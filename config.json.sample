@@ -1,3 +1,4 @@
 {
-"token":"add your bot token here"
+"Token":"add your bot token here",
+"CommandPrefix":"your prefix like ! here"
 }

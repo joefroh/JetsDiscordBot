@@ -10,10 +10,13 @@ namespace discordBot
     {
         private Configuration _config;
         private DiscordSocketClient _client;
+        private CommandHandler _commandHandler;
         public DiscordBot()
         {
             _config = new Configuration();
-            var token = _config["token"];
+            _commandHandler = new CommandHandler(_config);
+
+            var token = _config["Token"];
 
             if (!String.IsNullOrEmpty(token))
             {
@@ -43,10 +46,13 @@ namespace discordBot
         #region event handlers
         private async Task MessageReceived(SocketMessage arg)
         {
-            if (arg.Author.IsBot != true)
+            var message = arg as SocketUserMessage;
+            if (message == null) return;
+
+            if (message.Author.IsBot != true)
             {
                 Console.WriteLine("Non Bot message received.");
-                await arg.Channel.SendMessageAsync("You said: " + arg.Content);
+                await _commandHandler.HandleCommand(arg);
             }
         }
 
