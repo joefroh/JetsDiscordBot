@@ -61,18 +61,16 @@ namespace discordBot
             foreach (var guild in this._client.Guilds)
             {
                 Console.WriteLine("Seeing Guild: " + guild.Name);
+                foreach (var channel in guild.TextChannels)
+                {
+                    Console.WriteLine("Seeing text channel: " + channel.Name);
+                    if (channel.Name == "general")
+                    {
+                        await channel.SendMessageAsync("Connected!");
+                    }
+                }
             }
 
-            var enumerator = this._client.Guilds.GetEnumerator();
-            enumerator.MoveNext();
-
-            var channels = enumerator.Current.TextChannels.GetEnumerator();
-            while (channels.MoveNext() && channels.Current.Name.ToString() != "general")
-            {
-                Console.WriteLine("Seeing text channel: " + channels.Current.Name);
-            }
-            var chan = enumerator.Current.GetTextChannel(channels.Current.Id);
-            await chan.SendMessageAsync("Connected!");
             Console.WriteLine("Bot is now ready to interact with users.");
         }
     }
