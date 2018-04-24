@@ -69,7 +69,7 @@ namespace discordBot
             var channels = enumerator.Current.TextChannels.GetEnumerator();
             while (channels.MoveNext() && channels.Current.Name.ToString() != "general")
             {
-                //TODO get this to not be a crap implementation
+                Console.WriteLine("Seeing text channel: " + channels.Current.Name);
             }
             var chan = enumerator.Current.GetTextChannel(channels.Current.Id);
             await chan.SendMessageAsync("Connected!");
