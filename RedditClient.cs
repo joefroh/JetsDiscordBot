@@ -42,6 +42,8 @@ namespace discordBot
             var req = new RestRequest("/r/" + _subConfig.TargetSubreddit + "/new.json");
             req.AddParameter("raw_json", 1);
             req.AddParameter("limit", _subConfig.NewSubmissionCacheSize);
+            req.AddParameter("sort", "new");
+
             var res = _client.Execute(req);
             var jobj = JObject.Parse(res.Content);
 
