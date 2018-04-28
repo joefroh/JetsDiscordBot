@@ -18,13 +18,13 @@ namespace discordBot
 
         public DiscordBot()
         {
-            _config = new Configuration();
+            _config = ConfigurationLoader.LoadConfiguration();
             _commandHandler = new CommandHandler(_config);
             _subreddits = new List<RedditClient>();
 
             PopulateSubreddits();
 
-            var token = _config["Token"];
+            var token = _config.Token;
 
             if (!String.IsNullOrEmpty(token))
             {
@@ -41,7 +41,7 @@ namespace discordBot
 
         private void PopulateSubreddits()
         {
-            foreach (var subreddit in _config["SubredditConfigs"])
+            foreach (var subreddit in _config.SubredditConfigs)
             {
                 //_subreddits.Add(new RedditClient(_config, subreddit["TargetServer"], subreddit["TargetChannel"]));
             }
@@ -52,7 +52,7 @@ namespace discordBot
         public async Task LoginAsync()
         {
             Console.WriteLine("Logging in.");
-            await _client.LoginAsync(TokenType.Bot, _config["token"]);
+            await _client.LoginAsync(TokenType.Bot, _config.Token);
         }
 
         public async Task StartAsync()

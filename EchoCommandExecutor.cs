@@ -21,7 +21,7 @@ namespace discordBot
 
         public override async Task ExecuteCommand(SocketMessage msg)
         {
-            var message = msg.Content.Remove(0, (this.CommandString.Length + _config["CommandPrefix"].Length));
+            var message = msg.Content.Remove(0, (this.CommandString.Length + _config.CommandPrefix.Length));
             await msg.Channel.SendMessageAsync(message);
         }
     }

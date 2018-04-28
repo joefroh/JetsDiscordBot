@@ -8,5 +8,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="*"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="*"/>
     <PackageReference Include="RestSharp" Version="106.2.2"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="*"/>
   </ItemGroup>
 </Project>

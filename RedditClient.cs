@@ -10,20 +10,23 @@ namespace discordBot
     public class RedditClient
     {
         private RestClient _client;
-        private Configuration _config;
         private List<string> _lastNewSubmissionResult;
 
         private string _targetServer;
         private string _targetChannel;
+        private string _targetSubreddit;
+        private int _newSubmissionCacheSize;
         public string TargetChannel { get { return _targetChannel; } }
         public string TargetServer { get { return _targetServer; } }
+        public string TargetSubreddit { get { return _targetSubreddit; } }
 
-        public RedditClient(Configuration config, string targetServer, string targetChannel)
+        public RedditClient(int cache, string targetServer, string targetChannel, string targetSubreddit)
         {
             _client = new RestClient(Constants.RedditURL);
-            _config = config;
             _targetChannel = targetChannel;
             _targetServer = targetServer;
+            _targetSubreddit = targetSubreddit;
+            _newSubmissionCacheSize = cache;
 
             _lastNewSubmissionResult = new List<string>();
 
@@ -42,9 +45,9 @@ namespace discordBot
 
         private JObject FetchSubredditNewSubmissions()
         {
-            var req = new RestRequest("/r/" + _config["TargetSubreddit"] + "/new.json");
+            var req = new RestRequest("/r/" + _targetSubreddit + "/new.json");
             req.AddParameter("raw_json", 1);
-            req.AddParameter("limit", int.Parse(_config["NewSubmissionCacheSize"]));
+            req.AddParameter("limit", _newSubmissionCacheSize);
             var res = _client.Execute(req);
             var jobj = JObject.Parse(res.Content);
 

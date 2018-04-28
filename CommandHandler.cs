@@ -27,7 +27,7 @@ namespace discordBot
          */
         private void RegisterCommands()
         {
-            if (!(bool.Parse(_config["EnableTextCommands"])))
+            if (!_config.EnableCommands)
             {
                 Console.WriteLine("Text Commands disabled in config.");
                 return;
@@ -45,10 +45,10 @@ namespace discordBot
         public async Task HandleCommand(SocketMessage message)
         {
             var command = message.Content.Split(' ');
-            if (command[0].StartsWith(_config["CommandPrefix"]))
+            if (command[0].StartsWith(_config.CommandPrefix))
             {
                 ICommandExecutor executor;
-                if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config["CommandPrefix"])[1], out executor))
+                if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config.CommandPrefix)[1], out executor))
                 {
                     await executor.ExecuteCommand(message);
                 }

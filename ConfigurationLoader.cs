@@ -6,18 +6,16 @@ namespace discordBot
 {
     public class ConfigurationLoader
     {
-        private IConfigurationRoot _config;
-        public ConfigurationLoader()
+        public static Configuration LoadConfiguration()
         {
             var builder = new ConfigurationBuilder();
             builder.SetBasePath(Directory.GetCurrentDirectory());
             builder.AddJsonFile(Constants.ConfigFileName);
-            _config = builder.Build();
-        }
+            var configRoot = builder.Build();
+            var config = new Configuration();
+            configRoot.Bind(config);
 
-        public string this[string index]
-        {
-            get { return _config[index]; }
+            return config;
         }
     }
 }
