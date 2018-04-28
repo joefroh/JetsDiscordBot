@@ -13,10 +13,18 @@ namespace discordBot
         private Configuration _config;
         private List<string> _lastNewSubmissionResult;
 
-        public RedditClient(Configuration config)
+        private string _targetServer;
+        private string _targetChannel;
+        public string TargetChannel { get { return _targetChannel; } }
+        public string TargetServer { get { return _targetServer; } }
+
+        public RedditClient(Configuration config, string targetServer, string targetChannel)
         {
-            _client = new RestClient("https://www.reddit.com");
+            _client = new RestClient(Constants.RedditURL);
             _config = config;
+            _targetChannel = targetChannel;
+            _targetServer = targetServer;
+
             _lastNewSubmissionResult = new List<string>();
 
             InitializeSubredditSubmissions();

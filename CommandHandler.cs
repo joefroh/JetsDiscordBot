@@ -27,6 +27,11 @@ namespace discordBot
          */
         private void RegisterCommands()
         {
+            if (!(bool.Parse(_config["EnableTextCommands"])))
+            {
+                Console.WriteLine("Text Commands disabled in config.");
+                return;
+            }
             var commands = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(ICommandExecutor).IsAssignableFrom(p) && !p.IsAbstract);
             foreach (var command in commands)
             {

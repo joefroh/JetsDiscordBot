@@ -2,6 +2,7 @@ using Discord;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,14 +13,16 @@ namespace discordBot
         private Configuration _config;
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
-        private RedditClient _reddit;
+        private List<RedditClient> _subreddits;
         private SocketTextChannel _redditChannel = null;
 
         public DiscordBot()
         {
             _config = new Configuration();
             _commandHandler = new CommandHandler(_config);
-            _reddit = new RedditClient(_config);
+            _subreddits = new List<RedditClient>();
+
+            PopulateSubreddits();
 
             var token = _config["Token"];
 
@@ -33,7 +36,16 @@ namespace discordBot
             _client.Ready += ConnectedConfirm;
             _client.MessageReceived += MessageReceived;
 
-            Task.Run(() => PullReddit());
+            Task.Run(() => RedditPoll());
+        }
+
+        private void PopulateSubreddits()
+        {
+            foreach (var subreddit in _config["SubredditConfigs"])
+            {
+                //_subreddits.Add(new RedditClient(_config, subreddit["TargetServer"], subreddit["TargetChannel"]));
+            }
+            //new RedditClient(_config);
         }
 
         #region async tasks
@@ -84,19 +96,19 @@ namespace discordBot
         }
         #endregion
 
-        private void PullReddit()
+        private void RedditPoll()
         {
             while (true)
             {
-                var newSubmissions = _reddit.UpdateReddit();
-                if (_redditChannel != null)
-                {
-                    foreach (var sub in newSubmissions)
-                    {
-                        _redditChannel.SendMessageAsync(sub);
-                    }
-                }
-                Thread.Sleep(int.Parse(_config["RedditRefreshTimer"]) * 60000);
+                // var newSubmissions = _subreddits.UpdateReddit();
+                // if (_redditChannel != null)
+                // {
+                //     foreach (var sub in newSubmissions)
+                //     {
+                //         _redditChannel.SendMessageAsync(sub);
+                //     }
+                // }
+                // Thread.Sleep(int.Parse(_config["RedditRefreshTimer"]) * 60000);
             }
         }
     }
