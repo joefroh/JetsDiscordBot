@@ -43,7 +43,7 @@ namespace discordBot
         {
             foreach (var subreddit in _config.SubredditConfigs)
             {
-                //_subreddits.Add(new RedditClient(_config, subreddit["TargetServer"], subreddit["TargetChannel"]));
+                _subreddits.Add(new RedditClient(_config, subreddit["TargetServer"], subreddit["TargetChannel"]));
             }
             //new RedditClient(_config);
         }

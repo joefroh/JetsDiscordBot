@@ -1,6 +1,6 @@
 namespace discordBot
 {
-    public class SubredditConfigs
+    public class SubredditConfig
     {
         public string ServerID { get; set; }
         public string ServerFriendlyName { get; set; }
