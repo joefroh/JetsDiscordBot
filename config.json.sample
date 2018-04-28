@@ -1,9 +1,15 @@
 {
-"Token":"add your bot token here",
-"EnableTextCommands":"true/false",
-"CommandPrefix":"your prefix like ! here",
-"RedditRefreshTimer":"refresh timer in minutes as an int",
-"TargetSubreddit":"subreddit to pull new posts for",
-"NewSubmissionCacheSize":"the number of submissions you want to cache for new, int, max 100, min 1",
-"SubredditConfigs":{[]}
+    "Token": "your bot token",
+    "EnableTextCommands": "true/false",
+    "CommandPrefix": "any string you like, usually ! or similar",
+    "RedditRefreshTimer": "and int > 0, (10-30 recommended)",
+    "SubredditConfig": [
+        {
+            "ServerID": "server id for discord guild",
+            "ServerFriendlyName": "a string for us humans to remember which server",
+            "TargetChannelID": "channel id for where the reddit submissions go",
+            "TargetSubreddit": "which subreddit you want to watch",
+            "NewSubmissionCacheSize": "an int for how many posts you cache to determine whats new (recommend 25 or greater)"
+        }
+    ]
 }
