@@ -41,11 +41,10 @@ namespace discordBot
 
         private void PopulateSubreddits()
         {
-            foreach (var subreddit in _config.SubredditConfigs)
+            foreach (var subreddit in _config.SubredditConfig)
             {
-                _subreddits.Add(new RedditClient(_config, subreddit["TargetServer"], subreddit["TargetChannel"]));
+                _subreddits.Add(new RedditClient(subreddit));
             }
-            //new RedditClient(_config);
         }
 
         #region async tasks
@@ -100,15 +99,18 @@ namespace discordBot
         {
             while (true)
             {
-                // var newSubmissions = _subreddits.UpdateReddit();
-                // if (_redditChannel != null)
-                // {
-                //     foreach (var sub in newSubmissions)
-                //     {
-                //         _redditChannel.SendMessageAsync(sub);
-                //     }
-                // }
-                // Thread.Sleep(int.Parse(_config["RedditRefreshTimer"]) * 60000);
+                foreach (var subreddit in _subreddits)
+                {
+                    // var newSubmissions = _subreddits.UpdateReddit();
+                    // if (_redditChannel != null)
+                    // {
+                    //     foreach (var sub in newSubmissions)
+                    //     {
+                    //         _redditChannel.SendMessageAsync(sub);
+                    //     }
+                    // }
+                    // Thread.Sleep(int.Parse(_config["RedditRefreshTimer"]) * 60000);
+                }
             }
         }
     }

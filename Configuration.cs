@@ -8,6 +8,6 @@ namespace discordBot
         public bool EnableCommands { get; set; }
         public string CommandPrefix { get; set; }
         public int RedditRefreshTimer { get; set; }
-        public IEnumerable<SubredditConfigs> SubredditConfigs { get; set; }
+        public IEnumerable<SubredditConfig> SubredditConfig { get; set; }
     }
 }
