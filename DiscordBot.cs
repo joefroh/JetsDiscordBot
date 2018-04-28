@@ -3,6 +3,7 @@ using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -101,16 +102,19 @@ namespace discordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    // var newSubmissions = _subreddits.UpdateReddit();
-                    // if (_redditChannel != null)
-                    // {
-                    //     foreach (var sub in newSubmissions)
-                    //     {
-                    //         _redditChannel.SendMessageAsync(sub);
-                    //     }
-                    // }
-                    // Thread.Sleep(int.Parse(_config["RedditRefreshTimer"]) * 60000);
+                    var guild = _client.GetGuild(subreddit.TargetServer);
+                    if (null == guild) continue;
+
+                    var channel = guild.GetTextChannel(subreddit.TargetChannel);
+                    if (null == channel) continue;
+
+                    var newSubmissions = subreddit.UpdateReddit();
+                    foreach (var sub in newSubmissions)
+                    {
+                        channel.SendMessageAsync(sub);
+                    }
                 }
+                Thread.Sleep(_config.RedditRefreshTimer * 60000);
             }
         }
     }

@@ -13,8 +13,8 @@ namespace discordBot
         private List<string> _lastNewSubmissionResult;
         private SubredditConfig _subConfig;
 
-        public string TargetChannel { get { return _subConfig.TargetChannelID; } }
-        public string TargetServer { get { return _subConfig.ServerID; } }
+        public ulong TargetChannel { get { return _subConfig.TargetChannelID; } }
+        public ulong TargetServer { get { return _subConfig.ServerID; } }
         public string TargetSubreddit { get { return _subConfig.TargetSubreddit; } }
 
         public RedditClient(SubredditConfig config)
