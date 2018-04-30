@@ -27,7 +27,7 @@ namespace discordBot
          */
         private void RegisterCommands()
         {
-            if (!_config.EnableCommands)
+            if (!_config.EnableTextCommands)
             {
                 Console.WriteLine("Text Commands disabled in config.");
                 return;
