@@ -27,5 +27,5 @@ dotnet build
 Once everything is building properly, copy `config.json.sample` to `config.json` and fill in your bot token.
 
 ## Feature Requests
-* Goal Horn (with configurable delay) - Investigating
+* Goal Horn (with configurable delay) - In Progress
 * Team Stats Functions
