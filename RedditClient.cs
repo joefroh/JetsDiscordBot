@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -61,7 +62,10 @@ namespace discordBot
 
                 if (!_lastNewSubmissionResult.Contains(submission["data"]["name"].ToString()))
                 {
-                    results.Add(submission["data"]["title"].ToString() + ": " + submission["data"]["url"]);
+                    var builder = new StringBuilder();
+                    builder.AppendLine(submission["data"]["title"].ToString() + ": " + submission["data"]["url"]);
+                    builder.Append("Comments: " + Constants.RedditURL + submission["data"]["permalink"]);
+                    results.Add(builder.ToString());
                 }
             }
 
