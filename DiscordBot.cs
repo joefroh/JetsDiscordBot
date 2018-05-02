@@ -15,7 +15,8 @@ namespace discordBot
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
         private List<RedditClient> _subreddits;
-        private SocketTextChannel _redditChannel = null;
+        //private SocketTextChannel _redditChannel = null;
+        private SocketTextChannel _adminChannel;
 
         public DiscordBot()
         {
@@ -84,14 +85,15 @@ namespace discordBot
                 foreach (var channel in guild.TextChannels)
                 {
                     Console.WriteLine("Seeing text channel: " + channel.Name);
-                    if (channel.Name == "general")
-                    {
-                        _redditChannel = channel;
-                        await channel.SendMessageAsync("Connected!");
-                    }
                 }
             }
+            var adminGuild = _client.GetGuild(_config.AdminServerID);
+            if (adminGuild != null)
+            {
+                _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
+            }
 
+            await _adminChannel.SendMessageAsync("Bot has connected.");
             Console.WriteLine("Bot is now ready to interact with users.");
         }
         #endregion
