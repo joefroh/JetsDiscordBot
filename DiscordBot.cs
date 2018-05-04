@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -15,12 +16,13 @@ namespace discordBot
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
         private List<RedditClient> _subreddits;
-        //private SocketTextChannel _redditChannel = null;
         private SocketTextChannel _adminChannel;
+        private GoalHorn _goalHorn;
 
         public DiscordBot()
         {
             _config = ConfigurationLoader.LoadConfiguration();
+            _goalHorn = new GoalHorn();
             _commandHandler = new CommandHandler(_config);
             _subreddits = new List<RedditClient>();
 
@@ -39,6 +41,7 @@ namespace discordBot
             _client.MessageReceived += MessageReceived;
 
             Task.Run(() => RedditPoll());
+            Task.Run(() => GoalHornPoll());
         }
 
         private void PopulateSubreddits()
@@ -117,6 +120,36 @@ namespace discordBot
                     }
                 }
                 Thread.Sleep(_config.RedditRefreshTimer * 60000);
+            }
+        }
+
+        private void GoalHornPoll()
+        {
+            var currGoal = 0;
+
+            while (true)
+            {
+                var goal = _goalHorn.GetLatestGoal();
+
+                if (null != goal && goal.ScoringTeam == "Winnipeg Jets" && currGoal < goal.PlayIndex)
+                {
+                    StringBuilder builder = new StringBuilder();
+                    builder.AppendLine("GOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAALLLLL!!!!!");
+                    builder.AppendLine(goal.Description);
+                    builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
+
+                    currGoal = goal.PlayIndex;
+
+                    var adminGuild = _client.GetGuild(_config.AdminServerID);
+                    if (adminGuild != null)
+                    {
+                        _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
+                    }
+
+                    _adminChannel.SendMessageAsync(builder.ToString());
+                }
+
+                Thread.Sleep(1000);
             }
         }
     }
