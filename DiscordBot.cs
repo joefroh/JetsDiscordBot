@@ -15,18 +15,15 @@ namespace discordBot
         private Configuration _config;
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
-        private List<RedditClient> _subreddits;
+        private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
-        private GoalHorn _goalHorn;
+        // private GoalHorn _goalHorn;
 
         public DiscordBot()
         {
             _config = ConfigurationLoader.LoadConfiguration();
-            _goalHorn = new GoalHorn();
+            //_goalHorn = new GoalHorn();
             _commandHandler = new CommandHandler(_config);
-            _subreddits = new List<RedditClient>();
-
-            PopulateSubreddits();
 
             var token = _config.Token;
 
@@ -37,20 +34,13 @@ namespace discordBot
 
             Console.WriteLine("Starting up client.");
             _client = new DiscordSocketClient();
-            _client.Ready += ConnectedConfirm;
+            _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
+            _pollHandler = new PollHandler(_config, _client);
 
-            Task.Run(() => RedditPoll());
-            Task.Run(() => GoalHornPoll());
+            //Task.Run(() => GoalHornPoll());
         }
 
-        private void PopulateSubreddits()
-        {
-            foreach (var subreddit in _config.SubredditConfig)
-            {
-                _subreddits.Add(new RedditClient(subreddit));
-            }
-        }
 
         #region async tasks
         public async Task LoginAsync()
@@ -79,7 +69,7 @@ namespace discordBot
             }
         }
 
-        private async Task ConnectedConfirm()
+        private async Task GatewayHandshook()
         {
             Console.WriteLine("Connected as bot name: " + this._client.CurrentUser.Username);
             foreach (var guild in this._client.Guilds)
@@ -98,59 +88,39 @@ namespace discordBot
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
             Console.WriteLine("Bot is now ready to interact with users.");
+
+            _pollHandler.StartPollers();
         }
         #endregion
 
-        private void RedditPoll()
-        {
-            while (true)
-            {
-                foreach (var subreddit in _subreddits)
-                {
-                    var guild = _client.GetGuild(subreddit.TargetServer);
-                    if (null == guild) continue;
+        // private void GoalHornPoll()
+        // {
+        //     var currGoal = 0;
 
-                    var channel = guild.GetTextChannel(subreddit.TargetChannel);
-                    if (null == channel) continue;
+        //     while (true)
+        //     {
+        //         var goal = _goalHorn.GetLatestGoal();
 
-                    var newSubmissions = subreddit.UpdateReddit();
-                    foreach (var sub in newSubmissions)
-                    {
-                        channel.SendMessageAsync(sub);
-                    }
-                }
-                Thread.Sleep(_config.RedditRefreshTimer * 60000);
-            }
-        }
+        //         if (null != goal && goal.ScoringTeam == "Winnipeg Jets" && currGoal < goal.PlayIndex)
+        //         {
+        //             StringBuilder builder = new StringBuilder();
+        //             builder.AppendLine("GOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAALLLLL!!!!!");
+        //             builder.AppendLine(goal.Description);
+        //             builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
 
-        private void GoalHornPoll()
-        {
-            var currGoal = 0;
+        //             currGoal = goal.PlayIndex;
 
-            while (true)
-            {
-                var goal = _goalHorn.GetLatestGoal();
+        //             var adminGuild = _client.GetGuild(_config.AdminServerID);
+        //             if (adminGuild != null)
+        //             {
+        //                 _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
+        //             }
 
-                if (null != goal && goal.ScoringTeam == "Winnipeg Jets" && currGoal < goal.PlayIndex)
-                {
-                    StringBuilder builder = new StringBuilder();
-                    builder.AppendLine("GOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAALLLLL!!!!!");
-                    builder.AppendLine(goal.Description);
-                    builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
+        //             _adminChannel.SendMessageAsync(builder.ToString());
+        //         }
 
-                    currGoal = goal.PlayIndex;
-
-                    var adminGuild = _client.GetGuild(_config.AdminServerID);
-                    if (adminGuild != null)
-                    {
-                        _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
-                    }
-
-                    _adminChannel.SendMessageAsync(builder.ToString());
-                }
-
-                Thread.Sleep(1000);
-            }
-        }
+        //         Thread.Sleep(1000);
+        //     }
+        // }
     }
 }
