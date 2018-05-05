@@ -61,6 +61,8 @@ namespace discordBot
                                         builder.AppendLine("GOOOOOAAAAAALLLLL!!!!");
                                         builder.AppendLine(goal.Description);
                                         builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
+
+                                        _channel.SendMessageAsync(builder.ToString());
                                     }
                                     lastGoalIdx = currGoalIdx;
                                 }
@@ -83,6 +85,7 @@ namespace discordBot
                             {
                                 Console.WriteLine("Sleeping until game time in " + span.ToString());
                                 Thread.Sleep(span);
+                                Console.WriteLine("Waking up! Is it gametime?");
                             }
                             else //otherwise just wait 5 seconds and check again
                             {
