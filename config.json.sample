@@ -1,6 +1,7 @@
 {
     "Token": "your bot token",
     "EnableTextCommands": "true/false",
+    "EnablePollers": "true/false",
     "CommandPrefix": "any string you like, usually ! or similar",
     "RedditRefreshTimer": "any int > 0, (10-30 recommended)",
     "AdminServerID":"id for the server to receive admin outputs",
