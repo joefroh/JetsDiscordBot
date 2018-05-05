@@ -11,6 +11,7 @@ namespace discordBot
         public ulong AdminServerID { get; set; }
         public ulong AdminChannelID { get; set; }
         public IEnumerable<SubredditConfig> SubredditConfig { get; set; }
+        public IEnumerable<GoalHornConfig> GoalHornConfig { get; set; }
         public bool EnablePollers { get; set; }
     }
 }
