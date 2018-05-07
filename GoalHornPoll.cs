@@ -23,7 +23,7 @@ namespace discordBot
 
                     if (null != channel)
                     {
-                        _goalHorns.Add(new GoalHorn(channel, goalHornConfig.Team));
+                        _goalHorns.Add(new GoalHorn(channel, goalHornConfig));
                     }
                 }
             }
