@@ -65,6 +65,7 @@ namespace discordBot
                                             builder.AppendLine(goal.Description);
                                             builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
 
+                                            Thread.Sleep(_config.Delay * 1000);
                                             _channel.SendMessageAsync(builder.ToString());
                                         }
                                         lastGoalId = currGoalId;
