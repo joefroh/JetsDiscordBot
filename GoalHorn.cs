@@ -97,11 +97,8 @@ namespace discordBot
                     }
                 }
 
-                //Sleep until tomorrow at 5 AM Local(picked arbitrarily)
-                var target = DateTime.Today.AddDays(1).AddHours(5);
-                var now = DateTime.Now;
-
-                var span = target.Subtract(now);
+                //Sleep for 5 hours
+                var span = TimeSpan.FromHours(5);
                 Console.WriteLine("Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
                 Thread.Sleep(span);
             }
