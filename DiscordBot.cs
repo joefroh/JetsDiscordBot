@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,16 +15,19 @@ namespace discordBot
         private Configuration _config;
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
+<<<<<<< HEAD
         private List<RedditClient> _subreddits;
+=======
+        private PollHandler _pollHandler;
+>>>>>>> 5de6b3eb4697243a0328c3a9e880c4473e6e3423
         private SocketTextChannel _adminChannel;
+       
 
         public DiscordBot()
         {
             _config = ConfigurationLoader.LoadConfiguration();
+            
             _commandHandler = new CommandHandler(_config);
-            _subreddits = new List<RedditClient>();
-
-            PopulateSubreddits();
 
             var token = _config.Token;
 
@@ -34,19 +38,11 @@ namespace discordBot
 
             Console.WriteLine("Starting up client.");
             _client = new DiscordSocketClient();
-            _client.Ready += ConnectedConfirm;
+            _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
-
-            Task.Run(() => RedditPoll());
+            _pollHandler = new PollHandler(_config, _client);
         }
 
-        private void PopulateSubreddits()
-        {
-            foreach (var subreddit in _config.SubredditConfig)
-            {
-                _subreddits.Add(new RedditClient(subreddit));
-            }
-        }
 
         #region async tasks
         public async Task LoginAsync()
@@ -75,7 +71,7 @@ namespace discordBot
             }
         }
 
-        private async Task ConnectedConfirm()
+        private async Task GatewayHandshook()
         {
             Console.WriteLine("Connected as bot name: " + this._client.CurrentUser.Username);
             foreach (var guild in this._client.Guilds)
@@ -94,29 +90,9 @@ namespace discordBot
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
             Console.WriteLine("Bot is now ready to interact with users.");
+
+            _pollHandler.StartPollers();
         }
         #endregion
-
-        private void RedditPoll()
-        {
-            while (true)
-            {
-                foreach (var subreddit in _subreddits)
-                {
-                    var guild = _client.GetGuild(subreddit.TargetServer);
-                    if (null == guild) continue;
-
-                    var channel = guild.GetTextChannel(subreddit.TargetChannel);
-                    if (null == channel) continue;
-
-                    var newSubmissions = subreddit.UpdateReddit();
-                    foreach (var sub in newSubmissions)
-                    {
-                        channel.SendMessageAsync(sub);
-                    }
-                }
-                Thread.Sleep(_config.RedditRefreshTimer * 60000);
-            }
-        }
     }
 }
