@@ -92,35 +92,5 @@ namespace discordBot
             _pollHandler.StartPollers();
         }
         #endregion
-
-        // private void GoalHornPoll()
-        // {
-        //     var currGoal = 0;
-
-        //     while (true)
-        //     {
-        //         var goal = _goalHorn.GetLatestGoal();
-
-        //         if (null != goal && goal.ScoringTeam == "Winnipeg Jets" && currGoal < goal.PlayIndex)
-        //         {
-        //             StringBuilder builder = new StringBuilder();
-        //             builder.AppendLine("GOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAALLLLL!!!!!");
-        //             builder.AppendLine(goal.Description);
-        //             builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
-
-        //             currGoal = goal.PlayIndex;
-
-        //             var adminGuild = _client.GetGuild(_config.AdminServerID);
-        //             if (adminGuild != null)
-        //             {
-        //                 _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
-        //             }
-
-        //             _adminChannel.SendMessageAsync(builder.ToString());
-        //         }
-
-        //         Thread.Sleep(1000);
-        //     }
-        // }
     }
 }
