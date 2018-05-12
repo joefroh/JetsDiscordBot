@@ -25,7 +25,6 @@ namespace discordBot
             Task.Run(() => Poll());
         }
 
-        //TODO: Clean up this ungodly mess of a method. There has got to be another way.
         private void Poll()
         {
             while (true)
@@ -41,59 +40,13 @@ namespace discordBot
                         //If a game is found today, check if its already started
                         if (IsGameInProgress(game))
                         {
-                            var gameLive = true;
-                            var lastGoalId = -1;
-                            while (gameLive)
-                            {
-                                var gameObj = GetLiveGameData(game);
-                                var currGoal = GetLatestGoal(gameObj);
-                                if (currGoal != null)
-                                {
-                                    var currGoalId = int.Parse(currGoal["about"]["eventId"].ToString());
-                                    var currGoalIndx = int.Parse(currGoal["about"]["eventIdx"].ToString());
-
-                                    if (currGoalId > lastGoalId)
-                                    {
-                                        //we have a new goal, check if its the team we care about
-                                        var goal = GetGoalFromIndex(gameObj, currGoalIndx);
-
-                                        if (goal.ScoringTeamId == _config.Team)
-                                        {
-                                            //output to bot
-                                            StringBuilder builder = new StringBuilder();
-                                            builder.AppendLine("GOOOOOAAAAAALLLLL!!!!");
-                                            builder.AppendLine(goal.Description);
-                                            builder.AppendLine(@"https://media.giphy.com/media/xTiQyxssUcbkVRE2v6/giphy.gif");
-
-                                            Thread.Sleep(_config.Delay * 1000);
-                                            _channel.SendMessageAsync(builder.ToString());
-                                        }
-                                        lastGoalId = currGoalId;
-                                    }
-                                }
-
-                                gameLive = IsGameInProgress(gameObj);
-                                Thread.Sleep(1000);
-                            }
+                            RunGame(game);
                             gameFinal = true;
                         }
 
                         if (!gameFinal)
                         {
-                            // calculate time to game and sleep, or if its after the scheduled time, just wait 5 seconds or something
-                            var gametime = game.StartTimeUTC;
-                            var spanTilGame = gametime.Subtract(DateTime.UtcNow);
-
-                            if (spanTilGame.Ticks > 0) // check to make sure there is still time before the scheduled puck drop
-                            {
-                                Console.WriteLine("Sleeping until " + _config.TeamFriendlyName + " game in " + spanTilGame.ToString());
-                                Thread.Sleep(spanTilGame);
-                                Console.WriteLine("Waking up! Is it gametime?");
-                            }
-                            else //otherwise just wait 5 seconds and check again
-                            {
-                                Thread.Sleep(5000);
-                            }
+                            AwaitGameStart(game);
                         }
                     }
                 }
@@ -102,6 +55,75 @@ namespace discordBot
                 var span = TimeSpan.FromHours(5);
                 Console.WriteLine("Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
                 Thread.Sleep(span);
+            }
+        }
+
+        private void RunGame(GameDetail game)
+        {
+            var gameLive = true;
+            var lastGoalId = -1;
+            while (gameLive)
+            {
+                var gameObj = GetLiveGameData(game);
+                var currGoal = GetLatestGoal(gameObj);
+                if (currGoal != null)
+                {
+                    var currGoalId = int.Parse(currGoal["about"]["eventId"].ToString());
+                    var currGoalIndx = int.Parse(currGoal["about"]["eventIdx"].ToString());
+
+                    if (currGoalId > lastGoalId)
+                    {
+                        //we have a new goal, check if its the team we care about
+                        var goal = GetGoalFromIndex(gameObj, currGoalIndx);
+
+                        if (goal.ScoringTeamId == _config.Team)
+                        {
+                            // if we want to post the goal, delay first to let the data populate
+                            Thread.Sleep(_config.Delay * 1000);
+                            gameObj = GetLiveGameData(game);
+                            currGoal = GetLatestGoal(gameObj);
+                            if (currGoal != null)
+                            {
+                                currGoalIndx = int.Parse(currGoal["about"]["eventIdx"].ToString());
+                                goal = GetGoalFromIndex(gameObj, currGoalIndx);
+
+                                //output to bot
+                                AnnounceGoal(goal);
+                            }
+                        }
+                        lastGoalId = currGoalId;
+                    }
+                }
+
+                gameLive = IsGameInProgress(gameObj);
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void AnnounceGoal(GoalDetail goal)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine(String.Format("{0} {1} GOOOOOAAAALLLL!!!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
+            builder.AppendLine(goal.Description);
+
+            _channel.SendMessageAsync(builder.ToString());
+        }
+
+        private void AwaitGameStart(GameDetail game)
+        {
+            // calculate time to game and sleep, or if its after the scheduled time, just wait 5 seconds or something
+            var gametime = game.StartTimeUTC;
+            var spanTilGame = gametime.Subtract(DateTime.UtcNow);
+
+            if (spanTilGame.Ticks > 0) // check to make sure there is still time before the scheduled puck drop
+            {
+                Console.WriteLine("Sleeping until " + _config.TeamFriendlyName + " game in " + spanTilGame.ToString());
+                Thread.Sleep(spanTilGame);
+                Console.WriteLine("Waking up! Is it gametime?");
+            }
+            else //otherwise just wait 5 seconds and check again
+            {
+                Thread.Sleep(5000);
             }
         }
 
