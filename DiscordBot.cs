@@ -15,11 +15,7 @@ namespace discordBot
         private Configuration _config;
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
-<<<<<<< HEAD
-        private List<RedditClient> _subreddits;
-=======
         private PollHandler _pollHandler;
->>>>>>> 5de6b3eb4697243a0328c3a9e880c4473e6e3423
         private SocketTextChannel _adminChannel;
        
 
