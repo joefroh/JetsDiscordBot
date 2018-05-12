@@ -15,7 +15,6 @@ namespace discordBot
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
         private List<RedditClient> _subreddits;
-        //private SocketTextChannel _redditChannel = null;
         private SocketTextChannel _adminChannel;
 
         public DiscordBot()
