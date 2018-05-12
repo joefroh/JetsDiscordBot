@@ -17,12 +17,12 @@ namespace discordBot
         private CommandHandler _commandHandler;
         private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
-        // private GoalHorn _goalHorn;
+       
 
         public DiscordBot()
         {
             _config = ConfigurationLoader.LoadConfiguration();
-            //_goalHorn = new GoalHorn();
+            
             _commandHandler = new CommandHandler(_config);
 
             var token = _config.Token;
@@ -37,8 +37,6 @@ namespace discordBot
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
             _pollHandler = new PollHandler(_config, _client);
-
-            //Task.Run(() => GoalHornPoll());
         }
 
 
