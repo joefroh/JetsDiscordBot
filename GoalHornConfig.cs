@@ -8,5 +8,7 @@ namespace discordBot
         public string ServerFriendlyName { get; set; }
         public ulong TargetChannelID { get; set; }
         public int Delay { get; set; }
+        public string PreText { get; set; }
+        public string PostText { get; set; }
     }
 }
