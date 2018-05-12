@@ -32,3 +32,4 @@ Once everything is building properly, copy `config.json.sample` to `config.json`
 
 * Goal Horn (with configurable delay) - In Progress
 * Team Stats Functions
+* Team Video Publisher
