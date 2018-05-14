@@ -14,5 +14,17 @@
             "TargetSubreddit": "which subreddit you want to watch",
             "NewSubmissionCacheSize": "an int for how many posts you cache to determine whats new (recommend 25 or greater)"
         }
+    ],
+    "GoalHornConfig":[
+        {
+            "Team": "the team id number based on the NHL Apis",
+            "TeamFriendlyName": "some name you will remember which team this is",
+            "ServerID": "server id for the discord guild",
+            "ServerFriendlyName": "name you remember because ids suck",
+            "TargetChannelID": "channel id for where the goal horn should post",
+            "Delay": "how many seconds you want the goal horn to wait before posting",
+            "PreText": "any text you want to preceed the goal announcement",
+            "PostText": "any text you want to come after the goal announcement"
+        }
     ]
 }
