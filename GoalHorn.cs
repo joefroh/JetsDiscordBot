@@ -103,7 +103,7 @@ namespace discordBot
         private void AnnounceGoal(GoalDetail goal)
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine(String.Format("{0} {1} GOOOOOAAAALLLL!!!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
+            builder.AppendLine(String.Format("{0} {1} GOOOAAALLL!!!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
             builder.AppendLine(goal.Description);
 
             _channel.SendMessageAsync(builder.ToString());
