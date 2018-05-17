@@ -81,14 +81,12 @@ namespace discordBot
                             // if we want to post the goal, delay first to let the data populate
                             Thread.Sleep(_config.Delay * 1000);
                             gameObj = GetLiveGameData(game);
-                            currGoal = GetLatestGoal(gameObj);
-                            if (currGoal != null)
-                            {
-                                currGoalIndx = int.Parse(currGoal["about"]["eventIdx"].ToString());
-                                goal = GetGoalFromIndex(gameObj, currGoalIndx);
+                            var goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in the a short period, we can announce the wrong goal.
 
+                            if (goalDetails != null)
+                            {
                                 //output to bot
-                                AnnounceGoal(goal);
+                                AnnounceGoal(goalDetails);
                             }
                         }
                         lastGoalId = currGoalId;
@@ -103,7 +101,7 @@ namespace discordBot
         private void AnnounceGoal(GoalDetail goal)
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine(String.Format("{0} {1} GOOOAAALLL!!!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
+            builder.AppendLine(String.Format("{0} {1} GOOOAAALLL!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
             builder.AppendLine(goal.Description);
 
             _channel.SendMessageAsync(builder.ToString());
@@ -240,6 +238,24 @@ namespace discordBot
             return null;
         }
 
+        private GoalDetail GetGoalFromID(JObject gameObj, int id)
+        {
+            throw new NotImplementedException();
+            var scoringPlays = (JArray)gameObj["liveData"]["plays"]["scoringPlays"];
+            var allPlays = (JArray)gameObj["liveData"]["plays"]["allPlays"];
+
+            foreach (var scoringPlay in scoringPlays)
+            {
+                var play = allPlays[int.Parse(scoringPlay.ToString())];
+                if (int.Parse(play["about"]["eventId"].ToString()) == id)
+                {
+                    //Good Goal!
+                    return GetGoalFromIndex(gameObj, int.Parse(scoringPlay.ToString()));
+                }
+            }
+
+            return null;
+        }
         private GoalDetail GetGoalFromIndex(JObject gameObj, int index)
         {
             var allPlays = (JArray)gameObj["liveData"]["plays"]["allPlays"];
