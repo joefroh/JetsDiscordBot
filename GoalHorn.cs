@@ -240,7 +240,6 @@ namespace discordBot
 
         private GoalDetail GetGoalFromID(JObject gameObj, int id)
         {
-            throw new NotImplementedException();
             var scoringPlays = (JArray)gameObj["liveData"]["plays"]["scoringPlays"];
             var allPlays = (JArray)gameObj["liveData"]["plays"]["allPlays"];
 
