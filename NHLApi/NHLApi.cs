@@ -33,6 +33,11 @@ namespace NHLApi
             return result;
         }
 
+        /// <summary>
+        /// Gets the details for a specific team.
+        /// </summary>
+        /// <param name="id">The team ID based on the NHL Team List.</param>
+        /// <returns>The details for that specific team.</returns>
         public TeamDetail GetTeam(int id)
         {
             var request = new RestRequest(String.Format("/api/v1/teams/{0}", id));
@@ -42,6 +47,25 @@ namespace NHLApi
             var result = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
             return result;
         }
+
+        //TODO Expanders API modifyers
+
+        /// <summary>
+        /// Gets the list of players for a specific team.
+        /// </summary>
+        /// <param name="id">The team ID based on the NHL Team List.</param>
+        /// <returns>A list of the players on that specific team.</returns>
+        public IEnumerable<Player> GetCurrentRoster(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/teams/{0}/roster", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var playerArray = (JArray)jobj["roster"];
+            var result = JsonConvert.DeserializeObject<List<Player>>(playerArray.ToString());
+
+            return result;
+        }
+
 
         #endregion
     }
