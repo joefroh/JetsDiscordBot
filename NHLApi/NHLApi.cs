@@ -66,6 +66,67 @@ namespace NHLApi
             return result;
         }
 
+        /// <summary>
+        /// Gets the current active divisions in the NHL.
+        /// </summary>
+        /// <returns>List of active Divisions.</returns>
+        public IEnumerable<Division> GetDivisions()
+        {
+            var request = new RestRequest("/api/v1/divisions");
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var divisionArray = (JArray)jobj["divisions"];
+            var result = JsonConvert.DeserializeObject<List<Division>>(divisionArray.ToString());
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets a specific division from an ID. This can include old divisions.
+        /// </summary>
+        /// <param name="id">Id number of the division.</param>
+        /// <returns>The Division you requested.</returns>
+        public Division GetDivision(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/divisions/{0}", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var divisionArray = (JArray)jobj["divisions"];
+            var result = JsonConvert.DeserializeObject<Division>(divisionArray[0].ToString());
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets the currently active Conferences.
+        /// </summary>
+        /// <returns>A list of the active Conferences.</returns>
+        public IEnumerable<Conference> GetConferences()
+        {
+            var request = new RestRequest("/api/v1/conferences");
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var conferenceArray = (JArray)jobj["conferences"];
+            var result = JsonConvert.DeserializeObject<List<Conference>>(conferenceArray.ToString());
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets a specific Conference.false This can include old Conferences.
+        /// </summary>
+        /// <param name="id">The ID number of the Conference.</param>
+        /// <returns>The Conference.</returns>
+        public Conference GetConference(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/conferences/{0}", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var conferenceArray = (JArray)jobj["conferences"];
+            var result = JsonConvert.DeserializeObject<Conference>(conferenceArray[0].ToString());
+
+            return result;
+        }
 
         #endregion
     }
