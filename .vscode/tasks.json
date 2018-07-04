@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/discordBot.csproj"
+                "${workspaceFolder}/DiscordBot/discordBot.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/discordBot.csproj"
+                "${workspaceFolder}/DiscordBot/discordBot.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
