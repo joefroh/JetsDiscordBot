@@ -33,5 +33,21 @@ namespace NHLApiTests
                 Assert.AreEqual(expected[i], actual[i]);
             }
         }
+
+        [TestMethod]
+        public void GetTeamBasicTest()
+        {
+            // Load Expected result from file
+            var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetTeamResult.json");
+            var jobj = JObject.Parse(testResponse);
+            var teamArray = (JArray)jobj["teams"];
+            var expected = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
+
+            // Make API web call
+            var actual = api.GetTeam(52); // Go Jets Go!
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
