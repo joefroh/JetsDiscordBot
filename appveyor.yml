@@ -15,5 +15,6 @@ before_build:
   - cmd: dotnet restore --verbosity m
 build:
   project: JetsDiscordBot.sln
+  verbosity: minimal
 clone_depth: 1
 deploy: off
