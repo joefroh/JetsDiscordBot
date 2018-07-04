@@ -15,7 +15,7 @@ namespace NHLApiTests
         private NHLApiClient api = new NHLApiClient();
 
         [TestMethod]
-        public void GetTeamsBasic()
+        public void GetTeamsBasicTest()
         {
             // Load Expected result from file
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetTeamsResult.json");
