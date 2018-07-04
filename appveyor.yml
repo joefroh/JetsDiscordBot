@@ -15,5 +15,7 @@ before_build:
   - cmd: dotnet restore --verbosity m
 build_script:
   - cmd: dotnet build
+test_script:
+  - cmd: dotnet test .\NHLApi\NHLApiTests\
 clone_depth: 1
 deploy: off
