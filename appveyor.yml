@@ -13,9 +13,7 @@ before_build:
   - cmd: dotnet --version
   # Display minimal restore text
   - cmd: dotnet restore --verbosity m
-build_script:
-  - cmd: dotnet build
-test_script:
-  - cmd: dotnet test .\NHLApi\NHLApiTests\
+build:
+  project: JetsDiscordBot.sln
 clone_depth: 1
 deploy: off
