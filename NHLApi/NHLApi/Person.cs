@@ -1,6 +1,6 @@
 namespace NHLApi
 {
-    public class Person
+    public class SimplePerson
     {
         public int Id { get; set; }
         public string FullName { get; set; }
