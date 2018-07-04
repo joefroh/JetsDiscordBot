@@ -12,8 +12,8 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore ./discordBot.csproj --verbosity m
+  - cmd: dotnet restore --verbosity m
 build_script:
-  - cmd: dotnet build ./discordBot.csproj
+  - cmd: dotnet build
 clone_depth: 1
 deploy: off
