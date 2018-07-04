@@ -1,0 +1,278 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "roster" : [ {
+      "person" : {
+        "id" : 8470834,
+        "fullName" : "Dustin Byfuglien",
+        "link" : "/api/v1/people/8470834"
+      },
+      "jerseyNumber" : "33",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8471218,
+        "fullName" : "Blake Wheeler",
+        "link" : "/api/v1/people/8471218"
+      },
+      "jerseyNumber" : "26",
+      "position" : {
+        "code" : "R",
+        "name" : "Right Wing",
+        "type" : "Forward",
+        "abbreviation" : "RW"
+      }
+    }, {
+      "person" : {
+        "id" : 8473412,
+        "fullName" : "Bryan Little",
+        "link" : "/api/v1/people/8473412"
+      },
+      "jerseyNumber" : "18",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8473618,
+        "fullName" : "Mathieu Perreault",
+        "link" : "/api/v1/people/8473618"
+      },
+      "jerseyNumber" : "85",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8474574,
+        "fullName" : "Tyler Myers",
+        "link" : "/api/v1/people/8474574"
+      },
+      "jerseyNumber" : "57",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8475179,
+        "fullName" : "Dmitry Kulikov",
+        "link" : "/api/v1/people/8475179"
+      },
+      "jerseyNumber" : "5",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8475279,
+        "fullName" : "Ben Chiarot",
+        "link" : "/api/v1/people/8475279"
+      },
+      "jerseyNumber" : "7",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8476392,
+        "fullName" : "Adam Lowry",
+        "link" : "/api/v1/people/8476392"
+      },
+      "jerseyNumber" : "17",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8476460,
+        "fullName" : "Mark Scheifele",
+        "link" : "/api/v1/people/8476460"
+      },
+      "jerseyNumber" : "55",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8476476,
+        "fullName" : "Joe Morrow",
+        "link" : "/api/v1/people/8476476"
+      },
+      "jerseyNumber" : "70",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8476885,
+        "fullName" : "Jacob Trouba",
+        "link" : "/api/v1/people/8476885"
+      },
+      "jerseyNumber" : "8",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8476945,
+        "fullName" : "Connor Hellebuyck",
+        "link" : "/api/v1/people/8476945"
+      },
+      "jerseyNumber" : "37",
+      "position" : {
+        "code" : "G",
+        "name" : "Goalie",
+        "type" : "Goalie",
+        "abbreviation" : "G"
+      }
+    }, {
+      "person" : {
+        "id" : 8477359,
+        "fullName" : "Tucker Poolman",
+        "link" : "/api/v1/people/8477359"
+      },
+      "jerseyNumber" : "3",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8477429,
+        "fullName" : "Andrew Copp",
+        "link" : "/api/v1/people/8477429"
+      },
+      "jerseyNumber" : "9",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8477448,
+        "fullName" : "Marko Dano",
+        "link" : "/api/v1/people/8477448"
+      },
+      "jerseyNumber" : "56",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8477504,
+        "fullName" : "Josh Morrissey",
+        "link" : "/api/v1/people/8477504"
+      },
+      "jerseyNumber" : "44",
+      "position" : {
+        "code" : "D",
+        "name" : "Defenseman",
+        "type" : "Defenseman",
+        "abbreviation" : "D"
+      }
+    }, {
+      "person" : {
+        "id" : 8477940,
+        "fullName" : "Nikolaj Ehlers",
+        "link" : "/api/v1/people/8477940"
+      },
+      "jerseyNumber" : "27",
+      "position" : {
+        "code" : "L",
+        "name" : "Left Wing",
+        "type" : "Forward",
+        "abbreviation" : "LW"
+      }
+    }, {
+      "person" : {
+        "id" : 8478398,
+        "fullName" : "Kyle Connor",
+        "link" : "/api/v1/people/8478398"
+      },
+      "jerseyNumber" : "81",
+      "position" : {
+        "code" : "L",
+        "name" : "Left Wing",
+        "type" : "Forward",
+        "abbreviation" : "LW"
+      }
+    }, {
+      "person" : {
+        "id" : 8478458,
+        "fullName" : "Jack Roslovic",
+        "link" : "/api/v1/people/8478458"
+      },
+      "jerseyNumber" : "52",
+      "position" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    }, {
+      "person" : {
+        "id" : 8479293,
+        "fullName" : "Brandon Tanev",
+        "link" : "/api/v1/people/8479293"
+      },
+      "jerseyNumber" : "13",
+      "position" : {
+        "code" : "L",
+        "name" : "Left Wing",
+        "type" : "Forward",
+        "abbreviation" : "LW"
+      }
+    }, {
+      "person" : {
+        "id" : 8479339,
+        "fullName" : "Patrik Laine",
+        "link" : "/api/v1/people/8479339"
+      },
+      "jerseyNumber" : "29",
+      "position" : {
+        "code" : "R",
+        "name" : "Right Wing",
+        "type" : "Forward",
+        "abbreviation" : "RW"
+      }
+    } ],
+    "link" : "/api/v1/teams/52/roster"
+  }
