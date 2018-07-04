@@ -6,12 +6,12 @@ using RestSharp;
 
 namespace NHLApi
 {
-    class NHLApi
+    public class NHLApiClient
     {
         #region Setup and House Keeping
         private RestClient _restClient;
 
-        public NHLApi()
+        public NHLApiClient()
         {
             _restClient = new RestClient(Constants.NHLApiEndpoint);
         }

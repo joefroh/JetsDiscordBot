@@ -2,7 +2,7 @@ namespace NHLApi
 {
     public class Player
     {
-        public Person Person { get; set; }
+        public SimplePerson Person { get; set; }
 
         public int JerseyNumber { get; set; }
 
