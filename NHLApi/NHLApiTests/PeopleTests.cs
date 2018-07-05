@@ -14,7 +14,7 @@ namespace NHLApiTests
         [TestInitialize]
         public void TestInit()
         {
-            ClassLocator.ClassLocator.Locator.RegisterInstance<IRestClientService>(new TestRestClientService());
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new TestRestClientService());
         }
 
         [TestMethod]
@@ -38,7 +38,7 @@ namespace NHLApiTests
         [TestCleanup]
         public void TestCleanup()
         {
-            ClassLocator.ClassLocator.Locator.RegisterInstance<IRestClientService>(new RestClientService());
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new RestClientService());
         }
     }
 }
