@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
+using ClassLocator;
 
 namespace NHLApi
 {
     public class NHLApiClient
     {
         #region Setup and House Keeping
-        private RestClient _restClient;
+        private IRestClientService _restClient;
 
         public NHLApiClient()
         {
-            _restClient = new RestClient(Constants.NHLApiEndpoint);
+            _restClient = ClassLocator.ClassLocator.Locator.Fetch<IRestClientService>();
+            _restClient.BaseUrl = Constants.NHLApiEndpoint;
         }
 
         #endregion

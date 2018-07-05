@@ -3,10 +3,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 <ItemGroup>
-    <PackageReference Include="Discord.net" Version="1.0.2"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="*"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="*"/>
-    <PackageReference Include="RestSharp" Version="106.2.2"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="*"/>
+    <PackageReference Include="Discord.net" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="*" />
+    <PackageReference Include="RestSharp" Version="106.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="*" />
   </ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\..\ClassLocator\ClassLocator.csproj" />
+</ItemGroup>
 </Project>
