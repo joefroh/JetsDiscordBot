@@ -3,19 +3,18 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Position
+    public class TeamSimple
     {
-        public string Code { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Type { get; set; }
-        public string Abbreviation { get; set; }
-        
+        public string Link { get; set; }
+
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Position);
+            return this.Equals(obj as TeamSimple);
         }
 
-        public bool Equals(Position p)
+        public bool Equals(TeamSimple p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))

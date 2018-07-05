@@ -128,6 +128,17 @@ namespace NHLApi
             return result;
         }
 
+
+        public PersonDetail GetPerson(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/people/{0}", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var peopleArray = (JArray)jobj["people"];
+            var result = JsonConvert.DeserializeObject<PersonDetail>(peopleArray[0].ToString());
+
+            return result;
+        }
         #endregion
     }
 }

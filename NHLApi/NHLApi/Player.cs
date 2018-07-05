@@ -5,7 +5,7 @@ namespace NHLApi
 {
     public class Player
     {
-        public SimplePerson Person { get; set; }
+        public PersonSimple Person { get; set; }
 
         public int JerseyNumber { get; set; }
 
