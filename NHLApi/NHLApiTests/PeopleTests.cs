@@ -34,5 +34,11 @@ namespace NHLApiTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            ClassLocator.ClassLocator.Locator.RegisterInstance<IRestClientService>(new RestClientService());
+        }
     }
 }
