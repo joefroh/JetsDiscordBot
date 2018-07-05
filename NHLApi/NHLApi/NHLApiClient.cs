@@ -14,7 +14,7 @@ namespace NHLApi
 
         public NHLApiClient()
         {
-            _restClient = ClassLocator.ClassLocator.Locator.Fetch<IRestClientService>();
+            _restClient = ClassLocator.Locator.Instance.Fetch<IRestClientService>();
             _restClient.BaseUrl = Constants.NHLApiEndpoint;
         }
 
