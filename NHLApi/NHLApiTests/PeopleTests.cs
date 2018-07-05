@@ -4,18 +4,25 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NHLApi;
+using ClassLocator;
 
 namespace NHLApiTests
 {
     [TestClass]
     public class PeopleTests
     {
-        private NHLApiClient api = new NHLApiClient();
+        [TestInitialize]
+        public void TestInit()
+        {
+            ClassLocator.ClassLocator.Locator.RegisterInstance<IRestClientService>(new TestRestClientService());
+        }
 
         [TestMethod]
         public void GetPersonTestBasic()
         {
-             // Load Expected result from file
+            NHLApiClient api = new NHLApiClient();
+
+            // Load Expected result from file
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetPersonResult.json");
             var jobj = JObject.Parse(testResponse);
             var peopleArray = (JArray)jobj["people"];
