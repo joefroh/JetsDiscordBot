@@ -142,5 +142,18 @@ namespace NHLApi
             return result;
         }
         #endregion
+
+        #region Game Data APIs
+        public GameDetail GetLiveGameDetail(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/game/{0}/feed/live", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+           
+            var result = JsonConvert.DeserializeObject<GameDetail>(jobj.ToString());
+
+            return result;
+        }
+        #endregion
     }
 }

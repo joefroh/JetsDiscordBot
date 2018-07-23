@@ -8,6 +8,8 @@ namespace NHLApi
         public int Id { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
+        public string TriCode { get; set; }
+        public string Abbreviation { get; set; }
 
         public override bool Equals(object obj)
         {
