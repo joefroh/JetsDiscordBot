@@ -1,0 +1,3 @@
+[submodule "ClassLocator"]
+	path = ClassLocator
+	url = https://github.com/joefroh/ClassLocator

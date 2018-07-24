@@ -10,4 +10,8 @@
     <PackageReference Include="RestSharp" Version="106.2.2"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="*"/>
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NHLApi\NHLApi\NHLApi.csproj" />
+  </ItemGroup>
 </Project>

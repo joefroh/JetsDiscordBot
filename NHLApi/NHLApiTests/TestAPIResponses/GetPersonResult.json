@@ -1,0 +1,36 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "people" : [ {
+      "id" : 8476460,
+      "fullName" : "Mark Scheifele",
+      "link" : "/api/v1/people/8476460",
+      "firstName" : "Mark",
+      "lastName" : "Scheifele",
+      "primaryNumber" : "55",
+      "birthDate" : "1993-03-15",
+      "currentAge" : 25,
+      "birthCity" : "Kitchener",
+      "birthStateProvince" : "ON",
+      "birthCountry" : "CAN",
+      "nationality" : "CAN",
+      "height" : "6' 3\"",
+      "weight" : 207,
+      "active" : true,
+      "alternateCaptain" : true,
+      "captain" : false,
+      "rookie" : false,
+      "shootsCatches" : "R",
+      "rosterStatus" : "Y",
+      "currentTeam" : {
+        "id" : 52,
+        "name" : "Winnipeg Jets",
+        "link" : "/api/v1/teams/52"
+      },
+      "primaryPosition" : {
+        "code" : "C",
+        "name" : "Center",
+        "type" : "Forward",
+        "abbreviation" : "C"
+      }
+    } ]
+  }
