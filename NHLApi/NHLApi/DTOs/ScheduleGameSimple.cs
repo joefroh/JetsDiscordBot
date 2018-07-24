@@ -12,6 +12,7 @@ namespace NHLApi
         public DateTime GameDate { get; set; }
         public GameStatus Status { get; set; }
         public ScheduleTeamData Teams { get; set; }
+        public LineScore LineScore { get; set; }
         public VenueSimple Venue { get; set; }
         public ContentSimple Content { get; set; }
 

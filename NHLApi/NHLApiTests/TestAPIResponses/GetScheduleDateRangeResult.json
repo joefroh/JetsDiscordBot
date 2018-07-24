@@ -1,0 +1,3531 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "totalItems" : 69,
+    "totalEvents" : 0,
+    "totalGames" : 69,
+    "totalMatches" : 0,
+    "wait" : 10,
+    "dates" : [ {
+      "date" : "2018-12-20",
+      "totalItems" : 12,
+      "totalEvents" : 0,
+      "totalGames" : 12,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020530,
+        "link" : "/api/v1/game/2018020530/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "TD Garden",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020530/content"
+        }
+      }, {
+        "gamePk" : 2018020531,
+        "link" : "/api/v1/game/2018020531/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Air Canada Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020531/content"
+        }
+      }, {
+        "gamePk" : 2018020532,
+        "link" : "/api/v1/game/2018020532/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 18,
+              "name" : "Nashville Predators",
+              "link" : "/api/v1/teams/18"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Wells Fargo Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020532/content"
+        }
+      }, {
+        "gamePk" : 2018020533,
+        "link" : "/api/v1/game/2018020533/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "PPG Paints Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020533/content"
+        }
+      }, {
+        "gamePk" : 2018020534,
+        "link" : "/api/v1/game/2018020534/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "PNC Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020534/content"
+        }
+      }, {
+        "gamePk" : 2018020535,
+        "link" : "/api/v1/game/2018020535/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 29,
+              "name" : "Columbus Blue Jackets",
+              "link" : "/api/v1/teams/29"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Nationwide Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020535/content"
+        }
+      }, {
+        "gamePk" : 2018020536,
+        "link" : "/api/v1/game/2018020536/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T01:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 25,
+              "name" : "Dallas Stars",
+              "link" : "/api/v1/teams/25"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "American Airlines Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020536/content"
+        }
+      }, {
+        "gamePk" : 2018020537,
+        "link" : "/api/v1/game/2018020537/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 14,
+              "name" : "Tampa Bay Lightning",
+              "link" : "/api/v1/teams/14"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Scotiabank Saddledome",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020537/content"
+        }
+      }, {
+        "gamePk" : 2018020538,
+        "link" : "/api/v1/game/2018020538/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Gila River Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020538/content"
+        }
+      }, {
+        "gamePk" : 2018020539,
+        "link" : "/api/v1/game/2018020539/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 19,
+              "name" : "St. Louis Blues",
+              "link" : "/api/v1/teams/19"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020539/content"
+        }
+      }, {
+        "gamePk" : 2018020540,
+        "link" : "/api/v1/game/2018020540/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 2,
+              "name" : "New York Islanders",
+              "link" : "/api/v1/teams/2"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "T-Mobile Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020540/content"
+        }
+      }, {
+        "gamePk" : 2018020541,
+        "link" : "/api/v1/game/2018020541/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T03:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "SAP Center at San Jose",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020541/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-21",
+      "totalItems" : 3,
+      "totalEvents" : 0,
+      "totalGames" : 3,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020542,
+        "link" : "/api/v1/game/2018020542/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Prudential Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020542/content"
+        }
+      }, {
+        "gamePk" : 2018020543,
+        "link" : "/api/v1/game/2018020543/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 7,
+              "name" : "Buffalo Sabres",
+              "link" : "/api/v1/teams/7"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Capital One Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020543/content"
+        }
+      }, {
+        "gamePk" : 2018020544,
+        "link" : "/api/v1/game/2018020544/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 21,
+              "name" : "Colorado Avalanche",
+              "link" : "/api/v1/teams/21"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Pepsi Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020544/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-22",
+      "totalItems" : 14,
+      "totalEvents" : 0,
+      "totalGames" : 14,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020545,
+        "link" : "/api/v1/game/2018020545/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T18:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 18,
+              "name" : "Nashville Predators",
+              "link" : "/api/v1/teams/18"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "TD Garden",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020545/content"
+        }
+      }, {
+        "gamePk" : 2018020546,
+        "link" : "/api/v1/game/2018020546/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T18:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 29,
+              "name" : "Columbus Blue Jackets",
+              "link" : "/api/v1/teams/29"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Wells Fargo Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020546/content"
+        }
+      }, {
+        "gamePk" : 2018020547,
+        "link" : "/api/v1/game/2018020547/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T19:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Little Caesars Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020547/content"
+        }
+      }, {
+        "gamePk" : 2018020549,
+        "link" : "/api/v1/game/2018020549/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T21:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "T-Mobile Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020549/content"
+        }
+      }, {
+        "gamePk" : 2018020550,
+        "link" : "/api/v1/game/2018020550/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T21:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "SAP Center at San Jose",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020550/content"
+        }
+      }, {
+        "gamePk" : 2018020548,
+        "link" : "/api/v1/game/2018020548/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-22T21:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 19,
+              "name" : "St. Louis Blues",
+              "link" : "/api/v1/teams/19"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Scotiabank Saddledome",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020548/content"
+        }
+      }, {
+        "gamePk" : 2018020555,
+        "link" : "/api/v1/game/2018020555/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 21,
+              "name" : "Colorado Avalanche",
+              "link" : "/api/v1/teams/21"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Gila River Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020555/content"
+        }
+      }, {
+        "gamePk" : 2018020551,
+        "link" : "/api/v1/game/2018020551/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 7,
+              "name" : "Buffalo Sabres",
+              "link" : "/api/v1/teams/7"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "KeyBank Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020551/content"
+        }
+      }, {
+        "gamePk" : 2018020552,
+        "link" : "/api/v1/game/2018020552/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 3,
+              "name" : "New York Rangers",
+              "link" : "/api/v1/teams/3"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Air Canada Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020552/content"
+        }
+      }, {
+        "gamePk" : 2018020553,
+        "link" : "/api/v1/game/2018020553/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Canadian Tire Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020553/content"
+        }
+      }, {
+        "gamePk" : 2018020554,
+        "link" : "/api/v1/game/2018020554/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "PNC Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020554/content"
+        }
+      }, {
+        "gamePk" : 2018020556,
+        "link" : "/api/v1/game/2018020556/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 25,
+              "name" : "Dallas Stars",
+              "link" : "/api/v1/teams/25"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Xcel Energy Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020556/content"
+        }
+      }, {
+        "gamePk" : 2018020558,
+        "link" : "/api/v1/game/2018020558/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020558/content"
+        }
+      }, {
+        "gamePk" : 2018020557,
+        "link" : "/api/v1/game/2018020557/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 14,
+              "name" : "Tampa Bay Lightning",
+              "link" : "/api/v1/teams/14"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 22,
+              "name" : "Edmonton Oilers",
+              "link" : "/api/v1/teams/22"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020557/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-23",
+      "totalItems" : 8,
+      "totalEvents" : 0,
+      "totalGames" : 8,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020559,
+        "link" : "/api/v1/game/2018020559/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T18:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 29,
+              "name" : "Columbus Blue Jackets",
+              "link" : "/api/v1/teams/29"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Prudential Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020559/content"
+        }
+      }, {
+        "gamePk" : 2018020560,
+        "link" : "/api/v1/game/2018020560/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T22:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "PNC Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020560/content"
+        }
+      }, {
+        "gamePk" : 2018020562,
+        "link" : "/api/v1/game/2018020562/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "United Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020562/content"
+        }
+      }, {
+        "gamePk" : 2018020561,
+        "link" : "/api/v1/game/2018020561/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 3,
+              "name" : "New York Rangers",
+              "link" : "/api/v1/teams/3"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Madison Square Garden",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020561/content"
+        }
+      }, {
+        "gamePk" : 2018020563,
+        "link" : "/api/v1/game/2018020563/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T00:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Air Canada Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020563/content"
+        }
+      }, {
+        "gamePk" : 2018020565,
+        "link" : "/api/v1/game/2018020565/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "T-Mobile Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020565/content"
+        }
+      }, {
+        "gamePk" : 2018020566,
+        "link" : "/api/v1/game/2018020566/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "SAP Center at San Jose",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020566/content"
+        }
+      }, {
+        "gamePk" : 2018020564,
+        "link" : "/api/v1/game/2018020564/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-24T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 2,
+              "name" : "New York Islanders",
+              "link" : "/api/v1/teams/2"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 25,
+              "name" : "Dallas Stars",
+              "link" : "/api/v1/teams/25"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "American Airlines Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020564/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-27",
+      "totalItems" : 13,
+      "totalEvents" : 0,
+      "totalGames" : 13,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020567,
+        "link" : "/api/v1/game/2018020567/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "TD Garden",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020567/content"
+        }
+      }, {
+        "gamePk" : 2018020568,
+        "link" : "/api/v1/game/2018020568/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 29,
+              "name" : "Columbus Blue Jackets",
+              "link" : "/api/v1/teams/29"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 3,
+              "name" : "New York Rangers",
+              "link" : "/api/v1/teams/3"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Madison Square Garden",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020568/content"
+        }
+      }, {
+        "gamePk" : 2018020569,
+        "link" : "/api/v1/game/2018020569/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "PPG Paints Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020569/content"
+        }
+      }, {
+        "gamePk" : 2018020570,
+        "link" : "/api/v1/game/2018020570/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Capital One Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020570/content"
+        }
+      }, {
+        "gamePk" : 2018020571,
+        "link" : "/api/v1/game/2018020571/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T00:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 14,
+              "name" : "Tampa Bay Lightning",
+              "link" : "/api/v1/teams/14"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Amalie Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020571/content"
+        }
+      }, {
+        "gamePk" : 2018020572,
+        "link" : "/api/v1/game/2018020572/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 7,
+              "name" : "Buffalo Sabres",
+              "link" : "/api/v1/teams/7"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 19,
+              "name" : "St. Louis Blues",
+              "link" : "/api/v1/teams/19"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Scottrade Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020572/content"
+        }
+      }, {
+        "gamePk" : 2018020573,
+        "link" : "/api/v1/game/2018020573/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 25,
+              "name" : "Dallas Stars",
+              "link" : "/api/v1/teams/25"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 18,
+              "name" : "Nashville Predators",
+              "link" : "/api/v1/teams/18"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bridgestone Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020573/content"
+        }
+      }, {
+        "gamePk" : 2018020574,
+        "link" : "/api/v1/game/2018020574/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bell MTS Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020574/content"
+        }
+      }, {
+        "gamePk" : 2018020575,
+        "link" : "/api/v1/game/2018020575/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T01:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "United Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020575/content"
+        }
+      }, {
+        "gamePk" : 2018020576,
+        "link" : "/api/v1/game/2018020576/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 22,
+              "name" : "Edmonton Oilers",
+              "link" : "/api/v1/teams/22"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020576/content"
+        }
+      }, {
+        "gamePk" : 2018020577,
+        "link" : "/api/v1/game/2018020577/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 21,
+              "name" : "Colorado Avalanche",
+              "link" : "/api/v1/teams/21"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "T-Mobile Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020577/content"
+        }
+      }, {
+        "gamePk" : 2018020578,
+        "link" : "/api/v1/game/2018020578/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T03:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "STAPLES Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020578/content"
+        }
+      }, {
+        "gamePk" : 2018020579,
+        "link" : "/api/v1/game/2018020579/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T03:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "SAP Center at San Jose",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020579/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-28",
+      "totalItems" : 3,
+      "totalEvents" : 0,
+      "totalGames" : 3,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020580,
+        "link" : "/api/v1/game/2018020580/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "BB&T Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020580/content"
+        }
+      }, {
+        "gamePk" : 2018020581,
+        "link" : "/api/v1/game/2018020581/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 2,
+              "name" : "New York Islanders",
+              "link" : "/api/v1/teams/2"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Barclays Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020581/content"
+        }
+      }, {
+        "gamePk" : 2018020582,
+        "link" : "/api/v1/game/2018020582/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 29,
+              "name" : "Columbus Blue Jackets",
+              "link" : "/api/v1/teams/29"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Nationwide Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020582/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-29",
+      "totalItems" : 15,
+      "totalEvents" : 0,
+      "totalGames" : 15,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020583,
+        "link" : "/api/v1/game/2018020583/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T18:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 12,
+              "name" : "Carolina Hurricanes",
+              "link" : "/api/v1/teams/12"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 1,
+              "name" : "New Jersey Devils",
+              "link" : "/api/v1/teams/1"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Prudential Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020583/content"
+        }
+      }, {
+        "gamePk" : 2018020584,
+        "link" : "/api/v1/game/2018020584/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T20:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bell MTS Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020584/content"
+        }
+      }, {
+        "gamePk" : 2018020586,
+        "link" : "/api/v1/game/2018020586/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T21:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "STAPLES Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020586/content"
+        }
+      }, {
+        "gamePk" : 2018020585,
+        "link" : "/api/v1/game/2018020585/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T21:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 22,
+              "name" : "Edmonton Oilers",
+              "link" : "/api/v1/teams/22"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020585/content"
+        }
+      }, {
+        "gamePk" : 2018020587,
+        "link" : "/api/v1/game/2018020587/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 7,
+              "name" : "Buffalo Sabres",
+              "link" : "/api/v1/teams/7"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "KeyBank Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020587/content"
+        }
+      }, {
+        "gamePk" : 2018020588,
+        "link" : "/api/v1/game/2018020588/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 2,
+              "name" : "New York Islanders",
+              "link" : "/api/v1/teams/2"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 10,
+              "name" : "Toronto Maple Leafs",
+              "link" : "/api/v1/teams/10"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Air Canada Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020588/content"
+        }
+      }, {
+        "gamePk" : 2018020589,
+        "link" : "/api/v1/game/2018020589/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 15,
+              "name" : "Washington Capitals",
+              "link" : "/api/v1/teams/15"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 9,
+              "name" : "Ottawa Senators",
+              "link" : "/api/v1/teams/9"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Canadian Tire Centre",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020589/content"
+        }
+      }, {
+        "gamePk" : 2018020590,
+        "link" : "/api/v1/game/2018020590/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 8,
+              "name" : "Montréal Canadiens",
+              "link" : "/api/v1/teams/8"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 14,
+              "name" : "Tampa Bay Lightning",
+              "link" : "/api/v1/teams/14"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Amalie Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020590/content"
+        }
+      }, {
+        "gamePk" : 2018020591,
+        "link" : "/api/v1/game/2018020591/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T00:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 13,
+              "name" : "Florida Panthers",
+              "link" : "/api/v1/teams/13"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "BB&T Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020591/content"
+        }
+      }, {
+        "gamePk" : 2018020592,
+        "link" : "/api/v1/game/2018020592/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 5,
+              "name" : "Pittsburgh Penguins",
+              "link" : "/api/v1/teams/5"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 19,
+              "name" : "St. Louis Blues",
+              "link" : "/api/v1/teams/19"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Scottrade Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020592/content"
+        }
+      }, {
+        "gamePk" : 2018020593,
+        "link" : "/api/v1/game/2018020593/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 3,
+              "name" : "New York Rangers",
+              "link" : "/api/v1/teams/3"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 18,
+              "name" : "Nashville Predators",
+              "link" : "/api/v1/teams/18"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bridgestone Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020593/content"
+        }
+      }, {
+        "gamePk" : 2018020594,
+        "link" : "/api/v1/game/2018020594/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 17,
+              "name" : "Detroit Red Wings",
+              "link" : "/api/v1/teams/17"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 25,
+              "name" : "Dallas Stars",
+              "link" : "/api/v1/teams/25"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "American Airlines Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020594/content"
+        }
+      }, {
+        "gamePk" : 2018020595,
+        "link" : "/api/v1/game/2018020595/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 21,
+              "name" : "Colorado Avalanche",
+              "link" : "/api/v1/teams/21"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Pepsi Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020595/content"
+        }
+      }, {
+        "gamePk" : 2018020597,
+        "link" : "/api/v1/game/2018020597/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 24,
+              "name" : "Anaheim Ducks",
+              "link" : "/api/v1/teams/24"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Honda Center",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020597/content"
+        }
+      }, {
+        "gamePk" : 2018020596,
+        "link" : "/api/v1/game/2018020596/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-30T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Scotiabank Saddledome",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020596/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-30",
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020598,
+        "link" : "/api/v1/game/2018020598/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-31T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 53,
+              "name" : "Arizona Coyotes",
+              "link" : "/api/v1/teams/53"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Gila River Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020598/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    } ]
+  }
