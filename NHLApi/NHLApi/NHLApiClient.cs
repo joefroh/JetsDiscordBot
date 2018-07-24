@@ -191,7 +191,69 @@ namespace NHLApi
 
             return result;
         }
-        
+
+        public ScheduleData GetTodaysSchedule(int id)
+        {
+            var request = new RestRequest(String.Format("/api/v1/schedule?teamId={0}", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+
+        public ScheduleData GetSchedule(DateTime date)
+        {
+            var request = new RestRequest(String.Format("/api/v1/schedule?date={0}", DateToString(date)));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+
+        public ScheduleData GetSchedule(DateTime startDate, DateTime endDate)
+        {
+            var request = new RestRequest(String.Format("/api/v1/schedule?startDate={0}&endDate={1}", DateToString(startDate), DateToString(endDate)));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+
+        public ScheduleData GetSchedule(DateTime startDate, int teamId)
+        {
+            var request = new RestRequest(String.Format("/api/v1/schedule?date={0}&teamId={1}", DateToString(startDate), teamId));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+
+        public ScheduleData GetSchedule(DateTime startDate, DateTime endDate, int teamId)
+        {
+            var request = new RestRequest(String.Format("/api/v1/schedule?startDate={0}&endDate={1}&teamId={2}", DateToString(startDate), DateToString(endDate), teamId));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+
+        #endregion
+
+        #region Helper Private Methods
+        private string DateToString(DateTime date)
+        {
+            return date.ToString("yyyy-MM-dd");
+        }
         #endregion
     }
 }

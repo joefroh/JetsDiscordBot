@@ -1,0 +1,245 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "totalItems" : 4,
+    "totalEvents" : 0,
+    "totalGames" : 4,
+    "totalMatches" : 0,
+    "wait" : 10,
+    "dates" : [ {
+      "date" : "2018-12-20",
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020541,
+        "link" : "/api/v1/game/2018020541/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-21T03:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 28,
+              "name" : "San Jose Sharks",
+              "link" : "/api/v1/teams/28"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "SAP Center at San Jose",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020541/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-22",
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020558,
+        "link" : "/api/v1/game/2018020558/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-23T03:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 23,
+              "name" : "Vancouver Canucks",
+              "link" : "/api/v1/teams/23"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Rogers Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020558/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-27",
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020574,
+        "link" : "/api/v1/game/2018020574/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-28T01:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 20,
+              "name" : "Calgary Flames",
+              "link" : "/api/v1/teams/20"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bell MTS Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020574/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    }, {
+      "date" : "2018-12-29",
+      "totalItems" : 1,
+      "totalEvents" : 0,
+      "totalGames" : 1,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020584,
+        "link" : "/api/v1/game/2018020584/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2018-12-29T20:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 30,
+              "name" : "Minnesota Wild",
+              "link" : "/api/v1/teams/30"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 52,
+              "name" : "Winnipeg Jets",
+              "link" : "/api/v1/teams/52"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bell MTS Place",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020584/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    } ]
+  }
