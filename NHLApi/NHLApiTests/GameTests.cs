@@ -10,8 +10,6 @@ namespace NHLApiTests
     [TestClass]
     public class GameTests
     {
-        private NHLApiClient api = new NHLApiClient();
-
         [TestInitialize]
         public void TestInit()
         {
@@ -21,6 +19,8 @@ namespace NHLApiTests
         [TestMethod]
         public void GetLiveGameDetailTestBasic()
         {
+            NHLApiClient api = new NHLApiClient();
+
             // Load Expected result from file
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetLiveGameDetailResult.json");
             var jobj = JObject.Parse(testResponse);
