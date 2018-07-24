@@ -11,12 +11,16 @@ namespace NHLApiTests
     [TestClass]
     public class RosterTests
     {
-
-        private NHLApiClient api = new NHLApiClient();
+        [TestInitialize]
+        public void TestInit()
+        {
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new TestRestClientService());
+        }
 
         [TestMethod]
         public void GetRosterBasicTest()
         {
+            NHLApiClient api = new NHLApiClient();
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetCurrentRosterResult.json");
             var jobj = JObject.Parse(testResponse);
             var playerArray = (JArray)jobj["roster"];
@@ -29,6 +33,12 @@ namespace NHLApiTests
             {
                 Assert.AreEqual(expected[i], actual[i]);
             }
+        }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new RestClientService());
         }
 
     }
