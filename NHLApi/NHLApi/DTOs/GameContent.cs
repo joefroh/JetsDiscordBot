@@ -3,18 +3,22 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Franchise
+    // Note for this class, I have deliberately not implemented the full Editorial and Media content because I'm not using this.
+    // If you are consuming this library and this bugs you, feel free to open a PR doing this.
+
+    public class GameContent
     {
-        public int FranchiseId { get; set; }
-        public string TeamName { get; set; }
-        public string Link { get; set; }
+        public dynamic Editorial { get; set; }
+        public dynamic Media { get; set; }
+
+        public HighlightData Highlights { get; set; }
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Franchise);
+            return this.Equals(obj as GameContent);
         }
 
-        public bool Equals(Franchise p)
+        public bool Equals(GameContent p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))

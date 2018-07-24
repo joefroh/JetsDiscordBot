@@ -155,13 +155,24 @@ namespace NHLApi
             return result;
         }
 
-        public BoxScore GetBoxScore(int id)
+        public BoxScore GetGameBoxScore(int id)
         {
-             var request = new RestRequest(string.Format("/api/v1/game/{0}/boxscore", id));
+            var request = new RestRequest(string.Format("/api/v1/game/{0}/boxscore", id));
             var response = _restClient.Execute(request);
             var jobj = JObject.Parse(response.Content);
 
             var result = JsonConvert.DeserializeObject<BoxScore>(jobj.ToString());
+
+            return result;
+        }
+
+        public GameContent GetGameContent(int id)
+        {
+            var request = new RestRequest(string.Format("/api/v1/game/{0}/content", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<GameContent>(jobj.ToString());
 
             return result;
         }
