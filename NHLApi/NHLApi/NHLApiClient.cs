@@ -149,11 +149,23 @@ namespace NHLApi
             var request = new RestRequest(string.Format("/api/v1/game/{0}/feed/live", id));
             var response = _restClient.Execute(request);
             var jobj = JObject.Parse(response.Content);
-           
+
             var result = JsonConvert.DeserializeObject<GameDetail>(jobj.ToString());
 
             return result;
         }
+
+        public BoxScore GetBoxScore(int id)
+        {
+             var request = new RestRequest(string.Format("/api/v1/game/{0}/boxscore", id));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<BoxScore>(jobj.ToString());
+
+            return result;
+        }
+
         #endregion
     }
 }
