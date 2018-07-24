@@ -3,18 +3,35 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Franchise
+    public class ImageCutData
     {
-        public int FranchiseId { get; set; }
-        public string TeamName { get; set; }
-        public string Link { get; set; }
+        [JsonProperty("1136x640")]
+        public ImageDetail Size1136x640 { get; set; }
+        [JsonProperty("1024x576")]
+        public ImageDetail Size1024x576 { get; set; }
+        [JsonProperty("960x540")]
+        public ImageDetail Size960x540 { get; set; }
+        [JsonProperty("768x432")]
+        public ImageDetail Size768x432 { get; set; }
+        [JsonProperty("640x360")]
+        public ImageDetail Size640x360 { get; set; }
+        [JsonProperty("568x320")]
+        public ImageDetail Size568x320 { get; set; }
+        [JsonProperty("372x210")]
+        public ImageDetail Size372x210 { get; set; }
+        [JsonProperty("320x180")]
+        public ImageDetail Size320x180 { get; set; }
+        [JsonProperty("248x140")]
+        public ImageDetail Size248x140 { get; set; }
+        [JsonProperty("124x70")]
+        public ImageDetail Size124x70 { get; set; }
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Franchise);
+            return this.Equals(obj as ImageCutData);
         }
 
-        public bool Equals(Franchise p)
+        public bool Equals(ImageCutData p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))

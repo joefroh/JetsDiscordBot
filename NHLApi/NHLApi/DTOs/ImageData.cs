@@ -3,18 +3,18 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Franchise
+    public class ImageData
     {
-        public int FranchiseId { get; set; }
-        public string TeamName { get; set; }
-        public string Link { get; set; }
+        public string Title { get; set; }
+        public string AltText { get; set; }
+        public ImageCutData Cuts { get; set; }
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Franchise);
+            return this.Equals(obj as ImageData);
         }
 
-        public bool Equals(Franchise p)
+        public bool Equals(ImageData p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))

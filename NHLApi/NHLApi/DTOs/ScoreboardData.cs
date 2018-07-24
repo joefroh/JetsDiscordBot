@@ -1,20 +1,21 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Franchise
+    public class ScoreboardData
     {
-        public int FranchiseId { get; set; }
-        public string TeamName { get; set; }
-        public string Link { get; set; }
+        public string Title { get; set; }
+        public int TopicList { get; set; }
+        public List<MediaContent> Items { get; set; }
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Franchise);
+            return this.Equals(obj as ScoreboardData);
         }
 
-        public bool Equals(Franchise p)
+        public bool Equals(ScoreboardData p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))

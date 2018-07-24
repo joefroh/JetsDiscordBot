@@ -3,18 +3,19 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class Franchise
+    public class PlaybackData
     {
-        public int FranchiseId { get; set; }
-        public string TeamName { get; set; }
-        public string Link { get; set; }
+        public string Name { get; set; }
+        public string Width { get; set; } //Sadly there is a bug in the NHL api where they return the string null, instead of the value
+        public string Height { get; set; }
+        public string URL { get; set; }
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as Franchise);
+            return this.Equals(obj as PlaybackData);
         }
 
-        public bool Equals(Franchise p)
+        public bool Equals(PlaybackData p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))
