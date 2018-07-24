@@ -12,11 +12,16 @@ namespace NHLApiTests
     [TestClass]
     public class TeamTests
     {
-        private NHLApiClient api = new NHLApiClient();
+        [TestInitialize]
+        public void TestInit()
+        {
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new TestRestClientService());
+        }
 
         [TestMethod]
         public void GetTeamsBasicTest()
         {
+            NHLApiClient api = new NHLApiClient();
             // Load Expected result from file
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetTeamsResult.json");
             var jobj = JObject.Parse(testResponse);
@@ -37,6 +42,7 @@ namespace NHLApiTests
         [TestMethod]
         public void GetTeamBasicTest()
         {
+            NHLApiClient api = new NHLApiClient();
             // Load Expected result from file
             var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetTeamResult.json");
             var jobj = JObject.Parse(testResponse);
@@ -48,6 +54,30 @@ namespace NHLApiTests
 
             //Assert
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetNextGameTestBasic()
+        {
+            NHLApiClient api = new NHLApiClient();
+
+            var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetNextGameResult.json");
+            var jobj = JObject.Parse(testResponse);
+            var teamArray = (JArray)jobj["teams"];
+            var teamDetail = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
+            var expected = teamDetail.NextGameSchedule;
+
+            // Make API web call
+            NextGameSchedule actual = api.GetNextGame(52); // Jets
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            ClassLocator.Locator.Instance.RegisterInstance<IRestClientService>(new RestClientService());
         }
     }
 }

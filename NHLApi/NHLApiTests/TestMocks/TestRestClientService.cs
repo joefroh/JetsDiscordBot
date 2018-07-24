@@ -35,6 +35,12 @@ namespace NHLApiTests
                     return GenerateResponse(@"../../../TestAPIResponses/GetScheduleTeamDateResult.json");
                 case "/api/v1/schedule?startDate=2018-12-20&endDate=2018-12-30&teamId=52":
                     return GenerateResponse(@"../../../TestAPIResponses/GetScheduleTeamDateRangeResult.json");
+                case "/api/v1/teams/52?expand=team.schedule.next":
+                    return GenerateResponse(@"../../../TestAPIResponses/GetNextGameResult.json");
+                case "/api/v1/teams/52":
+                    return GenerateResponse("../../../TestAPIResponses/GetTeamResult.json");
+                case "/api/v1/teams":
+                    return GenerateResponse("../../../TestAPIResponses/GetTeamsResult.json");
                 default:
                     throw new NotImplementedException(String.Format("The test implementation does not exist for the resource: {0}", req.Resource));
             }
