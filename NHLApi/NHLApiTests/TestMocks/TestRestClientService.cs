@@ -23,6 +23,8 @@ namespace NHLApiTests
                     return GenerateResponse(@"../../../TestApiResponses/GetGameBoxScoreResult.json");
                 case "/api/v1/game/2017030325/content":
                     return GenerateResponse(@"../../../TestAPIResponses/GetGameContentResult.json");
+                case "/api/v1/schedule":
+                    return GenerateResponse(@"../../../TestApiResponses/GetTodaysScheduleResult.json");
                 default:
                     throw new NotImplementedException(String.Format("The test implementation does not exist for the resource: {0}", req.Resource));
             }

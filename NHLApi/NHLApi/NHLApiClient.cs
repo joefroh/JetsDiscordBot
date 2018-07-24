@@ -20,7 +20,7 @@ namespace NHLApi
 
         #endregion
 
-        #region Public API
+        #region Info APIs
 
         /// <summary>
         /// Gets all the active teams for the league.
@@ -177,6 +177,21 @@ namespace NHLApi
             return result;
         }
 
+        #endregion
+
+        #region Schedule APIs
+
+        public ScheduleData GetTodaysSchedule()
+        {
+            var request = new RestRequest("/api/v1/schedule");
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+
+            var result = JsonConvert.DeserializeObject<ScheduleData>(jobj.ToString());
+
+            return result;
+        }
+        
         #endregion
     }
 }
