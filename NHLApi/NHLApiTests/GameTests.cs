@@ -32,5 +32,22 @@ namespace NHLApiTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void GetBoxScoreTestBasic()
+        {
+            NHLApiClient api = new NHLApiClient();
+
+            // Load Expected result from file
+            var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetBoxScoreResult.json");
+            var jobj = JObject.Parse(testResponse);
+            var expected = JsonConvert.DeserializeObject<BoxScore>(jobj.ToString());
+
+            // Make API web call
+            BoxScore actual = api.GetBoxScore(2017030325); //Jets vs Vegas WCF Game 5 2018
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
