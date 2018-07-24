@@ -1,0 +1,4436 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "teams" : {
+      "away" : {
+        "team" : {
+          "id" : 54,
+          "name" : "Vegas Golden Knights",
+          "link" : "/api/v1/teams/54"
+        },
+        "teamStats" : {
+          "teamSkaterStats" : {
+            "goals" : 2,
+            "pim" : 8,
+            "shots" : 32,
+            "powerPlayPercentage" : "0.0",
+            "powerPlayGoals" : 0.0,
+            "powerPlayOpportunities" : 2.0,
+            "faceOffWinPercentage" : "50.0",
+            "blocked" : 9,
+            "takeaways" : 3,
+            "giveaways" : 17,
+            "hits" : 17
+          }
+        },
+        "players" : {
+          "ID8480073" : {
+            "person" : {
+              "id" : 8480073,
+              "fullName" : "Erik Brannstrom",
+              "link" : "/api/v1/people/8480073",
+              "firstName" : "Erik",
+              "lastName" : "Brannstrom",
+              "birthDate" : "1999-09-02",
+              "currentAge" : 18,
+              "birthCity" : "Eksjo",
+              "birthCountry" : "SWE",
+              "nationality" : "SWE",
+              "height" : "5' 10\"",
+              "weight" : 173,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8471817" : {
+            "person" : {
+              "id" : 8471817,
+              "fullName" : "Ryan Reaves",
+              "link" : "/api/v1/people/8471817",
+              "firstName" : "Ryan",
+              "lastName" : "Reaves",
+              "primaryNumber" : "75",
+              "birthDate" : "1987-01-20",
+              "currentAge" : 31,
+              "birthCity" : "Winnipeg",
+              "birthStateProvince" : "MB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 1\"",
+              "weight" : 225,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "75",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "7:30",
+                "assists" : 0,
+                "goals" : 1,
+                "shots" : 1,
+                "hits" : 2,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "7:30",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8475715" : {
+            "person" : {
+              "id" : 8475715,
+              "fullName" : "Oscar Lindberg",
+              "link" : "/api/v1/people/8475715",
+              "firstName" : "Oscar",
+              "lastName" : "Lindberg",
+              "primaryNumber" : "24",
+              "birthDate" : "1991-10-29",
+              "currentAge" : 26,
+              "birthCity" : "Skellefteå",
+              "birthCountry" : "SWE",
+              "nationality" : "SWE",
+              "height" : "6' 1\"",
+              "weight" : 202,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "24",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8475236" : {
+            "person" : {
+              "id" : 8475236,
+              "fullName" : "Cody Eakin",
+              "link" : "/api/v1/people/8475236",
+              "firstName" : "Cody",
+              "lastName" : "Eakin",
+              "primaryNumber" : "21",
+              "birthDate" : "1991-05-24",
+              "currentAge" : 27,
+              "birthCity" : "Winnipeg",
+              "birthStateProvince" : "MB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 190,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "21",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "15:13",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 3,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 54.55,
+                "faceOffWins" : 6,
+                "faceoffTaken" : 11,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "13:11",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "2:02"
+              }
+            }
+          },
+          "ID8477931" : {
+            "person" : {
+              "id" : 8477931,
+              "fullName" : "Tomas Nosek",
+              "link" : "/api/v1/people/8477931",
+              "firstName" : "Tomas",
+              "lastName" : "Nosek",
+              "primaryNumber" : "92",
+              "birthDate" : "1992-09-01",
+              "currentAge" : 25,
+              "birthCity" : "Pardubice",
+              "birthCountry" : "CZE",
+              "nationality" : "CZE",
+              "height" : "6' 3\"",
+              "weight" : 210,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "92",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "9:53",
+                "assists" : 1,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 3,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "8:42",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "1:11"
+              }
+            }
+          },
+          "ID8476525" : {
+            "person" : {
+              "id" : 8476525,
+              "fullName" : "Colin Miller",
+              "link" : "/api/v1/people/8476525",
+              "firstName" : "Colin",
+              "lastName" : "Miller",
+              "primaryNumber" : "6",
+              "birthDate" : "1992-10-29",
+              "currentAge" : 25,
+              "birthCity" : "Sault Ste. Marie",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 1\"",
+              "weight" : 196,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "6",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "13:40",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 2,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "11:13",
+                "powerPlayTimeOnIce" : "2:27",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8476448" : {
+            "person" : {
+              "id" : 8476448,
+              "fullName" : "William Karlsson",
+              "link" : "/api/v1/people/8476448",
+              "firstName" : "William",
+              "lastName" : "Karlsson",
+              "primaryNumber" : "71",
+              "birthDate" : "1993-01-08",
+              "currentAge" : 25,
+              "birthCity" : "Marsta",
+              "birthCountry" : "SWE",
+              "nationality" : "SWE",
+              "height" : "6' 1\"",
+              "weight" : 189,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "71",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "20:15",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 35.71,
+                "faceOffWins" : 5,
+                "faceoffTaken" : 14,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "15:02",
+                "powerPlayTimeOnIce" : "1:33",
+                "shortHandedTimeOnIce" : "3:40"
+              }
+            }
+          },
+          "ID8476987" : {
+            "person" : {
+              "id" : 8476987,
+              "fullName" : "Jake Bischoff",
+              "link" : "/api/v1/people/8476987",
+              "firstName" : "Jake",
+              "lastName" : "Bischoff",
+              "primaryNumber" : "45",
+              "birthDate" : "1994-07-25",
+              "currentAge" : 23,
+              "birthCity" : "Cambridge",
+              "birthStateProvince" : "MN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 194,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "45",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8475188" : {
+            "person" : {
+              "id" : 8475188,
+              "fullName" : "Brayden McNabb",
+              "link" : "/api/v1/people/8475188",
+              "firstName" : "Brayden",
+              "lastName" : "McNabb",
+              "primaryNumber" : "3",
+              "birthDate" : "1991-01-21",
+              "currentAge" : 27,
+              "birthCity" : "Davidson",
+              "birthStateProvince" : "SK",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 4\"",
+              "weight" : 212,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "3",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "23:12",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 2,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 2,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "18:03",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "5:09"
+              }
+            }
+          },
+          "ID8475287" : {
+            "person" : {
+              "id" : 8475287,
+              "fullName" : "Erik Haula",
+              "link" : "/api/v1/people/8475287",
+              "firstName" : "Erik",
+              "lastName" : "Haula",
+              "primaryNumber" : "56",
+              "birthDate" : "1991-03-23",
+              "currentAge" : 27,
+              "birthCity" : "Pori",
+              "birthCountry" : "FIN",
+              "nationality" : "FIN",
+              "height" : "6' 0\"",
+              "weight" : 193,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "56",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "14:06",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 3,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 45.45,
+                "faceOffWins" : 5,
+                "faceoffTaken" : 11,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "11:30",
+                "powerPlayTimeOnIce" : "2:27",
+                "shortHandedTimeOnIce" : "0:09"
+              }
+            }
+          },
+          "ID8478434" : {
+            "person" : {
+              "id" : 8478434,
+              "fullName" : "Keegan Kolesar",
+              "link" : "/api/v1/people/8478434",
+              "firstName" : "Keegan",
+              "lastName" : "Kolesar",
+              "primaryNumber" : "55",
+              "birthDate" : "1997-04-08",
+              "currentAge" : 21,
+              "birthCity" : "Brandon",
+              "birthStateProvince" : "MB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 227,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "55",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476852" : {
+            "person" : {
+              "id" : 8476852,
+              "fullName" : "Griffin Reinhart",
+              "link" : "/api/v1/people/8476852",
+              "firstName" : "Griffin",
+              "lastName" : "Reinhart",
+              "primaryNumber" : "8",
+              "birthDate" : "1994-01-24",
+              "currentAge" : 24,
+              "birthCity" : "North Vancouver",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 4\"",
+              "weight" : 212,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "8",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477220" : {
+            "person" : {
+              "id" : 8477220,
+              "fullName" : "Nate Schmidt",
+              "link" : "/api/v1/people/8477220",
+              "firstName" : "Nate",
+              "lastName" : "Schmidt",
+              "primaryNumber" : "88",
+              "birthDate" : "1991-07-16",
+              "currentAge" : 27,
+              "birthCity" : "St. Cloud",
+              "birthStateProvince" : "MN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 194,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "88",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "23:55",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 4,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "18:44",
+                "powerPlayTimeOnIce" : "2:20",
+                "shortHandedTimeOnIce" : "2:51"
+              }
+            }
+          },
+          "ID8479980" : {
+            "person" : {
+              "id" : 8479980,
+              "fullName" : "Nicolas Hague",
+              "link" : "/api/v1/people/8479980",
+              "firstName" : "Nicolas",
+              "lastName" : "Hague",
+              "birthDate" : "1998-12-05",
+              "currentAge" : 19,
+              "birthCity" : "Kitchener",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 6\"",
+              "weight" : 215,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476870" : {
+            "person" : {
+              "id" : 8476870,
+              "fullName" : "Stefan Matteau",
+              "link" : "/api/v1/people/8476870",
+              "firstName" : "Stefan",
+              "lastName" : "Matteau",
+              "primaryNumber" : "25",
+              "birthDate" : "1994-02-23",
+              "currentAge" : 24,
+              "birthCity" : "Chicago",
+              "birthStateProvince" : "IL",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 2\"",
+              "weight" : 220,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "25",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8480263" : {
+            "person" : {
+              "id" : 8480263,
+              "fullName" : "Dylan Ferguson",
+              "link" : "/api/v1/people/8480263",
+              "firstName" : "Dylan",
+              "lastName" : "Ferguson",
+              "primaryNumber" : "1",
+              "birthDate" : "1998-09-20",
+              "currentAge" : 19,
+              "birthCity" : "Lantzville",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 1\"",
+              "weight" : 189,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "1",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476391" : {
+            "person" : {
+              "id" : 8476391,
+              "fullName" : "TJ Tynan",
+              "link" : "/api/v1/people/8476391",
+              "firstName" : "TJ",
+              "lastName" : "Tynan",
+              "primaryNumber" : "68",
+              "birthDate" : "1992-02-25",
+              "currentAge" : 26,
+              "birthCity" : "Orland Park",
+              "birthStateProvince" : "IL",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "5' 8\"",
+              "weight" : 165,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "68",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8468674" : {
+            "person" : {
+              "id" : 8468674,
+              "fullName" : "Deryk Engelland",
+              "link" : "/api/v1/people/8468674",
+              "firstName" : "Deryk",
+              "lastName" : "Engelland",
+              "primaryNumber" : "5",
+              "birthDate" : "1982-04-03",
+              "currentAge" : 36,
+              "birthCity" : "Edmonton",
+              "birthStateProvince" : "AB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 214,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "5",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "23:20",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 3,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 2,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "18:25",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "4:55"
+              }
+            }
+          },
+          "ID8471707" : {
+            "person" : {
+              "id" : 8471707,
+              "fullName" : "James Neal",
+              "link" : "/api/v1/people/8471707",
+              "firstName" : "James",
+              "lastName" : "Neal",
+              "primaryNumber" : "18",
+              "birthDate" : "1987-09-03",
+              "currentAge" : 30,
+              "birthCity" : "Whitby",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 221,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "18",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "14:39",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "12:12",
+                "powerPlayTimeOnIce" : "2:27",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8476539" : {
+            "person" : {
+              "id" : 8476539,
+              "fullName" : "Jonathan Marchessault",
+              "link" : "/api/v1/people/8476539",
+              "firstName" : "Jonathan",
+              "lastName" : "Marchessault",
+              "primaryNumber" : "81",
+              "birthDate" : "1990-12-27",
+              "currentAge" : 27,
+              "birthCity" : "Cap-Rouge",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "5' 9\"",
+              "weight" : 174,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "81",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "17:19",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 6,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffPct" : 33.33,
+                "faceOffWins" : 1,
+                "faceoffTaken" : 3,
+                "takeaways" : 1,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "15:14",
+                "powerPlayTimeOnIce" : "1:33",
+                "shortHandedTimeOnIce" : "0:32"
+              }
+            }
+          },
+          "ID8477949" : {
+            "person" : {
+              "id" : 8477949,
+              "fullName" : "Alex Tuch",
+              "link" : "/api/v1/people/8477949",
+              "firstName" : "Alex",
+              "lastName" : "Tuch",
+              "primaryNumber" : "89",
+              "birthDate" : "1996-05-10",
+              "currentAge" : 22,
+              "birthCity" : "Syracuse",
+              "birthStateProvince" : "NY",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 4\"",
+              "weight" : 222,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "89",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "13:20",
+                "assists" : 0,
+                "goals" : 1,
+                "shots" : 4,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffPct" : 50.0,
+                "faceOffWins" : 2,
+                "faceoffTaken" : 4,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "11:47",
+                "powerPlayTimeOnIce" : "1:33",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8470594" : {
+            "person" : {
+              "id" : 8470594,
+              "fullName" : "Marc-Andre Fleury",
+              "link" : "/api/v1/people/8470594",
+              "firstName" : "Marc-Andre",
+              "lastName" : "Fleury",
+              "primaryNumber" : "29",
+              "birthDate" : "1984-11-28",
+              "currentAge" : 33,
+              "birthCity" : "Sorel",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 180,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "29",
+            "position" : {
+              "code" : "G",
+              "name" : "Goalie",
+              "type" : "Goalie",
+              "abbreviation" : "G"
+            },
+            "stats" : {
+              "goalieStats" : {
+                "timeOnIce" : "59:57",
+                "assists" : 0,
+                "goals" : 0,
+                "pim" : 0,
+                "shots" : 32,
+                "saves" : 31,
+                "powerPlaySaves" : 6,
+                "shortHandedSaves" : 0,
+                "evenSaves" : 25,
+                "shortHandedShotsAgainst" : 0,
+                "evenShotsAgainst" : 26,
+                "powerPlayShotsAgainst" : 6,
+                "decision" : "W",
+                "savePercentage" : 96.875,
+                "powerPlaySavePercentage" : 100.0,
+                "evenStrengthSavePercentage" : 96.15384615384616
+              }
+            }
+          },
+          "ID8476617" : {
+            "person" : {
+              "id" : 8476617,
+              "fullName" : "Tomas Hyka",
+              "link" : "/api/v1/people/8476617",
+              "firstName" : "Tomas",
+              "lastName" : "Hyka",
+              "primaryNumber" : "38",
+              "birthDate" : "1993-03-23",
+              "currentAge" : 25,
+              "birthCity" : "Mlada Boleslav",
+              "birthCountry" : "CZE",
+              "nationality" : "CZE",
+              "height" : "5' 11\"",
+              "weight" : 160,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "38",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477447" : {
+            "person" : {
+              "id" : 8477447,
+              "fullName" : "Shea Theodore",
+              "link" : "/api/v1/people/8477447",
+              "firstName" : "Shea",
+              "lastName" : "Theodore",
+              "primaryNumber" : "27",
+              "birthDate" : "1995-08-03",
+              "currentAge" : 22,
+              "birthCity" : "Langley",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 195,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "27",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "18:14",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 3,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "16:34",
+                "powerPlayTimeOnIce" : "1:40",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8475204" : {
+            "person" : {
+              "id" : 8475204,
+              "fullName" : "Brandon Pirri",
+              "link" : "/api/v1/people/8475204",
+              "firstName" : "Brandon",
+              "lastName" : "Pirri",
+              "primaryNumber" : "73",
+              "birthDate" : "1991-04-10",
+              "currentAge" : 27,
+              "birthCity" : "Toronto",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 186,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "73",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476876" : {
+            "person" : {
+              "id" : 8476876,
+              "fullName" : "Malcolm Subban",
+              "link" : "/api/v1/people/8476876",
+              "firstName" : "Malcolm",
+              "lastName" : "Subban",
+              "primaryNumber" : "30",
+              "birthDate" : "1993-12-21",
+              "currentAge" : 24,
+              "birthCity" : "Toronto",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 200,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "30",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477846" : {
+            "person" : {
+              "id" : 8477846,
+              "fullName" : "Ryan Carpenter",
+              "link" : "/api/v1/people/8477846",
+              "firstName" : "Ryan",
+              "lastName" : "Carpenter",
+              "primaryNumber" : "40",
+              "birthDate" : "1991-01-18",
+              "currentAge" : 27,
+              "birthCity" : "Oviedo",
+              "birthStateProvince" : "FL",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 0\"",
+              "weight" : 200,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "40",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "15:18",
+                "assists" : 1,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 66.67,
+                "faceOffWins" : 4,
+                "faceoffTaken" : 6,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "12:30",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "2:48"
+              }
+            }
+          },
+          "ID8474579" : {
+            "person" : {
+              "id" : 8474579,
+              "fullName" : "Luca Sbisa",
+              "link" : "/api/v1/people/8474579",
+              "firstName" : "Luca",
+              "lastName" : "Sbisa",
+              "primaryNumber" : "47",
+              "birthDate" : "1990-01-30",
+              "currentAge" : 28,
+              "birthCity" : "Ozieri",
+              "birthCountry" : "ITA",
+              "nationality" : "CHE",
+              "height" : "6' 2\"",
+              "weight" : 209,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "47",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "16:28",
+                "assists" : 1,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 2,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "13:23",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "3:05"
+              }
+            }
+          },
+          "ID8476779" : {
+            "person" : {
+              "id" : 8476779,
+              "fullName" : "Brad Hunt",
+              "link" : "/api/v1/people/8476779",
+              "firstName" : "Brad",
+              "lastName" : "Hunt",
+              "primaryNumber" : "77",
+              "birthDate" : "1988-08-24",
+              "currentAge" : 29,
+              "birthCity" : "Maple Ridge",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "5' 9\"",
+              "weight" : 187,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "77",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8480018" : {
+            "person" : {
+              "id" : 8480018,
+              "fullName" : "Nick Suzuki",
+              "link" : "/api/v1/people/8480018",
+              "firstName" : "Nick",
+              "lastName" : "Suzuki",
+              "birthDate" : "1999-08-10",
+              "currentAge" : 18,
+              "birthCity" : "London",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "5' 11\"",
+              "weight" : 183,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476861" : {
+            "person" : {
+              "id" : 8476861,
+              "fullName" : "Oscar Dansk",
+              "link" : "/api/v1/people/8476861",
+              "firstName" : "Oscar",
+              "lastName" : "Dansk",
+              "primaryNumber" : "35",
+              "birthDate" : "1994-02-28",
+              "currentAge" : 24,
+              "birthCity" : "Stockholm",
+              "birthCountry" : "SWE",
+              "nationality" : "SWE",
+              "height" : "6' 3\"",
+              "weight" : 195,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "35",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8475750" : {
+            "person" : {
+              "id" : 8475750,
+              "fullName" : "Jon Merrill",
+              "link" : "/api/v1/people/8475750",
+              "firstName" : "Jon",
+              "lastName" : "Merrill",
+              "primaryNumber" : "15",
+              "birthDate" : "1992-02-03",
+              "currentAge" : 26,
+              "birthCity" : "Oklahoma City",
+              "birthStateProvince" : "OK",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 3\"",
+              "weight" : 205,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "15",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477930" : {
+            "person" : {
+              "id" : 8477930,
+              "fullName" : "Pierre-Edouard Bellemare",
+              "link" : "/api/v1/people/8477930",
+              "firstName" : "Pierre-Edouard",
+              "lastName" : "Bellemare",
+              "primaryNumber" : "41",
+              "birthDate" : "1985-03-06",
+              "currentAge" : 33,
+              "birthCity" : "Le Blanc-Mesnil",
+              "birthCountry" : "FRA",
+              "nationality" : "FRA",
+              "height" : "6' 0\"",
+              "weight" : 198,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "41",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "12:00",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 66.67,
+                "faceOffWins" : 2,
+                "faceoffTaken" : 3,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "9:51",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "2:09"
+              }
+            }
+          },
+          "ID8477478" : {
+            "person" : {
+              "id" : 8477478,
+              "fullName" : "William Carrier",
+              "link" : "/api/v1/people/8477478",
+              "firstName" : "William",
+              "lastName" : "Carrier",
+              "primaryNumber" : "28",
+              "birthDate" : "1994-12-20",
+              "currentAge" : 23,
+              "birthCity" : "LaSalle",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 212,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "28",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8474520" : {
+            "person" : {
+              "id" : 8474520,
+              "fullName" : "Jason Garrison",
+              "link" : "/api/v1/people/8474520",
+              "firstName" : "Jason",
+              "lastName" : "Garrison",
+              "primaryNumber" : "7",
+              "birthDate" : "1984-11-13",
+              "currentAge" : 33,
+              "birthCity" : "White Rock",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 1\"",
+              "weight" : 218,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "7",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8479996" : {
+            "person" : {
+              "id" : 8479996,
+              "fullName" : "Cody Glass",
+              "link" : "/api/v1/people/8479996",
+              "firstName" : "Cody",
+              "lastName" : "Glass",
+              "birthDate" : "1999-04-01",
+              "currentAge" : 19,
+              "birthCity" : "Winnipeg",
+              "birthStateProvince" : "MB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 178,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8474102" : {
+            "person" : {
+              "id" : 8474102,
+              "fullName" : "David Perron",
+              "link" : "/api/v1/people/8474102",
+              "firstName" : "David",
+              "lastName" : "Perron",
+              "primaryNumber" : "57",
+              "birthDate" : "1988-05-28",
+              "currentAge" : 30,
+              "birthCity" : "Sherbrooke",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 200,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "57",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "13:22",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 100.0,
+                "faceOffWins" : 2,
+                "faceoffTaken" : 2,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "10:55",
+                "powerPlayTimeOnIce" : "2:27",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8475191" : {
+            "person" : {
+              "id" : 8475191,
+              "fullName" : "Reilly Smith",
+              "link" : "/api/v1/people/8475191",
+              "firstName" : "Reilly",
+              "lastName" : "Smith",
+              "primaryNumber" : "19",
+              "birthDate" : "1991-04-01",
+              "currentAge" : 27,
+              "birthCity" : "Toronto",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 185,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "19",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "20:19",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 2,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "15:17",
+                "powerPlayTimeOnIce" : "1:33",
+                "shortHandedTimeOnIce" : "3:29"
+              }
+            }
+          },
+          "ID8475193" : {
+            "person" : {
+              "id" : 8475193,
+              "fullName" : "Tomas Tatar",
+              "link" : "/api/v1/people/8475193",
+              "firstName" : "Tomas",
+              "lastName" : "Tatar",
+              "primaryNumber" : "90",
+              "birthDate" : "1990-12-01",
+              "currentAge" : 27,
+              "birthCity" : "Ilava",
+              "birthCountry" : "SVK",
+              "nationality" : "SVK",
+              "height" : "5' 10\"",
+              "weight" : 185,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 54,
+                "name" : "Vegas Golden Knights",
+                "link" : "/api/v1/teams/54"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "90",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          }
+        },
+        "goalies" : [ 8470594 ],
+        "skaters" : [ 8475188, 8468674, 8476525, 8471707, 8475191, 8475236, 8477447, 8477846, 8477930, 8474579, 8475287, 8474102, 8476448, 8471817, 8476539, 8477220, 8477949, 8477931, 8476987, 8480073, 8477478, 8476861, 8480263, 8474520, 8479996, 8479980, 8476779, 8476617, 8478434, 8475715, 8476870, 8475750, 8475204, 8476852, 8476876, 8480018, 8475193, 8476391 ],
+        "onIce" : [ 8468674, 8470594, 8475188, 8476448, 8476539, 8477930 ],
+        "onIcePlus" : [ {
+          "playerId" : 8468674,
+          "shiftDuration" : 66,
+          "stamina" : 33
+        }, {
+          "playerId" : 8470594,
+          "shiftDuration" : 478,
+          "stamina" : 33
+        }, {
+          "playerId" : 8475188,
+          "shiftDuration" : 140,
+          "stamina" : 33
+        }, {
+          "playerId" : 8476448,
+          "shiftDuration" : 16,
+          "stamina" : 100
+        }, {
+          "playerId" : 8476539,
+          "shiftDuration" : 16,
+          "stamina" : 100
+        }, {
+          "playerId" : 8477930,
+          "shiftDuration" : 66,
+          "stamina" : 33
+        } ],
+        "scratches" : [ 8476987, 8480073, 8477478, 8476861, 8480263, 8474520, 8479996, 8479980, 8476779, 8476617, 8478434, 8475715, 8476870, 8475750, 8475204, 8476852, 8476876, 8480018, 8475193, 8476391 ],
+        "penaltyBox" : [ ],
+        "coaches" : [ {
+          "person" : {
+            "fullName" : "Gerard Gallant",
+            "link" : "/api/v1/people/null"
+          },
+          "position" : {
+            "code" : "HC",
+            "name" : "Head Coach",
+            "type" : "Head Coach",
+            "abbreviation" : "Head Coach"
+          }
+        } ]
+      },
+      "home" : {
+        "team" : {
+          "id" : 52,
+          "name" : "Winnipeg Jets",
+          "link" : "/api/v1/teams/52"
+        },
+        "teamStats" : {
+          "teamSkaterStats" : {
+            "goals" : 1,
+            "pim" : 4,
+            "shots" : 32,
+            "powerPlayPercentage" : "0.0",
+            "powerPlayGoals" : 0.0,
+            "powerPlayOpportunities" : 4.0,
+            "faceOffWinPercentage" : "50.0",
+            "blocked" : 15,
+            "takeaways" : 9,
+            "giveaways" : 11,
+            "hits" : 18
+          }
+        },
+        "players" : {
+          "ID8473618" : {
+            "person" : {
+              "id" : 8473618,
+              "fullName" : "Mathieu Perreault",
+              "link" : "/api/v1/people/8473618",
+              "firstName" : "Mathieu",
+              "lastName" : "Perreault",
+              "primaryNumber" : "85",
+              "birthDate" : "1988-01-05",
+              "currentAge" : 30,
+              "birthCity" : "Drummondville",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "5' 10\"",
+              "weight" : 188,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "85",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "13:43",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 3,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "10:36",
+                "powerPlayTimeOnIce" : "3:07",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8471218" : {
+            "person" : {
+              "id" : 8471218,
+              "fullName" : "Blake Wheeler",
+              "link" : "/api/v1/people/8471218",
+              "firstName" : "Blake",
+              "lastName" : "Wheeler",
+              "primaryNumber" : "26",
+              "birthDate" : "1986-08-31",
+              "currentAge" : 31,
+              "birthCity" : "Plymouth",
+              "birthStateProvince" : "MN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 5\"",
+              "weight" : 225,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : true,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "26",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "23:13",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 5,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "16:23",
+                "powerPlayTimeOnIce" : "5:25",
+                "shortHandedTimeOnIce" : "1:25"
+              }
+            }
+          },
+          "ID8470828" : {
+            "person" : {
+              "id" : 8470828,
+              "fullName" : "Toby Enstrom",
+              "link" : "/api/v1/people/8470828",
+              "firstName" : "Toby",
+              "lastName" : "Enstrom",
+              "primaryNumber" : "39",
+              "birthDate" : "1984-11-05",
+              "currentAge" : 33,
+              "birthCity" : "Nordingra",
+              "birthCountry" : "SWE",
+              "nationality" : "SWE",
+              "height" : "5' 10\"",
+              "weight" : 180,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "39",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476945" : {
+            "person" : {
+              "id" : 8476945,
+              "fullName" : "Connor Hellebuyck",
+              "link" : "/api/v1/people/8476945",
+              "firstName" : "Connor",
+              "lastName" : "Hellebuyck",
+              "primaryNumber" : "37",
+              "birthDate" : "1993-05-19",
+              "currentAge" : 25,
+              "birthCity" : "Commerce",
+              "birthStateProvince" : "MI",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 4\"",
+              "weight" : 207,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "37",
+            "position" : {
+              "code" : "G",
+              "name" : "Goalie",
+              "type" : "Goalie",
+              "abbreviation" : "G"
+            },
+            "stats" : {
+              "goalieStats" : {
+                "timeOnIce" : "58:28",
+                "assists" : 0,
+                "goals" : 0,
+                "pim" : 0,
+                "shots" : 32,
+                "saves" : 30,
+                "powerPlaySaves" : 1,
+                "shortHandedSaves" : 2,
+                "evenSaves" : 27,
+                "shortHandedShotsAgainst" : 2,
+                "evenShotsAgainst" : 29,
+                "powerPlayShotsAgainst" : 1,
+                "decision" : "L",
+                "savePercentage" : 93.75,
+                "powerPlaySavePercentage" : 100.0,
+                "shortHandedSavePercentage" : 100.0,
+                "evenStrengthSavePercentage" : 93.10344827586206
+              }
+            }
+          },
+          "ID8473412" : {
+            "person" : {
+              "id" : 8473412,
+              "fullName" : "Bryan Little",
+              "link" : "/api/v1/people/8473412",
+              "firstName" : "Bryan",
+              "lastName" : "Little",
+              "primaryNumber" : "18",
+              "birthDate" : "1987-11-12",
+              "currentAge" : 30,
+              "birthCity" : "Edmonton",
+              "birthStateProvince" : "AB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 191,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "18",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "17:12",
+                "assists" : 1,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 69.23,
+                "faceOffWins" : 9,
+                "faceoffTaken" : 13,
+                "takeaways" : 2,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "13:27",
+                "powerPlayTimeOnIce" : "2:35",
+                "shortHandedTimeOnIce" : "1:10"
+              }
+            }
+          },
+          "ID8475815" : {
+            "person" : {
+              "id" : 8475815,
+              "fullName" : "Julian Melchiori",
+              "link" : "/api/v1/people/8475815",
+              "firstName" : "Julian",
+              "lastName" : "Melchiori",
+              "primaryNumber" : "71",
+              "birthDate" : "1991-12-06",
+              "currentAge" : 26,
+              "birthCity" : "Richmond Hill",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 5\"",
+              "weight" : 214,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "71",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476469" : {
+            "person" : {
+              "id" : 8476469,
+              "fullName" : "Joel Armia",
+              "link" : "/api/v1/people/8476469",
+              "firstName" : "Joel",
+              "lastName" : "Armia",
+              "primaryNumber" : "40",
+              "birthDate" : "1993-05-31",
+              "currentAge" : 25,
+              "birthCity" : "Pori",
+              "birthCountry" : "FIN",
+              "nationality" : "FIN",
+              "height" : "6' 3\"",
+              "weight" : 205,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "40",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "6:38",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "5:28",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "1:10"
+              }
+            }
+          },
+          "ID8477359" : {
+            "person" : {
+              "id" : 8477359,
+              "fullName" : "Tucker Poolman",
+              "link" : "/api/v1/people/8477359",
+              "firstName" : "Tucker",
+              "lastName" : "Poolman",
+              "primaryNumber" : "3",
+              "birthDate" : "1993-06-08",
+              "currentAge" : 25,
+              "birthCity" : "Dubuque",
+              "birthStateProvince" : "IA",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 2\"",
+              "weight" : 199,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "3",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8479339" : {
+            "person" : {
+              "id" : 8479339,
+              "fullName" : "Patrik Laine",
+              "link" : "/api/v1/people/8479339",
+              "firstName" : "Patrik",
+              "lastName" : "Laine",
+              "primaryNumber" : "29",
+              "birthDate" : "1998-04-19",
+              "currentAge" : 20,
+              "birthCity" : "Tampere",
+              "birthCountry" : "FIN",
+              "nationality" : "FIN",
+              "height" : "6' 5\"",
+              "weight" : 206,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "29",
+            "position" : {
+              "code" : "R",
+              "name" : "Right Wing",
+              "type" : "Forward",
+              "abbreviation" : "RW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "19:23",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "14:26",
+                "powerPlayTimeOnIce" : "4:57",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8476476" : {
+            "person" : {
+              "id" : 8476476,
+              "fullName" : "Joe Morrow",
+              "link" : "/api/v1/people/8476476",
+              "firstName" : "Joe",
+              "lastName" : "Morrow",
+              "primaryNumber" : "70",
+              "birthDate" : "1992-12-09",
+              "currentAge" : 25,
+              "birthCity" : "Edmonton",
+              "birthStateProvince" : "AB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 196,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "70",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "16:51",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 3,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "16:51",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8478458" : {
+            "person" : {
+              "id" : 8478458,
+              "fullName" : "Jack Roslovic",
+              "link" : "/api/v1/people/8478458",
+              "firstName" : "Jack",
+              "lastName" : "Roslovic",
+              "primaryNumber" : "52",
+              "birthDate" : "1997-01-29",
+              "currentAge" : 21,
+              "birthCity" : "Columbus",
+              "birthStateProvince" : "OH",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 187,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "52",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "10:54",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 2,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 100.0,
+                "faceOffWins" : 1,
+                "faceoffTaken" : 1,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 1,
+                "evenTimeOnIce" : "10:54",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8474574" : {
+            "person" : {
+              "id" : 8474574,
+              "fullName" : "Tyler Myers",
+              "link" : "/api/v1/people/8474574",
+              "firstName" : "Tyler",
+              "lastName" : "Myers",
+              "primaryNumber" : "57",
+              "birthDate" : "1990-02-01",
+              "currentAge" : 28,
+              "birthCity" : "Houston",
+              "birthStateProvince" : "TX",
+              "birthCountry" : "USA",
+              "nationality" : "CAN",
+              "height" : "6' 8\"",
+              "weight" : 229,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "57",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "17:55",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "14:24",
+                "powerPlayTimeOnIce" : "2:07",
+                "shortHandedTimeOnIce" : "1:24"
+              }
+            }
+          },
+          "ID8477940" : {
+            "person" : {
+              "id" : 8477940,
+              "fullName" : "Nikolaj Ehlers",
+              "link" : "/api/v1/people/8477940",
+              "firstName" : "Nikolaj",
+              "lastName" : "Ehlers",
+              "primaryNumber" : "27",
+              "birthDate" : "1996-02-14",
+              "currentAge" : 22,
+              "birthCity" : "Aalborg",
+              "birthCountry" : "DNK",
+              "nationality" : "DNK",
+              "height" : "6' 0\"",
+              "weight" : 172,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "27",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "16:49",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 2,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "13:46",
+                "powerPlayTimeOnIce" : "3:03",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8477962" : {
+            "person" : {
+              "id" : 8477962,
+              "fullName" : "Brendan Lemieux",
+              "link" : "/api/v1/people/8477962",
+              "firstName" : "Brendan",
+              "lastName" : "Lemieux",
+              "primaryNumber" : "48",
+              "birthDate" : "1996-03-15",
+              "currentAge" : 22,
+              "birthCity" : "Denver",
+              "birthStateProvince" : "CO",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 210,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "48",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477440" : {
+            "person" : {
+              "id" : 8477440,
+              "fullName" : "Jan Kostalek",
+              "link" : "/api/v1/people/8477440",
+              "firstName" : "Jan",
+              "lastName" : "Kostalek",
+              "primaryNumber" : "53",
+              "birthDate" : "1995-02-17",
+              "currentAge" : 23,
+              "birthCity" : "Prague",
+              "birthCountry" : "CZE",
+              "nationality" : "CZE",
+              "height" : "6' 1\"",
+              "weight" : 181,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "53",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8478891" : {
+            "person" : {
+              "id" : 8478891,
+              "fullName" : "Mason Appleton",
+              "link" : "/api/v1/people/8478891",
+              "firstName" : "Mason",
+              "lastName" : "Appleton",
+              "primaryNumber" : "82",
+              "birthDate" : "1996-01-15",
+              "currentAge" : 22,
+              "birthCity" : "Green Bay",
+              "birthStateProvince" : "WI",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 2\"",
+              "weight" : 193,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "82",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477464" : {
+            "person" : {
+              "id" : 8477464,
+              "fullName" : "Nic Petan",
+              "link" : "/api/v1/people/8477464",
+              "firstName" : "Nic",
+              "lastName" : "Petan",
+              "primaryNumber" : "19",
+              "birthDate" : "1995-03-22",
+              "currentAge" : 23,
+              "birthCity" : "Delta",
+              "birthStateProvince" : "BC",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "5' 9\"",
+              "weight" : 179,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "19",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8478398" : {
+            "person" : {
+              "id" : 8478398,
+              "fullName" : "Kyle Connor",
+              "link" : "/api/v1/people/8478398",
+              "firstName" : "Kyle",
+              "lastName" : "Connor",
+              "primaryNumber" : "81",
+              "birthDate" : "1996-12-09",
+              "currentAge" : 21,
+              "birthCity" : "Shelby Twp.",
+              "birthStateProvince" : "MI",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 182,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "81",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "22:36",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 3,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 0.0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 1,
+                "takeaways" : 3,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "19:14",
+                "powerPlayTimeOnIce" : "3:22",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8477480" : {
+            "person" : {
+              "id" : 8477480,
+              "fullName" : "Eric Comrie",
+              "link" : "/api/v1/people/8477480",
+              "firstName" : "Eric",
+              "lastName" : "Comrie",
+              "primaryNumber" : "1",
+              "birthDate" : "1995-07-06",
+              "currentAge" : 23,
+              "birthCity" : "Edmonton",
+              "birthStateProvince" : "AB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 1\"",
+              "weight" : 175,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "1",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476392" : {
+            "person" : {
+              "id" : 8476392,
+              "fullName" : "Adam Lowry",
+              "link" : "/api/v1/people/8476392",
+              "firstName" : "Adam",
+              "lastName" : "Lowry",
+              "primaryNumber" : "17",
+              "birthDate" : "1993-03-29",
+              "currentAge" : 25,
+              "birthCity" : "St. Louis",
+              "birthStateProvince" : "MO",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 5\"",
+              "weight" : 210,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "17",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "8:09",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 3,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 28.57,
+                "faceOffWins" : 2,
+                "faceoffTaken" : 7,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "6:44",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "1:25"
+              }
+            }
+          },
+          "ID8478031" : {
+            "person" : {
+              "id" : 8478031,
+              "fullName" : "Nelson Nogier",
+              "link" : "/api/v1/people/8478031",
+              "firstName" : "Nelson",
+              "lastName" : "Nogier",
+              "primaryNumber" : "62",
+              "birthDate" : "1996-05-27",
+              "currentAge" : 22,
+              "birthCity" : "Saskatoon",
+              "birthStateProvince" : "SK",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 2\"",
+              "weight" : 191,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "62",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8471669" : {
+            "person" : {
+              "id" : 8471669,
+              "fullName" : "Paul Stastny",
+              "link" : "/api/v1/people/8471669",
+              "firstName" : "Paul",
+              "lastName" : "Stastny",
+              "primaryNumber" : "25",
+              "birthDate" : "1985-12-27",
+              "currentAge" : 32,
+              "birthCity" : "Quebec City",
+              "birthStateProvince" : "QC",
+              "birthCountry" : "CAN",
+              "nationality" : "USA",
+              "height" : "6' 0\"",
+              "weight" : 193,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "25",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "18:27",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 23.08,
+                "faceOffWins" : 3,
+                "faceoffTaken" : 13,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "13:49",
+                "powerPlayTimeOnIce" : "4:38",
+                "shortHandedTimeOnIce" : "0:00"
+              }
+            }
+          },
+          "ID8468611" : {
+            "person" : {
+              "id" : 8468611,
+              "fullName" : "Matt Hendricks",
+              "link" : "/api/v1/people/8468611",
+              "firstName" : "Matt",
+              "lastName" : "Hendricks",
+              "primaryNumber" : "15",
+              "birthDate" : "1981-06-17",
+              "currentAge" : 37,
+              "birthCity" : "Blaine",
+              "birthStateProvince" : "MN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 0\"",
+              "weight" : 209,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "15",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8470834" : {
+            "person" : {
+              "id" : 8470834,
+              "fullName" : "Dustin Byfuglien",
+              "link" : "/api/v1/people/8470834",
+              "firstName" : "Dustin",
+              "lastName" : "Byfuglien",
+              "primaryNumber" : "33",
+              "birthDate" : "1985-03-27",
+              "currentAge" : 33,
+              "birthCity" : "Roseau",
+              "birthStateProvince" : "MN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 5\"",
+              "weight" : 260,
+              "active" : true,
+              "alternateCaptain" : true,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "33",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "26:51",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 6,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "21:08",
+                "powerPlayTimeOnIce" : "5:01",
+                "shortHandedTimeOnIce" : "0:42"
+              }
+            }
+          },
+          "ID8478915" : {
+            "person" : {
+              "id" : 8478915,
+              "fullName" : "Sami Niku",
+              "link" : "/api/v1/people/8478915",
+              "firstName" : "Sami",
+              "lastName" : "Niku",
+              "primaryNumber" : "83",
+              "birthDate" : "1996-10-10",
+              "currentAge" : 21,
+              "birthCity" : "Haapavesi",
+              "birthCountry" : "FIN",
+              "nationality" : "FIN",
+              "height" : "6' 1\"",
+              "weight" : 176,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : true,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "83",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477429" : {
+            "person" : {
+              "id" : 8477429,
+              "fullName" : "Andrew Copp",
+              "link" : "/api/v1/people/8477429",
+              "firstName" : "Andrew",
+              "lastName" : "Copp",
+              "primaryNumber" : "9",
+              "birthDate" : "1994-07-08",
+              "currentAge" : 24,
+              "birthCity" : "Ann Arbor",
+              "birthStateProvince" : "MI",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 206,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "9",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8474636" : {
+            "person" : {
+              "id" : 8474636,
+              "fullName" : "Michael Hutchinson",
+              "link" : "/api/v1/people/8474636",
+              "firstName" : "Michael",
+              "lastName" : "Hutchinson",
+              "primaryNumber" : "34",
+              "birthDate" : "1990-03-02",
+              "currentAge" : 28,
+              "birthCity" : "Barrie",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 3\"",
+              "weight" : 202,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "G",
+                "name" : "Goalie",
+                "type" : "Goalie",
+                "abbreviation" : "G"
+              }
+            },
+            "jerseyNumber" : "34",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477448" : {
+            "person" : {
+              "id" : 8477448,
+              "fullName" : "Marko Dano",
+              "link" : "/api/v1/people/8477448",
+              "firstName" : "Marko",
+              "lastName" : "Dano",
+              "primaryNumber" : "56",
+              "birthDate" : "1994-11-30",
+              "currentAge" : 23,
+              "birthCity" : "Eisenstadt",
+              "birthCountry" : "AUT",
+              "nationality" : "SVK",
+              "height" : "5' 11\"",
+              "weight" : 212,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "56",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476799" : {
+            "person" : {
+              "id" : 8476799,
+              "fullName" : "Cameron Schilling",
+              "link" : "/api/v1/people/8476799",
+              "firstName" : "Cameron",
+              "lastName" : "Schilling",
+              "birthDate" : "1988-10-07",
+              "currentAge" : 29,
+              "birthCity" : "Carmel",
+              "birthStateProvince" : "IN",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 2\"",
+              "weight" : 182,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477504" : {
+            "person" : {
+              "id" : 8477504,
+              "fullName" : "Josh Morrissey",
+              "link" : "/api/v1/people/8477504",
+              "firstName" : "Josh",
+              "lastName" : "Morrissey",
+              "primaryNumber" : "44",
+              "birthDate" : "1995-03-28",
+              "currentAge" : 23,
+              "birthCity" : "Calgary",
+              "birthStateProvince" : "AB",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 195,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "44",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "19:13",
+                "assists" : 0,
+                "goals" : 1,
+                "shots" : 2,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 2,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 3,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "16:22",
+                "powerPlayTimeOnIce" : "0:15",
+                "shortHandedTimeOnIce" : "2:36"
+              }
+            }
+          },
+          "ID8475179" : {
+            "person" : {
+              "id" : 8475179,
+              "fullName" : "Dmitry Kulikov",
+              "link" : "/api/v1/people/8475179",
+              "firstName" : "Dmitry",
+              "lastName" : "Kulikov",
+              "primaryNumber" : "5",
+              "birthDate" : "1990-10-29",
+              "currentAge" : 27,
+              "birthCity" : "Lipetsk",
+              "birthCountry" : "RUS",
+              "nationality" : "RUS",
+              "height" : "6' 1\"",
+              "weight" : 204,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "5",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "9:28",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 2,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 1,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 0,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "8:46",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "0:42"
+              }
+            }
+          },
+          "ID8478029" : {
+            "person" : {
+              "id" : 8478029,
+              "fullName" : "Chase De Leo",
+              "link" : "/api/v1/people/8478029",
+              "firstName" : "Chase",
+              "lastName" : "De Leo",
+              "primaryNumber" : "77",
+              "birthDate" : "1995-10-25",
+              "currentAge" : 22,
+              "birthCity" : "La Mirada",
+              "birthStateProvince" : "CA",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "5' 9\"",
+              "weight" : 185,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "77",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476885" : {
+            "person" : {
+              "id" : 8476885,
+              "fullName" : "Jacob Trouba",
+              "link" : "/api/v1/people/8476885",
+              "firstName" : "Jacob",
+              "lastName" : "Trouba",
+              "primaryNumber" : "8",
+              "birthDate" : "1994-02-26",
+              "currentAge" : 24,
+              "birthCity" : "Rochester",
+              "birthStateProvince" : "MI",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 3\"",
+              "weight" : 202,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "8",
+            "position" : {
+              "code" : "D",
+              "name" : "Defenseman",
+              "type" : "Defenseman",
+              "abbreviation" : "D"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "20:39",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 3,
+                "hits" : 3,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 1,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 3,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "17:11",
+                "powerPlayTimeOnIce" : "0:52",
+                "shortHandedTimeOnIce" : "2:36"
+              }
+            }
+          },
+          "ID8475279" : {
+            "person" : {
+              "id" : 8475279,
+              "fullName" : "Ben Chiarot",
+              "link" : "/api/v1/people/8475279",
+              "firstName" : "Ben",
+              "lastName" : "Chiarot",
+              "primaryNumber" : "7",
+              "birthDate" : "1991-05-09",
+              "currentAge" : 27,
+              "birthCity" : "Hamilton",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 3\"",
+              "weight" : 219,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "7",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8478424" : {
+            "person" : {
+              "id" : 8478424,
+              "fullName" : "Jansen Harkins",
+              "link" : "/api/v1/people/8478424",
+              "firstName" : "Jansen",
+              "lastName" : "Harkins",
+              "primaryNumber" : "58",
+              "birthDate" : "1997-05-23",
+              "currentAge" : 21,
+              "birthCity" : "Cleveland",
+              "birthStateProvince" : "OH",
+              "birthCountry" : "USA",
+              "nationality" : "USA",
+              "height" : "6' 1\"",
+              "weight" : 182,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "58",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8476460" : {
+            "person" : {
+              "id" : 8476460,
+              "fullName" : "Mark Scheifele",
+              "link" : "/api/v1/people/8476460",
+              "firstName" : "Mark",
+              "lastName" : "Scheifele",
+              "primaryNumber" : "55",
+              "birthDate" : "1993-03-15",
+              "currentAge" : 25,
+              "birthCity" : "Kitchener",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 3\"",
+              "weight" : 207,
+              "active" : true,
+              "alternateCaptain" : true,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "C",
+                "name" : "Center",
+                "type" : "Forward",
+                "abbreviation" : "C"
+              }
+            },
+            "jerseyNumber" : "55",
+            "position" : {
+              "code" : "C",
+              "name" : "Center",
+              "type" : "Forward",
+              "abbreviation" : "C"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "22:15",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 1,
+                "hits" : 0,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffPct" : 63.16,
+                "faceOffWins" : 12,
+                "faceoffTaken" : 19,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : 0,
+                "evenTimeOnIce" : "16:12",
+                "powerPlayTimeOnIce" : "4:38",
+                "shortHandedTimeOnIce" : "1:25"
+              }
+            }
+          },
+          "ID8473574" : {
+            "person" : {
+              "id" : 8473574,
+              "fullName" : "Shawn Matthias",
+              "link" : "/api/v1/people/8473574",
+              "firstName" : "Shawn",
+              "lastName" : "Matthias",
+              "primaryNumber" : "16",
+              "birthDate" : "1988-02-19",
+              "currentAge" : 30,
+              "birthCity" : "Mississauga",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 4\"",
+              "weight" : 231,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "16",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8477076" : {
+            "person" : {
+              "id" : 8477076,
+              "fullName" : "JC Lipon",
+              "link" : "/api/v1/people/8477076",
+              "firstName" : "JC",
+              "lastName" : "Lipon",
+              "primaryNumber" : "46",
+              "birthDate" : "1993-07-10",
+              "currentAge" : 25,
+              "birthCity" : "Regina",
+              "birthStateProvince" : "SK",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 183,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "46",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8479378" : {
+            "person" : {
+              "id" : 8479378,
+              "fullName" : "Logan Stanley",
+              "link" : "/api/v1/people/8479378",
+              "firstName" : "Logan",
+              "lastName" : "Stanley",
+              "primaryNumber" : "64",
+              "birthDate" : "1998-05-26",
+              "currentAge" : 20,
+              "birthCity" : "Waterloo",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 7\"",
+              "weight" : 228,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "D",
+                "name" : "Defenseman",
+                "type" : "Defenseman",
+                "abbreviation" : "D"
+              }
+            },
+            "jerseyNumber" : "64",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8478487" : {
+            "person" : {
+              "id" : 8478487,
+              "fullName" : "Michael Spacek",
+              "link" : "/api/v1/people/8478487",
+              "firstName" : "Michael",
+              "lastName" : "Spacek",
+              "primaryNumber" : "80",
+              "birthDate" : "1997-04-09",
+              "currentAge" : 21,
+              "birthCity" : "Marianske Lazne",
+              "birthCountry" : "CZE",
+              "nationality" : "CZE",
+              "height" : "5' 11\"",
+              "weight" : 187,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "R",
+              "rosterStatus" : "N",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "R",
+                "name" : "Right Wing",
+                "type" : "Forward",
+                "abbreviation" : "RW"
+              }
+            },
+            "jerseyNumber" : "80",
+            "position" : {
+              "code" : "N/A",
+              "name" : "Unknown",
+              "type" : "Unknown",
+              "abbreviation" : "N/A"
+            },
+            "stats" : { }
+          },
+          "ID8479293" : {
+            "person" : {
+              "id" : 8479293,
+              "fullName" : "Brandon Tanev",
+              "link" : "/api/v1/people/8479293",
+              "firstName" : "Brandon",
+              "lastName" : "Tanev",
+              "primaryNumber" : "13",
+              "birthDate" : "1991-12-31",
+              "currentAge" : 26,
+              "birthCity" : "Toronto",
+              "birthStateProvince" : "ON",
+              "birthCountry" : "CAN",
+              "nationality" : "CAN",
+              "height" : "6' 0\"",
+              "weight" : 180,
+              "active" : true,
+              "alternateCaptain" : false,
+              "captain" : false,
+              "rookie" : false,
+              "shootsCatches" : "L",
+              "rosterStatus" : "Y",
+              "currentTeam" : {
+                "id" : 52,
+                "name" : "Winnipeg Jets",
+                "link" : "/api/v1/teams/52"
+              },
+              "primaryPosition" : {
+                "code" : "L",
+                "name" : "Left Wing",
+                "type" : "Forward",
+                "abbreviation" : "LW"
+              }
+            },
+            "jerseyNumber" : "13",
+            "position" : {
+              "code" : "L",
+              "name" : "Left Wing",
+              "type" : "Forward",
+              "abbreviation" : "LW"
+            },
+            "stats" : {
+              "skaterStats" : {
+                "timeOnIce" : "7:16",
+                "assists" : 0,
+                "goals" : 0,
+                "shots" : 0,
+                "hits" : 1,
+                "powerPlayGoals" : 0,
+                "powerPlayAssists" : 0,
+                "penaltyMinutes" : 0,
+                "faceOffWins" : 0,
+                "faceoffTaken" : 0,
+                "takeaways" : 0,
+                "giveaways" : 0,
+                "shortHandedGoals" : 0,
+                "shortHandedAssists" : 0,
+                "blocked" : 1,
+                "plusMinus" : -1,
+                "evenTimeOnIce" : "5:51",
+                "powerPlayTimeOnIce" : "0:00",
+                "shortHandedTimeOnIce" : "1:25"
+              }
+            }
+          }
+        },
+        "goalies" : [ 8476945 ],
+        "skaters" : [ 8475179, 8476885, 8479293, 8476392, 8473412, 8471669, 8471218, 8477940, 8479339, 8470834, 8476469, 8477504, 8478458, 8476460, 8474574, 8476476, 8478398, 8473618, 8478891, 8475279, 8477480, 8477429, 8477448, 8478029, 8470828, 8478424, 8468611, 8474636, 8477440, 8477962, 8477076, 8473574, 8475815, 8478915, 8478031, 8477464, 8477359, 8476799, 8478487, 8479378 ],
+        "onIce" : [ 8470834, 8471218, 8471669, 8473412, 8476460, 8479339 ],
+        "onIcePlus" : [ {
+          "playerId" : 8470834,
+          "shiftDuration" : 91,
+          "stamina" : 33
+        }, {
+          "playerId" : 8471218,
+          "shiftDuration" : 84,
+          "stamina" : 33
+        }, {
+          "playerId" : 8471669,
+          "shiftDuration" : 66,
+          "stamina" : 33
+        }, {
+          "playerId" : 8473412,
+          "shiftDuration" : 66,
+          "stamina" : 33
+        }, {
+          "playerId" : 8476460,
+          "shiftDuration" : 66,
+          "stamina" : 33
+        }, {
+          "playerId" : 8479339,
+          "shiftDuration" : 71,
+          "stamina" : 33
+        } ],
+        "scratches" : [ 8478891, 8475279, 8477480, 8477429, 8477448, 8478029, 8470828, 8478424, 8468611, 8474636, 8477440, 8477962, 8477076, 8473574, 8475815, 8478915, 8478031, 8477464, 8477359, 8476799, 8478487, 8479378 ],
+        "penaltyBox" : [ ],
+        "coaches" : [ {
+          "person" : {
+            "fullName" : "Paul Maurice",
+            "link" : "/api/v1/people/null"
+          },
+          "position" : {
+            "code" : "HC",
+            "name" : "Head Coach",
+            "type" : "Head Coach",
+            "abbreviation" : "Head Coach"
+          }
+        } ]
+      }
+    },
+    "officials" : [ {
+      "official" : {
+        "id" : 2265,
+        "fullName" : "Kelly Sutherland",
+        "link" : "/api/v1/people/2265"
+      },
+      "officialType" : "Referee"
+    }, {
+      "official" : {
+        "id" : 2457,
+        "fullName" : "Gord Dwyer",
+        "link" : "/api/v1/people/2457"
+      },
+      "officialType" : "Referee"
+    }, {
+      "official" : {
+        "id" : 2308,
+        "fullName" : "Eric Furlatt",
+        "link" : "/api/v1/people/2308"
+      },
+      "officialType" : "Referee"
+    }, {
+      "official" : {
+        "id" : 2505,
+        "fullName" : "Scott Cherrey",
+        "link" : "/api/v1/people/2505"
+      },
+      "officialType" : "Linesman"
+    }, {
+      "official" : {
+        "id" : 2300,
+        "fullName" : "Derek Amell",
+        "link" : "/api/v1/people/2300"
+      },
+      "officialType" : "Linesman"
+    }, {
+      "official" : {
+        "id" : 4717,
+        "fullName" : "Devin Berg",
+        "link" : "/api/v1/people/4717"
+      },
+      "officialType" : "Linesman"
+    } ]
+  }

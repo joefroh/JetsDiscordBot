@@ -1,0 +1,168 @@
+{
+    "copyright" : "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2018. All Rights Reserved.",
+    "totalItems" : 3,
+    "totalEvents" : 0,
+    "totalGames" : 3,
+    "totalMatches" : 0,
+    "wait" : 10,
+    "dates" : [ {
+      "date" : "2019-01-01",
+      "totalItems" : 3,
+      "totalEvents" : 0,
+      "totalGames" : 3,
+      "totalMatches" : 0,
+      "games" : [ {
+        "gamePk" : 2018020612,
+        "link" : "/api/v1/game/2018020612/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2019-01-01T18:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 6,
+              "name" : "Boston Bruins",
+              "link" : "/api/v1/teams/6"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 16,
+              "name" : "Chicago Blackhawks",
+              "link" : "/api/v1/teams/16"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Notre Dame Stadium",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020612/content"
+        }
+      }, {
+        "gamePk" : 2018020613,
+        "link" : "/api/v1/game/2018020613/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2019-01-02T01:30:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 4,
+              "name" : "Philadelphia Flyers",
+              "link" : "/api/v1/teams/4"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 18,
+              "name" : "Nashville Predators",
+              "link" : "/api/v1/teams/18"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "Bridgestone Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020613/content"
+        }
+      }, {
+        "gamePk" : 2018020614,
+        "link" : "/api/v1/game/2018020614/feed/live",
+        "gameType" : "R",
+        "season" : "20182019",
+        "gameDate" : "2019-01-02T02:00:00Z",
+        "status" : {
+          "abstractGameState" : "Preview",
+          "codedGameState" : "1",
+          "detailedState" : "Scheduled",
+          "statusCode" : "1",
+          "startTimeTBD" : false
+        },
+        "teams" : {
+          "away" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 26,
+              "name" : "Los Angeles Kings",
+              "link" : "/api/v1/teams/26"
+            }
+          },
+          "home" : {
+            "leagueRecord" : {
+              "wins" : 0,
+              "losses" : 0,
+              "ot" : 0,
+              "type" : "league"
+            },
+            "score" : 0,
+            "team" : {
+              "id" : 54,
+              "name" : "Vegas Golden Knights",
+              "link" : "/api/v1/teams/54"
+            }
+          }
+        },
+        "venue" : {
+          "name" : "T-Mobile Arena",
+          "link" : "/api/v1/venues/null"
+        },
+        "content" : {
+          "link" : "/api/v1/game/2018020614/content"
+        }
+      } ],
+      "events" : [ ],
+      "matches" : [ ]
+    } ]
+  }
