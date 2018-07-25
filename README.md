@@ -17,6 +17,15 @@ The repo has configuration files to make building and debugging easy with VS Cod
 To get started with this project, just fork or clone the repo, then open a powershell prompt in the root folder of the repo and run:
 
 ``` bash
+git submodule -q update --init --recursive
+```
+
+That will properly initialize all the submodules, before you build the project. You only need to run that once after cloning.
+
+Then restore all the dependencies:
+
+
+``` bash
 dotnet restore
 ```
 
@@ -30,6 +39,5 @@ Once everything is building properly, copy `config.json.sample` to `config.json`
 
 ## Feature Requests
 
-* Goal Horn (with configurable delay) - In Progress
-* Team Stats Functions
+* Team Stats Functions - In Progress
 * Team Video Publisher
