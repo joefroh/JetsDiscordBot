@@ -1,3 +1,6 @@
 [submodule "ClassLocator"]
 	path = ClassLocator
 	url = https://github.com/joefroh/ClassLocator
+[submodule "NHLApiDotNet"]
+	path = NHLApiDotNet
+	url = https://github.com/joefroh/NHLApiDotNet.git
