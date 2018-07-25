@@ -16,7 +16,8 @@ namespace NHLApi
         public Division Division { get; set; }
         public Conference Conference { get; set; }
         public Franchise Franchise { get; set; }
-        public NextGameSchedule NextGameSchedule { get; set; }
+        public GameScheduleData NextGameSchedule { get; set; }
+        public GameScheduleData PreviousGameSchedule { get; set; }
         public string ShortName { get; set; }
         public string OfficialSiteUrl { get; set; }
         public int FranchiseId { get; set; }
