@@ -4,6 +4,6 @@ namespace discordBot
     {
         NextGame,
         LastGame,
-
+        LastGameHighlights,
     }
 }
