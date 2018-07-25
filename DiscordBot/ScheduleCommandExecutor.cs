@@ -47,7 +47,7 @@ namespace discordBot
             {
                 command = (ScheduleCommandEnum)Enum.Parse(typeof(ScheduleCommandEnum), commandString, true); // ignore case
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 await CommandExecutorHelpers.ErrorMessage(msg, String.Format("I'm sorry, I didn't recognize the command: {0}", commandString));
                 return;
