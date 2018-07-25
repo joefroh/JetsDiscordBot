@@ -68,7 +68,25 @@ namespace NHLApiTests
             var expected = teamDetail.NextGameSchedule;
 
             // Make API web call
-            NextGameSchedule actual = api.GetNextGame(52); // Jets
+            GameScheduleData actual = api.GetNextGame(52); // Jets
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetLastGameTestBasic()
+        {
+            NHLApiClient api = new NHLApiClient();
+
+            var testResponse = File.ReadAllText(@"../../../TestAPIResponses/GetLastGameResult.json");
+            var jobj = JObject.Parse(testResponse);
+            var teamArray = (JArray)jobj["teams"];
+            var teamDetail = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
+            var expected = teamDetail.PreviousGameSchedule;
+
+            // Make API web call
+            GameScheduleData actual = api.GetLastGame(52); // Jets
 
             //Assert
             Assert.AreEqual(expected, actual);

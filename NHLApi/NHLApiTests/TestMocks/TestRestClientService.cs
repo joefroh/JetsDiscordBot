@@ -37,6 +37,8 @@ namespace NHLApiTests
                     return GenerateResponse(@"../../../TestAPIResponses/GetScheduleTeamDateRangeResult.json");
                 case "/api/v1/teams/52?expand=team.schedule.next":
                     return GenerateResponse(@"../../../TestAPIResponses/GetNextGameResult.json");
+                case "/api/v1/teams/52?expand=team.schedule.previous":
+                    return GenerateResponse(@"../../../TestAPIResponses/GetLastGameResult.json");
                 case "/api/v1/teams/52":
                     return GenerateResponse("../../../TestAPIResponses/GetTeamResult.json");
                 case "/api/v1/teams":

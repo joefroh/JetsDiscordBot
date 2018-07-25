@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace NHLApi
 {
-    public class NextGameSchedule
+    public class GameScheduleData
     {
         public int TotalItems { get; set; }
         public int TotalEvents { get; set; }
@@ -14,9 +14,9 @@ namespace NHLApi
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as NextGameSchedule);
+            return this.Equals(obj as GameScheduleData);
         }
-        public bool Equals(NextGameSchedule p)
+        public bool Equals(GameScheduleData p)
         {
             // If parameter is null, return false.
             if (Object.ReferenceEquals(p, null))
