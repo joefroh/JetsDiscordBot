@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
@@ -63,53 +65,64 @@ namespace discordBot
 
             var result = GenerateScheduleResult(team, command);
 
-            if (result == "")
+            if (result.Count() == 0)
             {
                 await CommandExecutorHelpers.ErrorMessage(msg);
                 return;
             }
 
-            await msg.Channel.SendMessageAsync(result);
+            foreach (var response in result)
+            {
+                await msg.Channel.SendMessageAsync(response);
+            }
         }
 
-        private string GenerateScheduleResult(string team, ScheduleCommandEnum command)
+        private IEnumerable<string> GenerateScheduleResult(string team, ScheduleCommandEnum command)
         {
+            int teamId = int.Parse(team);
             switch (command)
             {
                 case ScheduleCommandEnum.NextGame:
-                    return NextGame(team);
+                    return NextGame(teamId);
                 case ScheduleCommandEnum.LastGame:
-                    return LastGame(team);
+                    return LastGame(teamId);
+                case ScheduleCommandEnum.LastGameHighlights:
+                    return LastGameHighlights(teamId);
                 default:
-                    return ""; //TODO revisit this decision. Empty string puts error checking honous above.
+                    return new List<string>(); //TODO revisit this decision. Empty string puts error checking honous above.
             }
         }
 
-        private string NextGame(string team)
+        private IEnumerable<string> NextGame(int team)
         {
+            List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
-            var nextGame = api.GetNextGame(int.Parse(team));
-            var teamData = api.GetTeam(int.Parse(team));
+            var nextGame = api.GetNextGame(team);
+            var teamData = api.GetTeam(team);
 
             if (nextGame.TotalGames < 1)
             {
-                return string.Format("There are currently no games scheduled for the {0}", teamData.Name);
+                result.Add(string.Format("There are currently no games scheduled for the {0}", teamData.Name));
+                return result;
             }
 
             var game = nextGame.Dates[0].Games[0];
-            return string.Format("The next {0} game is {1}, {2} @ {3} at {4}", teamData.Name, game.GameDate.ToLocalTime().ToLongDateString(), game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name);
+            result.Add(string.Format("The next {0} game is {1}, {2} @ {3} at {4}", teamData.Name, game.GameDate.ToLocalTime().ToLongDateString(), game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name));
+            return result;
         }
 
-        private string LastGame(string team)
+        private IEnumerable<string> LastGame(int team)
         {
+            List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
-            var teamId = int.Parse(team);
-            var lastGame = api.GetLastGame(teamId);
-            var teamData = api.GetTeam(teamId);
 
-            if (lastGame.TotalGames < 1)
+            var lastGame = api.GetLastGame(team);
+            var teamData = api.GetTeam(team);
+
+            if (lastGame == null || lastGame.TotalGames < 1)
             {
-                return string.Format("There are currently no previous games the {0}", teamData.Name);
+                result.Add(string.Format("There are currently no previous games the {0}", teamData.Name));
+                return result;
             }
 
             var game = lastGame.Dates[0].Games[0];
@@ -119,7 +132,34 @@ namespace discordBot
             StringBuilder builder = new StringBuilder();
             builder.AppendLine(string.Format("The last {0} game was {1}, {2} @ {3} at {4}", teamData.Name, game.GameDate.ToLocalTime().ToLongDateString(), game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name));
             builder.AppendLine(string.Format("The final score was {0} {1} : {2} {3}", awayTeam.Abbreviation, game.Teams.Away.Score, homeTeam.Abbreviation, game.Teams.Home.Score));
-            return builder.ToString();
+            result.Add(builder.ToString());
+
+            return result;
+        }
+
+        private IEnumerable<string> LastGameHighlights(int team)
+        {
+            List<string> result = new List<string>();
+            NHLApiClient api = new NHLApiClient();
+            var lastGame = api.GetLastGame(team);
+            var gameId = lastGame.Dates[0].Games[0].GamePk;
+
+            var content = api.GetGameContent(gameId);
+
+            foreach (var highlight in content.Highlights.Scoreboard.Items)
+            {
+                if (highlight.Type != "video")
+                    continue;
+
+                var builder = new StringBuilder();
+                var vid = highlight.Playbacks.Last();
+                builder.AppendLine(highlight.Title);
+                builder.AppendLine(vid.URL);
+
+                result.Add(builder.ToString());
+            }
+
+            return result;
         }
     }
 }
