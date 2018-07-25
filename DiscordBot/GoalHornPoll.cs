@@ -14,6 +14,9 @@ namespace discordBot
 
         private void RegisterGoalHorns()
         {
+            if (null == _config.GoalHornConfig)
+                return;
+                
             foreach (var goalHornConfig in _config.GoalHornConfig)
             {
                 var guild = _client.GetGuild(goalHornConfig.ServerID);
