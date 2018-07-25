@@ -50,6 +50,27 @@ namespace NHLApi
             return result;
         }
 
+        public GameScheduleData GetNextGame(int teamId)
+        {
+            var request = new RestRequest(String.Format("/api/v1/teams/{0}?expand=team.schedule.next", teamId));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var teamArray = (JArray)jobj["teams"];
+            var result = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
+            return result.NextGameSchedule;
+        }
+
+        public GameScheduleData GetLastGame(int teamId)
+        {
+            var request = new RestRequest(String.Format("/api/v1/teams/{0}?expand=team.schedule.previous", teamId));
+            var response = _restClient.Execute(request);
+            var jobj = JObject.Parse(response.Content);
+            var teamArray = (JArray)jobj["teams"];
+            var result = JsonConvert.DeserializeObject<TeamDetail>(teamArray[0].ToString());
+            return result.PreviousGameSchedule;
+        }
+
+
         //TODO Expanders API modifyers
 
         /// <summary>

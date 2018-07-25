@@ -41,7 +41,7 @@ namespace discordBot
             req.AddParameter("limit", limit);
             req.AddParameter("sort", "new");
 
-            var res = _client.Execute(req);
+            var res = _client.Execute(req); // TODO check IsSuccessful and fail gracefully.
             var jobj = JObject.Parse(res.Content);
 
             return jobj;
