@@ -35,7 +35,7 @@ To build you can use VS Code or in a powershell prompt run:
 dotnet build
 ```
 
-Once everything is building properly, copy `config.json.sample` to `config.json` and fill in your bot token.
+Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
 
 ## Feature Requests
 
