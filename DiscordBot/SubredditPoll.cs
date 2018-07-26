@@ -14,7 +14,7 @@ namespace discordBot
             
             foreach (var subreddit in _config.SubredditConfig)
             {
-                _subreddits.Add(new RedditClient(subreddit));
+                _subreddits.Add(new RedditClient(subreddit)); // TODO Walk this call tree and figure out how to get the "fail wait" off the main thread for init, only happens then.
             }
         }
 
