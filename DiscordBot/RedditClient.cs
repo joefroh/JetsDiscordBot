@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
+using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -41,9 +42,20 @@ namespace discordBot
             req.AddParameter("limit", limit);
             req.AddParameter("sort", "new");
 
-            var res = _client.Execute(req); // TODO check IsSuccessful and fail gracefully.
-            var jobj = JObject.Parse(res.Content);
+            var res = _client.Execute(req);
 
+            if (!res.IsSuccessful)
+            {
+                // Fixes sporatic poller crash, if Reddit gives a bad response (busy or down)
+                // Wait 10 minutes and recurse.
+
+                Console.WriteLine("Subreddit Poll failed for some reason. Waiting 10 mins and trying again.");
+                Thread.Sleep(1000 * 60 * 10);
+                Console.WriteLine("Subreddit Poll is trying again after failure.");
+                return FetchSubredditNewSubmissions(limit);
+            }
+
+            var jobj = JObject.Parse(res.Content);
             return jobj;
         }
 
@@ -52,6 +64,7 @@ namespace discordBot
             var results = new List<string>();
             ulong tempNewestTime = 0;
 
+            Console.WriteLine("Checking Subreddit for new posts: " + _subConfig.TargetSubreddit);
             var jobj = FetchSubredditNewSubmissions(_subConfig.NewSubmissionCacheSize);
 
             foreach (var submission in jobj["data"]["children"])
@@ -61,6 +74,7 @@ namespace discordBot
                 // if the submission is newer than the newest one we saw last poll
                 if (submissionTime > _newestSubmissionTime)
                 {
+                    Console.WriteLine("Found a new post in: " + _subConfig.TargetSubreddit);
                     var builder = new StringBuilder();
                     builder.AppendLine(submission["data"]["title"].ToString() + ": " + submission["data"]["url"]);
                     builder.Append("Comments: " + Constants.RedditURL + submission["data"]["permalink"]);
