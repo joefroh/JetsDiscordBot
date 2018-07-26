@@ -50,6 +50,7 @@ namespace discordBot
                 ICommandExecutor executor;
                 if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config.CommandPrefix)[1], out executor))
                 {
+                    await message.Channel.TriggerTypingAsync();
                     await executor.ExecuteCommand(message);
                 }
             }
