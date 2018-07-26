@@ -10,9 +10,23 @@ namespace discordBot
 {
     public class ScheduleCommandExecutor : ICommandExecutor
     {
+
+        private readonly string helpText = "";
+
         public ScheduleCommandExecutor(Configuration config) : base(config)
         {
+            var builder = new StringBuilder();
+            builder.AppendLine(_config.CommandPrefix + CommandString + " <team Id Number> <function>");
 
+            builder.Append("Functions: ");
+            foreach (var function in Enum.GetNames(typeof(ScheduleCommandEnum)))
+            {
+                builder.Append("`" + function + "` ");
+            }
+
+            builder.AppendLine();
+            builder.Append("Team name mapping is a work in progress, please stay tuned. The Jets are 52 btw.");
+            helpText = builder.ToString();
         }
 
         public override string CommandString
@@ -27,7 +41,7 @@ namespace discordBot
         {
             get
             {
-                return "sched <teamname> next"; // this should be help text on how to use the function
+                return helpText; // this should be help text on how to use the function
             }
         }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Discord.WebSocket;
 
@@ -48,11 +49,45 @@ namespace discordBot
             if (command[0].StartsWith(_config.CommandPrefix))
             {
                 ICommandExecutor executor;
-                if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config.CommandPrefix)[1], out executor))
+                if (command[0].ToLower().Split(_config.CommandPrefix)[1] == "help") //help is a privileged command, it needs to know about the others
+                {
+                    await SendHelpInfo(command, message);
+                }
+                else if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config.CommandPrefix)[1], out executor))
                 {
                     await message.Channel.TriggerTypingAsync();
                     await executor.ExecuteCommand(message);
                 }
+            }
+        }
+
+        private async Task SendHelpInfo(string[] command, SocketMessage message)
+        {
+            if (command.Count() == 1)
+            {
+                var builder = new StringBuilder();
+                builder.AppendLine("The bot currently supports the following commands:");
+
+                foreach (var ex in _commandExecutors)
+                {
+                    builder.Append("`" + ex.Value.CommandString + "`" + " ");
+                }
+                builder.AppendLine();
+                builder.AppendLine(string.Format("To get help with any specific command type {0}help <command>", _config.CommandPrefix));
+
+                await message.Channel.SendMessageAsync(builder.ToString());
+            }
+            if (command.Count() > 1)
+            {
+                var param = command[1].Split(_config.CommandPrefix).Last();
+                ICommandExecutor executor;
+                if (!_commandExecutors.TryGetValue(param, out executor))
+                {
+                    await message.Channel.SendMessageAsync("Sorry, I don't recognize the command: " + param);
+                    return;
+                }
+
+                await message.Channel.SendMessageAsync(executor.HelpText);
             }
         }
     }

@@ -17,7 +17,13 @@ namespace discordBot
             }
         }
 
-        public override string HelpText => throw new System.NotImplementedException();
+        public override string HelpText
+        {
+            get
+            {
+                return "Checks if the bot is still up. It should say \"Pong\"";
+            }
+        }
 
         public override async Task ExecuteCommand(SocketMessage msg)
         {
