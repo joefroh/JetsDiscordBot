@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using ClassLocator;
 using Discord.WebSocket;
 
 namespace discordBot
@@ -8,11 +9,11 @@ namespace discordBot
     class SubredditPoll : IPoller
     {
         private List<RedditClient> _subreddits;
-        public SubredditPoll(DiscordSocketClient client, Configuration config) : base(client, config)
+        public SubredditPoll(DiscordSocketClient client) : base(client)
         {
             _subreddits = new List<RedditClient>();
             
-            foreach (var subreddit in _config.SubredditConfig)
+            foreach (var subreddit in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.SubredditConfig)
             {
                 _subreddits.Add(new RedditClient(subreddit)); // TODO Walk this call tree and figure out how to get the "fail wait" off the main thread for init, only happens then.
             }
@@ -20,7 +21,7 @@ namespace discordBot
 
         public override void StartPoll()
         {
-            Task.Run(() => Poll(_config.RedditRefreshTimer));
+            Task.Run(() => Poll(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.RedditRefreshTimer));
         }
 
         private void Poll(int pollRate)

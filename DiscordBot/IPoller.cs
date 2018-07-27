@@ -5,11 +5,9 @@ namespace discordBot
     public abstract class IPoller
     {
         protected DiscordSocketClient _client;
-        protected Configuration _config;
-        protected IPoller(DiscordSocketClient client, Configuration config)
+        protected IPoller(DiscordSocketClient client)
         {
             _client = client;
-            _config = config;
         }
         public abstract void StartPoll();
     }

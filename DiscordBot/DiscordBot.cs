@@ -1,3 +1,4 @@
+using ClassLocator;
 using Discord;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +13,6 @@ namespace discordBot
 {
     public class DiscordBot
     {
-        private Configuration _config;
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
         private PollHandler _pollHandler;
@@ -20,12 +20,10 @@ namespace discordBot
        
 
         public DiscordBot()
-        {
-            _config = ConfigurationLoader.LoadConfiguration();
-            
-            _commandHandler = new CommandHandler(_config);
+        {            
+            _commandHandler = new CommandHandler();
 
-            var token = _config.Token;
+            var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
 
             if (!String.IsNullOrEmpty(token))
             {
@@ -36,7 +34,7 @@ namespace discordBot
             _client = new DiscordSocketClient();
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
-            _pollHandler = new PollHandler(_config, _client);
+            _pollHandler = new PollHandler(_client);
         }
 
 
@@ -44,7 +42,7 @@ namespace discordBot
         public async Task LoginAsync()
         {
             Console.WriteLine("Logging in.");
-            await _client.LoginAsync(TokenType.Bot, _config.Token);
+            await _client.LoginAsync(TokenType.Bot, Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token);
         }
 
         public async Task StartAsync()
@@ -78,10 +76,10 @@ namespace discordBot
                     Console.WriteLine("Seeing text channel: " + channel.Name);
                 }
             }
-            var adminGuild = _client.GetGuild(_config.AdminServerID);
+            var adminGuild = _client.GetGuild(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.AdminServerID);
             if (adminGuild != null)
             {
-                _adminChannel = adminGuild.GetTextChannel(_config.AdminChannelID);
+                _adminChannel = adminGuild.GetTextChannel(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.AdminChannelID);
             }
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
