@@ -8,7 +8,7 @@ namespace discordBot
     class GoalHornPoll : IPoller
     {
         private List<GoalHorn> _goalHorns;
-        public GoalHornPoll(DiscordSocketClient client) : base(client)
+        public GoalHornPoll()
         {
             _goalHorns = new List<GoalHorn>();
         }
@@ -20,7 +20,7 @@ namespace discordBot
                 
             foreach (var goalHornConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.GoalHornConfig)
             {
-                var guild = _client.GetGuild(goalHornConfig.ServerID);
+                var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(goalHornConfig.ServerID);
                 if (null != guild)
                 {
                     var channel = guild.GetTextChannel(goalHornConfig.TargetChannelID);
@@ -33,7 +33,7 @@ namespace discordBot
             }
         }
 
-        public override void StartPoll()
+        public void StartPoll()
         {
             RegisterGoalHorns();
             foreach (var goalHorn in _goalHorns)

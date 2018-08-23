@@ -8,13 +8,11 @@ namespace discordBot
 {
     class PollHandler
     {
-        private DiscordSocketClient _client;
         private List<IPoller> _pollers;
 
         private bool _pollersRunning = false;
-        public PollHandler(DiscordSocketClient client)
+        public PollHandler()
         {
-            _client = client;
             _pollers = new List<IPoller>();
 
             RegisterPollers();
@@ -31,7 +29,7 @@ namespace discordBot
             foreach (var poller in pollers)
             {
                 //TODO Handle conflicts like a good coder.
-                var pollerInstance = Activator.CreateInstance(poller, _client) as IPoller;
+                var pollerInstance = Activator.CreateInstance(poller) as IPoller;
                 _pollers.Add(pollerInstance);
                 Console.WriteLine("Poller Registered of type: " + poller.GetType().FullName);
             }

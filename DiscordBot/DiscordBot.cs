@@ -32,9 +32,10 @@ namespace discordBot
 
             Console.WriteLine("Starting up client.");
             _client = new DiscordSocketClient();
+            Locator.Instance.RegisterInstance<DiscordSocketClient>(_client); //Make the client available downstream as a resource
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
-            _pollHandler = new PollHandler(_client);
+            _pollHandler = new PollHandler();
         }
 
 

@@ -9,7 +9,7 @@ namespace discordBot
     class SubredditPoll : IPoller
     {
         private List<RedditClient> _subreddits;
-        public SubredditPoll(DiscordSocketClient client) : base(client)
+        public SubredditPoll()
         {
             _subreddits = new List<RedditClient>();
             
@@ -19,7 +19,7 @@ namespace discordBot
             }
         }
 
-        public override void StartPoll()
+        public void StartPoll()
         {
             Task.Run(() => Poll(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.RedditRefreshTimer));
         }
@@ -30,7 +30,7 @@ namespace discordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    var guild = _client.GetGuild(subreddit.TargetServer);
+                    var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(subreddit.TargetServer);
                     if (null == guild) continue;
 
                     var channel = guild.GetTextChannel(subreddit.TargetChannel);
