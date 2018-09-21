@@ -60,6 +60,7 @@ namespace discordBot
             var commandString = message[2];
             ScheduleCommandEnum command = 0;
 
+            // Generate an enum from a string, enforces the command exists
             try
             {
                 command = (ScheduleCommandEnum)Enum.Parse(typeof(ScheduleCommandEnum), commandString, true); // ignore case
@@ -103,9 +104,38 @@ namespace discordBot
                     return LastGame(teamId);
                 case ScheduleCommandEnum.LastGameHighlights:
                     return LastGameHighlights(teamId);
+                case ScheduleCommandEnum.LastGameLineScore:
+                    return LastGameLineScore(teamId);
                 default:
                     return new List<string>(); //TODO revisit this decision. Empty string puts error checking honous above.
             }
+        }
+
+        private IEnumerable<string> LastGameLineScore(int teamId)
+        {
+            List<string> result = new List<string>();
+
+            var api = new NHLApiClient();
+            var lastGame = api.GetLastGame(teamId);
+            var teamData = api.GetTeam(teamId);
+
+            if (lastGame == null || lastGame.TotalGames < 1)
+            {
+                result.Add(string.Format("There are currently no previous games the {0}", teamData.Name));
+                return result;
+            }
+
+            var homeTeam = api.GetTeam(lastGame.Dates[0].Games[0].Teams.Home.Team.Id);
+            var awayTeam = api.GetTeam(lastGame.Dates[0].Games[0].Teams.Away.Team.Id);
+            var gameData = api.GetLiveGameDetail(lastGame.Dates[0].Games[0].GamePk);
+            var lineScore = api.GetGameLineScore(lastGame.Dates[0].Games[0].GamePk);
+
+            foreach (var period in lineScore.Periods)
+            {
+                var summary = new PeriodSummaryGenerator(period, homeTeam, awayTeam, gameData);
+                result.Add(summary.ToString());
+            }
+            return result;
         }
 
         private IEnumerable<string> NextGame(int team)
