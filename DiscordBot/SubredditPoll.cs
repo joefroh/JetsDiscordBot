@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,8 +13,15 @@ namespace discordBot
         public SubredditPoll()
         {
             _subreddits = new List<RedditClient>();
-            
-            foreach (var subreddit in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.SubredditConfig)
+            var configs = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.SubredditConfig;
+
+            if (null == configs)
+            {
+                Console.WriteLine("WARNING: NO SUBREDDIT CONFIGS FOUND IN CONFIGURATION FILE.");
+                return;
+            }
+
+            foreach (var subreddit in configs)
             {
                 _subreddits.Add(new RedditClient(subreddit)); // TODO Walk this call tree and figure out how to get the "fail wait" off the main thread for init, only happens then.
             }
