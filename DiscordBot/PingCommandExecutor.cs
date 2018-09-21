@@ -5,7 +5,7 @@ namespace discordBot
 {
     public class PingCommandExececutor : ICommandExecutor
     {
-        public PingCommandExececutor(Configuration config) : base(config)
+        public PingCommandExececutor()
         {
 
         }

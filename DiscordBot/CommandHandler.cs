@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLocator;
 using Discord.WebSocket;
 
 namespace discordBot
 {
     public class CommandHandler
     {
-        private Configuration _config;
         private Dictionary<string, ICommandExecutor> _commandExecutors;
-        public CommandHandler(Configuration config)
+        public CommandHandler()
         {
-            _config = config;
             _commandExecutors = new Dictionary<string, ICommandExecutor>();
 
             RegisterCommands();
@@ -28,7 +27,7 @@ namespace discordBot
          */
         private void RegisterCommands()
         {
-            if (!_config.EnableTextCommands)
+            if (!Locator.Instance.Fetch<IConfigurationLoader>().Configuration.EnableTextCommands)
             {
                 Console.WriteLine("Text Commands disabled in config.");
                 return;
@@ -37,7 +36,7 @@ namespace discordBot
             foreach (var command in commands)
             {
                 //TODO Handle conflicts like a good coder.
-                var commandExecutor = Activator.CreateInstance(command, _config) as ICommandExecutor;
+                var commandExecutor = Activator.CreateInstance(command) as ICommandExecutor;
                 _commandExecutors.Add(commandExecutor.CommandString, commandExecutor);
                 Console.WriteLine("Registering handler for command: " + commandExecutor.CommandString);
             }
@@ -46,14 +45,14 @@ namespace discordBot
         public async Task HandleCommand(SocketMessage message)
         {
             var command = message.Content.Split(' ');
-            if (command[0].StartsWith(_config.CommandPrefix))
+            if (command[0].StartsWith(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix))
             {
                 ICommandExecutor executor;
-                if (command[0].ToLower().Split(_config.CommandPrefix)[1] == "help") //help is a privileged command, it needs to know about the others
+                if (command[0].ToLower().Split(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix)[1] == "help") //help is a privileged command, it needs to know about the others
                 {
                     await SendHelpInfo(command, message);
                 }
-                else if (_commandExecutors.TryGetValue(command[0].ToLower().Split(_config.CommandPrefix)[1], out executor))
+                else if (_commandExecutors.TryGetValue(command[0].ToLower().Split(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix)[1], out executor))
                 {
                     await message.Channel.TriggerTypingAsync();
                     await executor.ExecuteCommand(message);
@@ -73,13 +72,13 @@ namespace discordBot
                     builder.Append("`" + ex.Value.CommandString + "`" + " ");
                 }
                 builder.AppendLine();
-                builder.AppendLine(string.Format("To get help with any specific command type {0}help <command>", _config.CommandPrefix));
+                builder.AppendLine(string.Format("To get help with any specific command type {0}help <command>", Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix));
 
                 await message.Channel.SendMessageAsync(builder.ToString());
             }
             if (command.Count() > 1)
             {
-                var param = command[1].Split(_config.CommandPrefix).Last();
+                var param = command[1].Split(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix).Last();
                 ICommandExecutor executor;
                 if (!_commandExecutors.TryGetValue(param, out executor))
                 {

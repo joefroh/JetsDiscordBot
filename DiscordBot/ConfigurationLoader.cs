@@ -1,12 +1,25 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-//TODO MAKE THIS A DAMN SERVICE AND WRITE DEP INJECTION SO I CAN STOP PASSING THIS EVERYWHERE
 namespace discordBot
 {
-    public class ConfigurationLoader
+    public class ConfigurationLoader : IConfigurationLoader
     {
-        public static Configuration LoadConfiguration()
+        private Configuration _config;
+        public ConfigurationLoader()
+        {
+            LoadConfiguration();
+        }
+
+        public Configuration Configuration
+        {
+            get
+            {
+                return _config;
+            }
+        }
+
+        private void LoadConfiguration()
         {
             var builder = new ConfigurationBuilder();
             builder.SetBasePath(Directory.GetCurrentDirectory());
@@ -15,7 +28,7 @@ namespace discordBot
             var config = new Configuration();
             configRoot.Bind(config);
 
-            return config;
+            _config = config;
         }
     }
 }

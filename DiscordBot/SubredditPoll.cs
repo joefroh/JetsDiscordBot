@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using ClassLocator;
 using Discord.WebSocket;
 
 namespace discordBot
@@ -8,19 +10,26 @@ namespace discordBot
     class SubredditPoll : IPoller
     {
         private List<RedditClient> _subreddits;
-        public SubredditPoll(DiscordSocketClient client, Configuration config) : base(client, config)
+        public SubredditPoll()
         {
             _subreddits = new List<RedditClient>();
-            
-            foreach (var subreddit in _config.SubredditConfig)
+            var configs = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.SubredditConfig;
+
+            if (null == configs)
+            {
+                Console.WriteLine("WARNING: NO SUBREDDIT CONFIGS FOUND IN CONFIGURATION FILE.");
+                return;
+            }
+
+            foreach (var subreddit in configs)
             {
                 _subreddits.Add(new RedditClient(subreddit)); // TODO Walk this call tree and figure out how to get the "fail wait" off the main thread for init, only happens then.
             }
         }
 
-        public override void StartPoll()
+        public void StartPoll()
         {
-            Task.Run(() => Poll(_config.RedditRefreshTimer));
+            Task.Run(() => Poll(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.RedditRefreshTimer));
         }
 
         private void Poll(int pollRate)
@@ -29,7 +38,7 @@ namespace discordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    var guild = _client.GetGuild(subreddit.TargetServer);
+                    var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(subreddit.TargetServer);
                     if (null == guild) continue;
 
                     var channel = guild.GetTextChannel(subreddit.TargetChannel);

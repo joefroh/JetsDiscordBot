@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLocator;
 using Discord.WebSocket;
 using NHLApi;
 
@@ -13,10 +14,10 @@ namespace discordBot
 
         private readonly string helpText = "";
 
-        public ScheduleCommandExecutor(Configuration config) : base(config)
+        public ScheduleCommandExecutor()
         {
             var builder = new StringBuilder();
-            builder.AppendLine(_config.CommandPrefix + CommandString + " <team Id Number> <function>");
+            builder.AppendLine(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix + CommandString + " <team Id Number> <function>");
 
             builder.Append("Functions: ");
             foreach (var function in Enum.GetNames(typeof(ScheduleCommandEnum)))
