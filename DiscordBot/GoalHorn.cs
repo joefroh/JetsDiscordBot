@@ -114,7 +114,7 @@ namespace discordBot
 
             var api = new NHLApiClient();
 
-            var teamId = int.Parse(gameObj["gameData"]["teams"]["home"]["id"].ToString());
+            var teamId = _config.Team;
             var scheduleData = api.GetTodaysSchedule(teamId);
             var nextGame = api.GetNextGame(teamId);
             var teamData = api.GetTeam(teamId);
