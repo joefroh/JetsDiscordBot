@@ -102,6 +102,24 @@ namespace discordBot
                 gameLive = IsGameInProgress(gameObj);
                 Thread.Sleep(1000);
             }
+
+            var gameData = GetLiveGameData(game);
+            SendLineScoreForPeriod(gameData);
+            SendGameSummary(gameData);
+        }
+
+        private void SendGameSummary(JObject gameObj)
+        {
+            List<string> result = new List<string>();
+
+            var api = new NHLApiClient();
+
+            var teamId = int.Parse(gameObj["gameData"]["teams"]["home"]["id"].ToString());
+            var scheduleData = api.GetTodaysSchedule(teamId);
+            var nextGame = api.GetNextGame(teamId);
+            var teamData = api.GetTeam(teamId);
+
+            _channel.SendMessageAsync(NHLInformationSummarizer.GameSummary(scheduleData,nextGame,teamData));
         }
 
         private void AwaitIntermission(GameDetail game, JObject gameObj)
@@ -130,9 +148,7 @@ namespace discordBot
             var gameData = api.GetLiveGameDetail(int.Parse(gameObj["gamePk"].ToString()));
             var lineScore = api.GetGameLineScore(int.Parse(gameObj["gamePk"].ToString()));
 
-            var summary = new PeriodSummaryGenerator(lineScore.Periods.Last(), homeTeam, awayTeam, gameData);
-
-            _channel.SendMessageAsync(summary.ToString());
+            _channel.SendMessageAsync(NHLInformationSummarizer.PeriodSummary(lineScore.Periods.Last(), homeTeam, awayTeam, gameData));
         }
 
         private bool GameIsInIntermission(JObject gameObj)

@@ -1,4 +1,9 @@
 {
     "dotnet-test-explorer.testProjectPath": "./NHLApi/NHLApiTests/",
-    "todo-tree.flat": true
+    "todo-tree.flat": true,
+    "cSpell.words": [
+        "information",
+        "nhl",
+        "summarizer"
+    ]
 }
