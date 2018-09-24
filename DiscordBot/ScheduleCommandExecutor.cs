@@ -132,7 +132,7 @@ namespace discordBot
 
             foreach (var period in lineScore.Periods)
             {
-                var summary = new PeriodSummaryGenerator(period, homeTeam, awayTeam, gameData);
+                var summary = NHLInformationSummarizer.PeriodSummary(period, homeTeam, awayTeam, gameData);
                 result.Add(summary.ToString());
             }
             return result;
@@ -151,8 +151,7 @@ namespace discordBot
                 return result;
             }
 
-            var game = nextGame.Dates[0].Games[0];
-            result.Add(string.Format("The next {0} game is {1}, {2} @ {3} at {4}", teamData.Name, game.GameDate.ToLocalTime().ToLongDateString(), game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name));
+            result.Add(NHLInformationSummarizer.NextGameSummary(nextGame, teamData));
             return result;
         }
 

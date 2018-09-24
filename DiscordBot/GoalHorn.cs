@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Discord.WebSocket;
 using Newtonsoft.Json.Linq;
+using NHLApi;
 using RestSharp;
 
 namespace discordBot
@@ -62,6 +65,7 @@ namespace discordBot
         {
             var gameLive = true;
             var lastGoalId = -1;
+
             while (gameLive)
             {
                 var gameObj = GetLiveGameData(game);
@@ -81,7 +85,7 @@ namespace discordBot
                             // if we want to post the goal, delay first to let the data populate
                             Thread.Sleep(_config.Delay * 1000);
                             gameObj = GetLiveGameData(game);
-                            var goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in the a short period, we can announce the wrong goal.
+                            var goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in a short period, we can announce the wrong goal.
 
                             if (goalDetails != null)
                             {
@@ -93,9 +97,63 @@ namespace discordBot
                     }
                 }
 
+                AwaitIntermission(game, gameObj);
+
                 gameLive = IsGameInProgress(gameObj);
                 Thread.Sleep(1000);
             }
+
+            var gameData = GetLiveGameData(game);
+            SendLineScoreForPeriod(gameData);
+            SendGameSummary(gameData);
+        }
+
+        private void SendGameSummary(JObject gameObj)
+        {
+            List<string> result = new List<string>();
+
+            var api = new NHLApiClient();
+
+            var teamId = _config.Team;
+            var scheduleData = api.GetTodaysSchedule(teamId);
+            var nextGame = api.GetNextGame(teamId);
+            var teamData = api.GetTeam(teamId);
+
+            _channel.SendMessageAsync(NHLInformationSummarizer.GameSummary(scheduleData,nextGame,teamData));
+        }
+
+        private void AwaitIntermission(GameDetail game, JObject gameObj)
+        {
+            if (!GameIsInIntermission(gameObj))
+                return;
+
+            // Send Period LineScore here
+            SendLineScoreForPeriod(gameObj);
+
+            while (GameIsInIntermission(gameObj))
+            {
+                Thread.Sleep(5000); // check every 5 seconds to see if intermission is over
+                gameObj = GetLiveGameData(game);
+            }
+        }
+
+        private void SendLineScoreForPeriod(JObject gameObj)
+        {
+            List<string> result = new List<string>();
+
+            var api = new NHLApiClient();
+
+            var homeTeam = api.GetTeam(int.Parse(gameObj["gameData"]["teams"]["home"]["id"].ToString()));
+            var awayTeam = api.GetTeam(int.Parse(gameObj["gameData"]["teams"]["away"]["id"].ToString()));
+            var gameData = api.GetLiveGameDetail(int.Parse(gameObj["gamePk"].ToString()));
+            var lineScore = api.GetGameLineScore(int.Parse(gameObj["gamePk"].ToString()));
+
+            _channel.SendMessageAsync(NHLInformationSummarizer.PeriodSummary(lineScore.Periods.Last(), homeTeam, awayTeam, gameData));
+        }
+
+        private bool GameIsInIntermission(JObject gameObj)
+        {
+            return bool.Parse(gameObj["liveData"]["linescore"]["intermissionInfo"]["inIntermission"].ToString());
         }
 
         private void AnnounceGoal(GoalDetail goal)
