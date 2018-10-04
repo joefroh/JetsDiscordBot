@@ -62,7 +62,9 @@ namespace discordBot
         public static string NextGameSummary(GameScheduleData nextGame, TeamDetail teamData)
         {
             var game = nextGame.Dates[0].Games[0];
-            return string.Format("The next {0} game is {1}, {2} @ {3} at {4}", teamData.Name, game.GameDate.ToLocalTime().ToLongDateString(), game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name);
+            var gamelocaltime = game.GameDate.AddHours(teamData.Venue.TimeZone.Offset);
+            var gameTime = gamelocaltime.ToLongDateString() +" at " + gamelocaltime.ToShortTimeString() + " "+ teamData.Venue.TimeZone.TZ;
+            return string.Format("The next {0} game is {1}, {2} @ {3} at {4}", teamData.Name,gameTime , game.Teams.Away.Team.Name, game.Teams.Home.Team.Name, game.Venue.Name);
         }
 
         #region private helpers
