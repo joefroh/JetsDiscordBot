@@ -24,6 +24,7 @@ namespace discordBot
             _commandHandler = new CommandHandler();
 
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
+            Locator.Instance.Fetch<TeamNameTranslator>();
 
             if (!String.IsNullOrEmpty(token))
             {
