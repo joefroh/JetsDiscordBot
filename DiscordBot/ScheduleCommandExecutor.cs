@@ -17,7 +17,7 @@ namespace discordBot
         public ScheduleCommandExecutor()
         {
             var builder = new StringBuilder();
-            builder.AppendLine(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix + CommandString + " <team Id Number> <function>");
+            builder.AppendLine(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix + CommandString + " <function> <team>");
 
             builder.Append("Functions: ");
             foreach (var function in Enum.GetNames(typeof(ScheduleCommandEnum)))
@@ -26,8 +26,7 @@ namespace discordBot
             }
 
             builder.AppendLine();
-            builder.Append("Team name mapping is a work in progress, please stay tuned. The Jets are 52 btw.");
-            helpText = builder.ToString();
+            helpText = builder.ToString(); // HELP TEXT IS ASSIGNED HERE
         }
 
         public override string CommandString
@@ -56,8 +55,8 @@ namespace discordBot
                 return;
             }
 
-            var team = message[1];
-            var commandString = message[2];
+            var team = string.Join(" ", message.Skip(2));
+            var commandString = message[1];
             ScheduleCommandEnum command = 0;
 
             // Generate an enum from a string, enforces the command exists
@@ -68,14 +67,6 @@ namespace discordBot
             catch (ArgumentException)
             {
                 await CommandExecutorHelpers.ErrorMessage(msg, String.Format("I'm sorry, I didn't recognize the command: {0}", commandString));
-                return;
-            }
-
-            // make sure the team id is a number until I sort out a better parsing solution.
-            int teamId = -1;
-            if (!int.TryParse(team, out teamId))
-            {
-                await CommandExecutorHelpers.ErrorMessage(msg);
                 return;
             }
 
@@ -95,25 +86,68 @@ namespace discordBot
 
         private IEnumerable<string> GenerateScheduleResult(string team, ScheduleCommandEnum command)
         {
-            int teamId = int.Parse(team);
             switch (command)
             {
                 case ScheduleCommandEnum.NextGame:
-                    return NextGame(teamId);
+                    return NextGame(team);
                 case ScheduleCommandEnum.LastGame:
-                    return LastGame(teamId);
+                    return LastGame(team);
                 case ScheduleCommandEnum.LastGameHighlights:
-                    return LastGameHighlights(teamId);
+                    return LastGameHighlights(team);
                 case ScheduleCommandEnum.LastGameLineScore:
-                    return LastGameLineScore(teamId);
+                    return LastGameLineScore(team);
+                case ScheduleCommandEnum.Lookup:
+                    return Lookup(team);
                 default:
                     return new List<string>(); //TODO revisit this decision. Empty string puts error checking honous above.
             }
         }
 
-        private IEnumerable<string> LastGameLineScore(int teamId)
+        private IEnumerable<string> Lookup(string team)
         {
-            List<string> result = new List<string>();
+            var result = new List<string>();
+            var nameMappings = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+            if (nameMappings.Count == 0)
+            {
+                result.Add("Couldn't find team: " + team);
+                return result;
+            }
+
+            if (nameMappings.Count > 1)
+            {
+                result.Add("Multiple results found for that team, which did you mean?");
+                result.Add(String.Format("{0} or {1}?", nameMappings[0].Value.First(), nameMappings[1].Value.First()));
+                return result;
+            }
+
+            result.Add(nameMappings.First().Value.First() + " " + nameMappings.First().Key);
+            return result;
+        }
+
+        private IEnumerable<string> LastGameLineScore(string team)
+        {
+             List<string> result = new List<string>();
+             int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+           
 
             var api = new NHLApiClient();
             var lastGame = api.GetLastGame(teamId);
@@ -138,12 +172,34 @@ namespace discordBot
             return result;
         }
 
-        private IEnumerable<string> NextGame(int team)
+        private IEnumerable<string> NextGame(string team)
         {
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
-            var nextGame = api.GetNextGame(team);
-            var teamData = api.GetTeam(team);
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+
+
+            var nextGame = api.GetNextGame(teamId);
+            var teamData = api.GetTeam(teamId);
 
             if (nextGame.TotalGames < 1)
             {
@@ -155,13 +211,34 @@ namespace discordBot
             return result;
         }
 
-        private IEnumerable<string> LastGame(int team)
+        private IEnumerable<string> LastGame(string team)
         {
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
+            int teamId = -1;
 
-            var lastGame = api.GetLastGame(team);
-            var teamData = api.GetTeam(team);
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+            
+
+            var lastGame = api.GetLastGame(teamId);
+            var teamData = api.GetTeam(teamId);
 
             if (lastGame == null || lastGame.TotalGames < 1)
             {
@@ -181,11 +258,32 @@ namespace discordBot
             return result;
         }
 
-        private IEnumerable<string> LastGameHighlights(int team)
+        private IEnumerable<string> LastGameHighlights(string team)
         {
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
-            var lastGame = api.GetLastGame(team);
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+            
+            var lastGame = api.GetLastGame(teamId);
             var gameId = lastGame.Dates[0].Games[0].GamePk;
 
             var content = api.GetGameContent(gameId);

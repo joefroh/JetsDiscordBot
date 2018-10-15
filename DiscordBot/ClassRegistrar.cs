@@ -7,6 +7,7 @@ namespace discordBot
         public void RegisterClasses(Locator locator)
         {
             locator.Register<IConfigurationLoader,ConfigurationLoader>();
+            locator.Register<TeamNameTranslator,TeamNameTranslator>();
         }
     }
 }
