@@ -126,8 +126,28 @@ namespace discordBot
 
         private IEnumerable<string> LastGameLineScore(string team)
         {
-            int teamId = int.Parse(team);
-            List<string> result = new List<string>();
+             List<string> result = new List<string>();
+             int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+           
 
             var api = new NHLApiClient();
             var lastGame = api.GetLastGame(teamId);
@@ -193,9 +213,29 @@ namespace discordBot
 
         private IEnumerable<string> LastGame(string team)
         {
-            int teamId = int.Parse(team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+            
 
             var lastGame = api.GetLastGame(teamId);
             var teamData = api.GetTeam(teamId);
@@ -220,9 +260,29 @@ namespace discordBot
 
         private IEnumerable<string> LastGameHighlights(string team)
         {
-            int teamId = int.Parse(team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+            
             var lastGame = api.GetLastGame(teamId);
             var gameId = lastGame.Dates[0].Games[0].GamePk;
 
