@@ -98,9 +98,46 @@ namespace discordBot
                     return LastGameLineScore(team);
                 case ScheduleCommandEnum.Lookup:
                     return Lookup(team);
+                case ScheduleCommandEnum.Countdown:
+                    return Countdown(team);
                 default:
                     return new List<string>(); //TODO revisit this decision. Empty string puts error checking honous above.
             }
+        }
+
+        private IEnumerable<string> Countdown(string team)
+        {
+            List<string> result = new List<string>();
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+
+            var api = new NHLApiClient();
+            var nextGame = api.GetNextGame(teamId);
+            var teamData = api.GetTeam(teamId);
+            
+            var timeToGame = nextGame.Dates.First().Games.First().GameDate - DateTime.UtcNow;
+
+            var formatString = (timeToGame.Days > 0 ? "d" : "") + @"\.hh\:mm\:ss";
+            result.Add(string.Format("The next {0} game is in {1}.", teamData.Name, timeToGame.Duration().ToString(formatString)));
+            return result;
         }
 
         private IEnumerable<string> Lookup(string team)
@@ -126,8 +163,8 @@ namespace discordBot
 
         private IEnumerable<string> LastGameLineScore(string team)
         {
-             List<string> result = new List<string>();
-             int teamId = -1;
+            List<string> result = new List<string>();
+            int teamId = -1;
 
             var isTeamId = int.TryParse(team, out teamId);
             if (!isTeamId)
@@ -147,7 +184,6 @@ namespace discordBot
 
                 teamId = Ids.First().Key;
             }
-           
 
             var api = new NHLApiClient();
             var lastGame = api.GetLastGame(teamId);
@@ -197,7 +233,6 @@ namespace discordBot
                 teamId = Ids.First().Key;
             }
 
-
             var nextGame = api.GetNextGame(teamId);
             var teamData = api.GetTeam(teamId);
 
@@ -235,7 +270,6 @@ namespace discordBot
 
                 teamId = Ids.First().Key;
             }
-            
 
             var lastGame = api.GetLastGame(teamId);
             var teamData = api.GetTeam(teamId);
@@ -257,7 +291,6 @@ namespace discordBot
 
             return result;
         }
-
         private IEnumerable<string> LastGameHighlights(string team)
         {
             List<string> result = new List<string>();
@@ -282,7 +315,7 @@ namespace discordBot
 
                 teamId = Ids.First().Key;
             }
-            
+
             var lastGame = api.GetLastGame(teamId);
             var gameId = lastGame.Dates[0].Games[0].GamePk;
 
