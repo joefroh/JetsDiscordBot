@@ -6,6 +6,7 @@ namespace discordBot
         LastGame,
         LastGameHighlights,
         LastGameLineScore,
-        Lookup
+        Lookup,
+        Countdown
     }
 }
