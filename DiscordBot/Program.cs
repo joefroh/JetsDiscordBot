@@ -22,7 +22,7 @@ namespace discordBot
             _bot = new DiscordBot();
             await _bot.LoginAsync();
             await _bot.StartAsync();
-            Locator.Instance.Fetch<ILogger>().LogLine("Awaiting.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Awaiting main thread.");
             await Task.Delay(-1);
         }
     }

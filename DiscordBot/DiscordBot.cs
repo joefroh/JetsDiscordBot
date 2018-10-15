@@ -24,11 +24,10 @@ namespace discordBot
             _commandHandler = new CommandHandler();
 
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
-            Locator.Instance.Fetch<TeamNameTranslator>();
-
+            
             if (!String.IsNullOrEmpty(token))
             {
-                Locator.Instance.Fetch<ILogger>().LogLine("Got token.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Got token from config.");
             }
 
             Locator.Instance.Fetch<ILogger>().LogLine("Starting up client.");
@@ -45,6 +44,7 @@ namespace discordBot
         {
             Locator.Instance.Fetch<ILogger>().LogLine("Logging in.");
             await _client.LoginAsync(TokenType.Bot, Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token);
+            Locator.Instance.Fetch<ILogger>().LogLine("Successfully logged in.");
         }
 
         public async Task StartAsync()
