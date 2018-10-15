@@ -17,7 +17,7 @@ namespace discordBot
         public ScheduleCommandExecutor()
         {
             var builder = new StringBuilder();
-            builder.AppendLine(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix + CommandString + " <team Id Number> <function>");
+            builder.AppendLine(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.CommandPrefix + CommandString + " <function> <team>");
 
             builder.Append("Functions: ");
             foreach (var function in Enum.GetNames(typeof(ScheduleCommandEnum)))
@@ -26,7 +26,6 @@ namespace discordBot
             }
 
             builder.AppendLine();
-            builder.Append("Team name mapping is a work in progress, please stay tuned. The Jets are 52 btw.");
             helpText = builder.ToString(); // HELP TEXT IS ASSIGNED HERE
         }
 
@@ -56,8 +55,8 @@ namespace discordBot
                 return;
             }
 
-            var team = message[1];
-            var commandString = message[2];
+            var team = string.Join(" ", message.Skip(2));
+            var commandString = message[1];
             ScheduleCommandEnum command = 0;
 
             // Generate an enum from a string, enforces the command exists
@@ -70,14 +69,6 @@ namespace discordBot
                 await CommandExecutorHelpers.ErrorMessage(msg, String.Format("I'm sorry, I didn't recognize the command: {0}", commandString));
                 return;
             }
-
-            // make sure the team id is a number until I sort out a better parsing solution.
-            // int teamId = -1;
-            // if (!int.TryParse(team, out teamId))
-            // {
-            //     await CommandExecutorHelpers.ErrorMessage(msg);
-            //     return;
-            // }
 
             var result = GenerateScheduleResult(team, command);
 
@@ -163,9 +154,30 @@ namespace discordBot
 
         private IEnumerable<string> NextGame(string team)
         {
-            int teamId = int.Parse(team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
+            int teamId = -1;
+
+            var isTeamId = int.TryParse(team, out teamId);
+            if (!isTeamId)
+            {
+                var Ids = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
+                if (Ids.Count > 1)
+                {
+                    result.Add("Name conflict, got more than one team ID for " + team + ". Please be more specific.");
+                    return result;
+                }
+
+                if (Ids.Count == 0)
+                {
+                    result.Add("Couldn't find a team by the name " + team + ". Please try another name.");
+                    return result;
+                }
+
+                teamId = Ids.First().Key;
+            }
+
+
             var nextGame = api.GetNextGame(teamId);
             var teamData = api.GetTeam(teamId);
 

@@ -1,8 +1,8 @@
 {
     "TeamNames":{
         "1":["New Jersey", "Devils", "New Jersey Devils"],
-        "2":["New York", "Islanders", "New York Islanders"],
-        "3":["New York", "Rangers", "New York Rangers", "Rags", "Blue Shirts"],
+        "2":["New York Islanders", "Islanders", "New York"],
+        "3":["New York Rangers", "Rangers", "New York", "Rags", "Blue Shirts"],
         "4":["Philadelphia", "Flyers", "Philadelphia Flyers"],
         "5":["Pittsburgh", "Penguins", "Pens","Pittsburgh Penguins"],
         "6":["Boston", "Bruins", "Boston Bruins"],
@@ -32,5 +32,4 @@
         "53":["Arizona", "Coyotes", "Yotes", "Arizona Coyotes"],
         "54":["Las Vegas", "Golden Knights", "Knights", "Vegas", "Las Vegas Golden Knights"]
     }
- 
 }
