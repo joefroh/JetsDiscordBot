@@ -28,10 +28,10 @@ namespace discordBot
 
             if (!String.IsNullOrEmpty(token))
             {
-                Console.WriteLine("Got token.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Got token.");
             }
 
-            Console.WriteLine("Starting up client.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Starting up client.");
             _client = new DiscordSocketClient();
             Locator.Instance.RegisterInstance<DiscordSocketClient>(_client); //Make the client available downstream as a resource
             _client.Ready += GatewayHandshook;
@@ -43,7 +43,7 @@ namespace discordBot
         #region async tasks
         public async Task LoginAsync()
         {
-            Console.WriteLine("Logging in.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Logging in.");
             await _client.LoginAsync(TokenType.Bot, Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token);
         }
 
@@ -62,20 +62,19 @@ namespace discordBot
 
             if (message.Author.IsBot != true)
             {
-                Console.WriteLine("Non Bot message received.");
                 await _commandHandler.HandleCommand(arg);
             }
         }
 
         private async Task GatewayHandshook()
         {
-            Console.WriteLine("Connected as bot name: " + this._client.CurrentUser.Username);
+            Locator.Instance.Fetch<ILogger>().LogLine("Connected as bot name: " + this._client.CurrentUser.Username);
             foreach (var guild in this._client.Guilds)
             {
-                Console.WriteLine("Seeing Guild: " + guild.Name);
+                Locator.Instance.Fetch<ILogger>().LogLine("Seeing Guild: " + guild.Name);
                 foreach (var channel in guild.TextChannels)
                 {
-                    Console.WriteLine("Seeing text channel: " + channel.Name);
+                    Locator.Instance.Fetch<ILogger>().LogLine("Seeing text channel: " + channel.Name);
                 }
             }
             var adminGuild = _client.GetGuild(Locator.Instance.Fetch<IConfigurationLoader>().Configuration.AdminServerID);
@@ -85,7 +84,7 @@ namespace discordBot
             }
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
-            Console.WriteLine("Bot is now ready to interact with users.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Bot is now ready to interact with users.");
 
             _pollHandler.StartPollers();
         }

@@ -17,7 +17,7 @@ namespace discordBot
 
             if (null == configs)
             {
-                Console.WriteLine("WARNING: NO SUBREDDIT CONFIGS FOUND IN CONFIGURATION FILE.");
+                Locator.Instance.Fetch<ILogger>().LogLine("WARNING: NO SUBREDDIT CONFIGS FOUND IN CONFIGURATION FILE.");
                 return;
             }
 

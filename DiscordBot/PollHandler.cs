@@ -22,7 +22,7 @@ namespace discordBot
         {
             if (!Locator.Instance.Fetch<IConfigurationLoader>().Configuration.EnablePollers)
             {
-                Console.WriteLine("Pollers disabled in config.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Pollers disabled in config.");
                 return;
             }
             var pollers = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IPoller).IsAssignableFrom(p) && !p.IsAbstract);
@@ -31,7 +31,7 @@ namespace discordBot
                 //TODO Handle conflicts like a good coder.
                 var pollerInstance = Activator.CreateInstance(poller) as IPoller;
                 _pollers.Add(pollerInstance);
-                Console.WriteLine("Poller Registered of type: " + poller.GetType().FullName);
+                Locator.Instance.Fetch<ILogger>().LogLine("Poller Registered of type: " + pollerInstance.GetType());
             }
         }
 

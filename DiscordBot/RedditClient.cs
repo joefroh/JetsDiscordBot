@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
 using System.Threading;
+using ClassLocator;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp;
@@ -49,9 +50,9 @@ namespace discordBot
                 // Fixes sporatic poller crash, if Reddit gives a bad response (busy or down)
                 // Wait 10 minutes and recurse.
 
-                Console.WriteLine("Subreddit Poll failed for some reason. Waiting 10 mins and trying again.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Subreddit Poll failed for some reason. Waiting 10 mins and trying again.");
                 Thread.Sleep(1000 * 60 * 10);
-                Console.WriteLine("Subreddit Poll is trying again after failure.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Subreddit Poll is trying again after failure.");
                 return FetchSubredditNewSubmissions(limit);
             }
 
@@ -64,7 +65,7 @@ namespace discordBot
             var results = new List<string>();
             ulong tempNewestTime = 0;
 
-            Console.WriteLine("Checking Subreddit for new posts: " + _subConfig.TargetSubreddit);
+            Locator.Instance.Fetch<ILogger>().LogLine("Checking Subreddit for new posts: " + _subConfig.TargetSubreddit);
             var jobj = FetchSubredditNewSubmissions(_subConfig.NewSubmissionCacheSize);
 
             foreach (var submission in jobj["data"]["children"])
@@ -74,7 +75,7 @@ namespace discordBot
                 // if the submission is newer than the newest one we saw last poll
                 if (submissionTime > _newestSubmissionTime)
                 {
-                    Console.WriteLine("Found a new post in: " + _subConfig.TargetSubreddit);
+                    Locator.Instance.Fetch<ILogger>().LogLine("Found a new post in: " + _subConfig.TargetSubreddit);
                     var builder = new StringBuilder();
                     builder.AppendLine(submission["data"]["title"].ToString() + ": " + submission["data"]["url"]);
                     builder.Append("Comments: " + Constants.RedditURL + submission["data"]["permalink"]);

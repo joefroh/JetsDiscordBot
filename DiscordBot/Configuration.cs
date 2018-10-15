@@ -13,5 +13,6 @@ namespace discordBot
         public IEnumerable<SubredditConfig> SubredditConfig { get; set; }
         public IEnumerable<GoalHornConfig> GoalHornConfig { get; set; }
         public bool EnablePollers { get; set; }
+        public string LogFile { get; set; }
     }
 }

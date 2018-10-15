@@ -29,7 +29,7 @@ namespace discordBot
         {
             if (!Locator.Instance.Fetch<IConfigurationLoader>().Configuration.EnableTextCommands)
             {
-                Console.WriteLine("Text Commands disabled in config.");
+                Locator.Instance.Fetch<ILogger>().LogLine("Text Commands disabled in config.");
                 return;
             }
             var commands = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(ICommandExecutor).IsAssignableFrom(p) && !p.IsAbstract);
@@ -38,7 +38,7 @@ namespace discordBot
                 //TODO Handle conflicts like a good coder.
                 var commandExecutor = Activator.CreateInstance(command) as ICommandExecutor;
                 _commandExecutors.Add(commandExecutor.CommandString, commandExecutor);
-                Console.WriteLine("Registering handler for command: " + commandExecutor.CommandString);
+                Locator.Instance.Fetch<ILogger>().LogLine("Registering handler for command: " + commandExecutor.CommandString);
             }
         }
 
