@@ -32,6 +32,7 @@ namespace discordBot
 
         private void InitializeSubredditSubmissions()
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Initializing subreddit poller for /r/"+ _subConfig.TargetSubreddit);
             var jobj = FetchSubredditNewSubmissions(1);
             _newestSubmissionTime = ulong.Parse(jobj["data"]["children"][0]["data"]["created_utc"].ToString());
         }
@@ -43,6 +44,7 @@ namespace discordBot
             req.AddParameter("limit", limit);
             req.AddParameter("sort", "new");
 
+            Locator.Instance.Fetch<ILogger>().LogLine("Fetching newest posts in subreddit: /r/" + _subConfig.TargetSubreddit);
             var res = _client.Execute(req);
 
             if (!res.IsSuccessful)
@@ -65,7 +67,6 @@ namespace discordBot
             var results = new List<string>();
             ulong tempNewestTime = 0;
 
-            Locator.Instance.Fetch<ILogger>().LogLine("Checking Subreddit for new posts: " + _subConfig.TargetSubreddit);
             var jobj = FetchSubredditNewSubmissions(_subConfig.NewSubmissionCacheSize);
 
             foreach (var submission in jobj["data"]["children"])
@@ -75,7 +76,7 @@ namespace discordBot
                 // if the submission is newer than the newest one we saw last poll
                 if (submissionTime > _newestSubmissionTime)
                 {
-                    Locator.Instance.Fetch<ILogger>().LogLine("Found a new post in: " + _subConfig.TargetSubreddit);
+                    Locator.Instance.Fetch<ILogger>().LogLine("Found a new post in /r/" + _subConfig.TargetSubreddit);
                     var builder = new StringBuilder();
                     builder.AppendLine(submission["data"]["title"].ToString() + ": " + submission["data"]["url"]);
                     builder.Append("Comments: " + Constants.RedditURL + submission["data"]["permalink"]);
