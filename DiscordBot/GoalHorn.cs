@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using ClassLocator;
 using Discord.WebSocket;
 using Newtonsoft.Json.Linq;
 using NHLApi;
@@ -56,7 +57,7 @@ namespace discordBot
 
                 //Sleep for 5 hours
                 var span = TimeSpan.FromHours(5);
-                Console.WriteLine("Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
+                Locator.Instance.Fetch<ILogger>().LogLine("Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
                 Thread.Sleep(span);
             }
         }
@@ -173,9 +174,9 @@ namespace discordBot
 
             if (spanTilGame.Ticks > 0) // check to make sure there is still time before the scheduled puck drop
             {
-                Console.WriteLine("Sleeping until " + _config.TeamFriendlyName + " game in " + spanTilGame.ToString());
+                Locator.Instance.Fetch<ILogger>().LogLine("Sleeping until " + _config.TeamFriendlyName + " game in " + spanTilGame.ToString());
                 Thread.Sleep(spanTilGame);
-                Console.WriteLine("Waking up! Is it gametime?");
+                Locator.Instance.Fetch<ILogger>().LogLine("Waking up! Is it gametime?");
             }
             else //otherwise just wait 5 seconds and check again
             {

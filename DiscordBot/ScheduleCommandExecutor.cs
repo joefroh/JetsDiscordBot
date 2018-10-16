@@ -47,10 +47,13 @@ namespace discordBot
 
         public async override Task ExecuteCommand(SocketMessage msg)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Schedule Command received.");
+
             var message = msg.Content.Split(' '); //TODO make a method that does this nicely, this will get repeated a lot (the following few lines)
 
             if (message.Length < 3)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine("ERROR: Schedule command did not have enough params, sending error response.");
                 await CommandExecutorHelpers.ErrorMessage(msg);
                 return;
             }
@@ -66,6 +69,7 @@ namespace discordBot
             }
             catch (ArgumentException)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine("ERROR: Schedule command didn't match anything known, sending error response.");
                 await CommandExecutorHelpers.ErrorMessage(msg, String.Format("I'm sorry, I didn't recognize the command: {0}", commandString));
                 return;
             }
@@ -74,12 +78,14 @@ namespace discordBot
 
             if (result.Count() == 0)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine("ERROR: Failed to generate Schedule command response, sending error response.");
                 await CommandExecutorHelpers.ErrorMessage(msg);
                 return;
             }
 
             foreach (var response in result)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine("SUCCESS: Schedule command complete.");
                 await msg.Channel.SendMessageAsync(response);
             }
         }
@@ -107,6 +113,7 @@ namespace discordBot
 
         private IEnumerable<string> Countdown(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing Countdown command for: " + team);
             List<string> result = new List<string>();
             int teamId = -1;
 
@@ -132,7 +139,7 @@ namespace discordBot
             var api = new NHLApiClient();
             var nextGame = api.GetNextGame(teamId);
             var teamData = api.GetTeam(teamId);
-            
+
             var timeToGame = nextGame.Dates.First().Games.First().GameDate - DateTime.UtcNow;
 
             var formatString = (timeToGame.Days > 0 ? "d" : "") + @"\.hh\:mm\:ss";
@@ -142,6 +149,7 @@ namespace discordBot
 
         private IEnumerable<string> Lookup(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing Lookup command for: " + team);
             var result = new List<string>();
             var nameMappings = Locator.Instance.Fetch<TeamNameTranslator>().LookupIdsForName(team);
             if (nameMappings.Count == 0)
@@ -163,6 +171,7 @@ namespace discordBot
 
         private IEnumerable<string> LastGameLineScore(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing LastGameLineScore command for: " + team);
             List<string> result = new List<string>();
             int teamId = -1;
 
@@ -210,6 +219,7 @@ namespace discordBot
 
         private IEnumerable<string> NextGame(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing NextGame command for team: " + team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
             int teamId = -1;
@@ -248,6 +258,7 @@ namespace discordBot
 
         private IEnumerable<string> LastGame(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing LastGame command for team: " + team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
             int teamId = -1;
@@ -293,6 +304,7 @@ namespace discordBot
         }
         private IEnumerable<string> LastGameHighlights(string team)
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Executing LastGameHighlights command for team: " + team);
             List<string> result = new List<string>();
             NHLApiClient api = new NHLApiClient();
             int teamId = -1;

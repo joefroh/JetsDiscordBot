@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ClassLocator;
 
 namespace discordBot
 {
@@ -17,11 +18,11 @@ namespace discordBot
         // async main
         public async Task MainAsync()
         {
-            Console.WriteLine("Starting up the bot.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Starting up the bot.");
             _bot = new DiscordBot();
             await _bot.LoginAsync();
             await _bot.StartAsync();
-            Console.WriteLine("Awaiting.");
+            Locator.Instance.Fetch<ILogger>().LogLine("Awaiting main thread.");
             await Task.Delay(-1);
         }
     }
