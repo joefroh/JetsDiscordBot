@@ -1,6 +1,7 @@
 {
     "Token": "your bot token",
     "LogFile": "name of your log file",
+    "EnableReactions": "true/false",
     "EnableTextCommands": "true/false",
     "EnablePollers": "true/false",
     "CommandPrefix": "any string you like, usually ! or similar",
