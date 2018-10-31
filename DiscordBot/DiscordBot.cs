@@ -15,6 +15,7 @@ namespace discordBot
     {
         private DiscordSocketClient _client;
         private CommandHandler _commandHandler;
+        private ReactionHandler _reactionHandler;
         private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
        
@@ -22,6 +23,7 @@ namespace discordBot
         public DiscordBot()
         {            
             _commandHandler = new CommandHandler();
+            _reactionHandler = new ReactionHandler();
 
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
             
@@ -59,6 +61,8 @@ namespace discordBot
         {
             var message = arg as SocketUserMessage;
             if (message == null) return;
+
+            await _reactionHandler.HandleMessage(arg);
 
             if (message.Author.IsBot != true)
             {
