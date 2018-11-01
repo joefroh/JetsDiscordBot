@@ -38,6 +38,9 @@ namespace discordBot
 
         private bool MessageTriggerOnOnlyIgnoredWords(string message)
         {
+            if (_config.Ignore == null)
+                return false;
+                
             var tokens = message.Split(' ');
 
             foreach (var token in tokens)
