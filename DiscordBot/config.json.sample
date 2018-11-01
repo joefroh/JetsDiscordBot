@@ -28,5 +28,12 @@
             "PreText": "any text you want to preceed the goal announcement",
             "PostText": "any text you want to come after the goal announcement"
         }
+    ],
+    "ReactionActorConfig":[
+        {
+            "Trigger":"string to trigger on",
+            "Reaction":"the reaction name you want to add",
+            "Ignore":["list","of","words","to ignore"]
+        }
     ]
 }

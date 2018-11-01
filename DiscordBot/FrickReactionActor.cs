@@ -6,7 +6,7 @@ using Discord.WebSocket;
 
 namespace discordBot
 {
-    public class FrickReactionActor : IReactionActor
+    public class FrickReactionActor
     {
         public string TriggerString { get { return "fuck"; } }
 

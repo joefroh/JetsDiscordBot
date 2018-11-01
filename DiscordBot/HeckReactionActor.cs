@@ -6,7 +6,7 @@ using Discord.WebSocket;
 
 namespace discordBot
 {
-    public class HeckReactionActor : IReactionActor
+    public class HeckReactionActor
     {
         public string TriggerString { get { return "hell"; } }
 
