@@ -62,12 +62,20 @@ namespace discordBot
                 return false;
 
             var tokens = message.Split(' ');
-
+            
             foreach (var token in tokens)
             {
-                foreach (var ignoreWord in _config.Ignore)
+                if (token.Contains(_config.Trigger))
                 {
-                    if (token.ToLower().Contains(Trigger) && !token.ToLower().Contains(ignoreWord))
+                    var filterWord = false;
+                    foreach (var ignoreWord in _config.Ignore)
+                    {
+                        if (token.ToLower().Contains(ignoreWord))
+                        {
+                            filterWord = true;
+                        }
+                    }
+                    if (!filterWord)
                     {
                         return false;
                     }
