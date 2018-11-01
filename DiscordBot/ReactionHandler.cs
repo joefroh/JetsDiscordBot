@@ -9,10 +9,10 @@ namespace discordBot
 {
     public class ReactionHandler
     {
-        Dictionary<string, IReactionActor> _reactions;
+        Dictionary<string, ReactionActor> _reactions;
         public ReactionHandler()
         {
-            _reactions = new Dictionary<string, IReactionActor>();
+            _reactions = new Dictionary<string, ReactionActor>();
             LoadReactions();
         }
         private void LoadReactions()
@@ -23,13 +23,19 @@ namespace discordBot
                 return;
             }
 
-            var reactors = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IReactionActor).IsAssignableFrom(p) && !p.IsAbstract);
-            foreach (var reactor in reactors)
+            // var reactors = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IReactionActor).IsAssignableFrom(p) && !p.IsAbstract);
+            // foreach (var reactor in reactors)
+            // {
+            //     //TODO Handle conflicts like a good coder.
+            //     var reactionActor = Activator.CreateInstance(reactor) as IReactionActor;
+            //     _reactions.Add(reactionActor.TriggerString, reactionActor);
+            //     Locator.Instance.Fetch<ILogger>().LogLine("Registering reaction actor for string: " + reactionActor.TriggerString);
+            // }
+
+            foreach (var reactionConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.ReactionActorConfig)
             {
-                //TODO Handle conflicts like a good coder.
-                var reactionActor = Activator.CreateInstance(reactor) as IReactionActor;
-                _reactions.Add(reactionActor.TriggerString, reactionActor);
-                Locator.Instance.Fetch<ILogger>().LogLine("Registering reaction actor for string: " + reactionActor.TriggerString);
+                var reaction = new ReactionActor(reactionConfig);
+                _reactions.Add(reactionConfig.Trigger, reaction);
             }
         }
 
