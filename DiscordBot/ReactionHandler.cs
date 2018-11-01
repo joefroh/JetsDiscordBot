@@ -23,15 +23,6 @@ namespace discordBot
                 return;
             }
 
-            // var reactors = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IReactionActor).IsAssignableFrom(p) && !p.IsAbstract);
-            // foreach (var reactor in reactors)
-            // {
-            //     //TODO Handle conflicts like a good coder.
-            //     var reactionActor = Activator.CreateInstance(reactor) as IReactionActor;
-            //     _reactions.Add(reactionActor.TriggerString, reactionActor);
-            //     Locator.Instance.Fetch<ILogger>().LogLine("Registering reaction actor for string: " + reactionActor.TriggerString);
-            // }
-
             foreach (var reactionConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.ReactionActorConfig)
             {
                 var reaction = new ReactionActor(reactionConfig);
