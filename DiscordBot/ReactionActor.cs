@@ -65,7 +65,7 @@ namespace discordBot
             
             foreach (var token in tokens)
             {
-                if (token.Contains(_config.Trigger))
+                if (token.ToLower().Contains(_config.Trigger))
                 {
                     var filterWord = false;
                     foreach (var ignoreWord in _config.Ignore)
