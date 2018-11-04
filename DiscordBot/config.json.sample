@@ -33,7 +33,8 @@
         {
             "Trigger":"string to trigger on",
             "Reaction":"the reaction name you want to add",
-            "Ignore":["list","of","words","to ignore"]
+            "Ignore":["list","of","words","to ignore"],
+            "ChannelBlackList": ["list of channels", "to ignore"]
         }
     ]
 }
