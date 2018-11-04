@@ -32,6 +32,11 @@ namespace discordBot
                 return;
             }
 
+            if (MessageFromBlackList(msg))
+            {
+                return;
+            }
+
             var guild = ((SocketGuildChannel)msg.Channel).Guild;
 
             // load an emoji
@@ -56,13 +61,18 @@ namespace discordBot
             }
         }
 
+        private bool MessageFromBlackList(SocketMessage msg)
+        {
+            return _config.ChannelBlackList.Contains(msg.Channel.Id.ToString());
+        }
+
         private bool MessageTriggerOnOnlyIgnoredWords(string message)
         {
             if (_config.Ignore == null)
                 return false;
 
             var tokens = message.Split(' ');
-            
+
             foreach (var token in tokens)
             {
                 if (token.ToLower().Contains(_config.Trigger))
