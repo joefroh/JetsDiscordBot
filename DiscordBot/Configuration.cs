@@ -16,5 +16,6 @@ namespace discordBot
         public bool EnablePollers { get; set; }
         public bool EnableReactions { get; set; }
         public string LogFile { get; set; }
+        public string MessageLogFile { get; set; }
     }
 }

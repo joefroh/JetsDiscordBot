@@ -62,6 +62,8 @@ namespace discordBot
             var message = arg as SocketUserMessage;
             if (message == null) return;
 
+            Locator.Instance.Fetch<IMessageLogger>().LogMessage(arg);
+            
             await _reactionHandler.HandleMessage(arg);
 
             if (message.Author.IsBot != true)
