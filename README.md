@@ -37,6 +37,12 @@ dotnet build
 
 Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
 
+Once you can get the bot to start up and build, make sure you add it to your server by creating an add link:
+
+`https://discordapp.com/oauth2/authorize?client_id=<YOUR_CLIENT_ID>&scope=bot&permissions=8`
+
+Note: This will try to add a bot using Admin permissions, you can get a different permission number where you get your bot token.
+
 ## Feature Requests
 
 * Team Stats Functions - In Progress
