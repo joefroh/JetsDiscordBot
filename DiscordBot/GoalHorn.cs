@@ -26,6 +26,7 @@ namespace discordBot
 
         public void Run()
         {
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Running Goal Horn poller for {0}", _config.TeamFriendlyName));
             Task.Run(() => Poll());
         }
 
@@ -44,6 +45,8 @@ namespace discordBot
                         //If a game is found today, check if its already started
                         if (IsGameInProgress(game))
                         {
+                            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Game in progress for {0}", _config.TeamFriendlyName));
+                            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Starting game listener for {0}", _config.TeamFriendlyName));
                             RunGame(game);
                             gameFinal = true;
                         }
@@ -57,7 +60,7 @@ namespace discordBot
 
                 //Sleep for 5 hours
                 var span = TimeSpan.FromHours(5);
-                Locator.Instance.Fetch<ILogger>().LogLine("Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
+                Locator.Instance.Fetch<ILogger>().LogLine("Goal Horn: Game complete or no " + _config.TeamFriendlyName + " game today detected, sleeping for " + span.ToString());
                 Thread.Sleep(span);
             }
         }
@@ -66,7 +69,7 @@ namespace discordBot
         {
             var gameLive = true;
             var lastGoalId = -1;
-
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Enterting GameLive loop for {0}", _config.TeamFriendlyName));
             while (gameLive)
             {
                 var gameObj = GetLiveGameData(game);
@@ -78,22 +81,28 @@ namespace discordBot
 
                     if (currGoalId > lastGoalId)
                     {
-                        //we have a new goal, check if its the team we care about
+                        Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Detected goal in tracked game for {0}", _config.TeamFriendlyName));
+
+                        //we have a new goal
                         var goal = GetGoalFromIndex(gameObj, currGoalIndx);
+                        GoalDetail goalDetails = null;
 
-                        if (goal.ScoringTeamId == _config.Team)
+                        //if (goal.ScoringTeamId == _config.Team)
+                        //{
+                        // if we want to post the goal, delay first to let the data populate
+                        Thread.Sleep(_config.Delay * 1000);
+                        gameObj = GetLiveGameData(game);
+                        goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in a short period, we can announce the wrong goal.
+                        //}
+
+                        if (goalDetails != null)
                         {
-                            // if we want to post the goal, delay first to let the data populate
-                            Thread.Sleep(_config.Delay * 1000);
-                            gameObj = GetLiveGameData(game);
-                            var goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in a short period, we can announce the wrong goal.
-
-                            if (goalDetails != null)
-                            {
-                                //output to bot
-                                AnnounceGoal(goalDetails);
-                            }
+                            //output to bot
+                            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Announcing goal in tracked game for {0}", _config.TeamFriendlyName));
+                            AnnounceGoal(goalDetails);
                         }
+
+                        Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Updating goal index to {1} for {0}", _config.TeamFriendlyName, currGoalId));
                         lastGoalId = currGoalId;
                     }
                 }
@@ -101,9 +110,10 @@ namespace discordBot
                 AwaitIntermission(game, gameObj);
 
                 gameLive = IsGameInProgress(gameObj);
-                Thread.Sleep(1000);
+                Thread.Sleep(2000); // This used to be 1 second, but that seemed really fast.
             }
 
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Exited game loop, running end game commands for {0}", _config.TeamFriendlyName));
             var gameData = GetLiveGameData(game);
             SendLineScoreForPeriod(gameData);
             SendGameSummary(gameData);
@@ -120,7 +130,7 @@ namespace discordBot
             var nextGame = api.GetNextGame(teamId);
             var teamData = api.GetTeam(teamId);
 
-            _channel.SendMessageAsync(NHLInformationSummarizer.GameSummary(scheduleData,nextGame,teamData));
+            _channel.SendMessageAsync(NHLInformationSummarizer.GameSummary(scheduleData, nextGame, teamData));
         }
 
         private void AwaitIntermission(GameDetail game, JObject gameObj)
@@ -128,12 +138,15 @@ namespace discordBot
             if (!GameIsInIntermission(gameObj))
                 return;
 
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Intermission detected in game for {0}", _config.TeamFriendlyName));
+            
             // Send Period LineScore here
             SendLineScoreForPeriod(gameObj);
 
             while (GameIsInIntermission(gameObj))
             {
-                Thread.Sleep(5000); // check every 5 seconds to see if intermission is over
+                Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Checking if intermission is over for {0}", _config.TeamFriendlyName));
+                Thread.Sleep(30000); // check every 30 seconds to see if intermission is over
                 gameObj = GetLiveGameData(game);
             }
         }
@@ -149,6 +162,7 @@ namespace discordBot
             var gameData = api.GetLiveGameDetail(int.Parse(gameObj["gamePk"].ToString()));
             var lineScore = api.GetGameLineScore(int.Parse(gameObj["gamePk"].ToString()));
 
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Sending period line score for {0}", _config.TeamFriendlyName));
             _channel.SendMessageAsync(NHLInformationSummarizer.PeriodSummary(lineScore.Periods.Last(), homeTeam, awayTeam, gameData));
         }
 
@@ -187,6 +201,7 @@ namespace discordBot
         #region Game Manipulation Methods
         private GameDetail GetTodaysGame()
         {
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Fetching today's game schedule for {0}", _config.TeamFriendlyName));
             var req = new RestRequest("/api/v1/schedule");
             req.AddParameter("teamId", _config.Team);
             var res = _restClient.Execute(req);
@@ -195,6 +210,7 @@ namespace discordBot
 
             if (dates.Count == 0)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: No dates found today for {0}", _config.TeamFriendlyName));
                 return null;
             }
 
@@ -202,10 +218,12 @@ namespace discordBot
 
             if (gameDates.Count == 0)
             {
+                Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: No games found today for {0}", _config.TeamFriendlyName));
                 return null;
             }
 
             // There should only ever be 1
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Found a game today for {0}", _config.TeamFriendlyName));
             var gameDate = DateTime.Parse(gameDates[0]["gameDate"].ToString());
             var gameLiveLink = gameDates[0]["link"].ToString();
 
