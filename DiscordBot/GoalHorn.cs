@@ -87,21 +87,26 @@ namespace discordBot
                         var goal = GetGoalFromIndex(gameObj, currGoalIndx);
                         GoalDetail goalDetails = null;
 
-                        //if (goal.ScoringTeamId == _config.Team)
-                        //{
+
                         // if we want to post the goal, delay first to let the data populate
                         Thread.Sleep(_config.Delay * 1000);
                         gameObj = GetLiveGameData(game);
                         goalDetails = GetGoalFromID(gameObj, currGoalId); // Fixes bug where if 2 goals are scored in a short period, we can announce the wrong goal.
-                        //}
+
 
                         if (goalDetails != null)
                         {
-                            //output to bot
                             Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Announcing goal in tracked game for {0}", _config.TeamFriendlyName));
-                            AnnounceGoal(goalDetails);
+                            if (goal.ScoringTeamId == _config.Team)
+                            {
+                                //output to bot
+                                AnnouncePriorityGoal(goalDetails);
+                            }
+                            else
+                            {
+                                AnnounceGoal(goalDetails);
+                            }
                         }
-
                         Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Updating goal index to {1} for {0}", _config.TeamFriendlyName, currGoalId));
                         lastGoalId = currGoalId;
                     }
@@ -118,6 +123,7 @@ namespace discordBot
             SendLineScoreForPeriod(gameData);
             SendGameSummary(gameData);
         }
+
 
         private void SendGameSummary(JObject gameObj)
         {
@@ -139,7 +145,7 @@ namespace discordBot
                 return;
 
             Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Goal Horn: Intermission detected in game for {0}", _config.TeamFriendlyName));
-            
+
             // Send Period LineScore here
             SendLineScoreForPeriod(gameObj);
 
@@ -171,10 +177,19 @@ namespace discordBot
             return bool.Parse(gameObj["liveData"]["linescore"]["intermissionInfo"]["inIntermission"].ToString());
         }
 
-        private void AnnounceGoal(GoalDetail goal)
+        private void AnnouncePriorityGoal(GoalDetail goal)
         {
             StringBuilder builder = new StringBuilder();
             builder.AppendLine(String.Format("{0} {1} GOOOAAALLL!!! {2}", _config.PreText, _config.TeamFriendlyName.ToUpper(), _config.PostText));
+            builder.AppendLine(goal.Description);
+
+            _channel.SendMessageAsync(builder.ToString());
+        }
+
+        private void AnnounceGoal(GoalDetail goal)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine(String.Format("{1} Goal", goal.ScoringTeam));
             builder.AppendLine(goal.Description);
 
             _channel.SendMessageAsync(builder.ToString());
