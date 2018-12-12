@@ -9,6 +9,7 @@ namespace discordBot
             locator.Register<IConfigurationLoader, ConfigurationLoader>();
             locator.Register<ILogger, Logger>();
             locator.Register<TeamNameTranslator, TeamNameTranslator>();
+            locator.Register<IMessageLogger, FlatFileMessageLogger>();
         }
     }
 }
