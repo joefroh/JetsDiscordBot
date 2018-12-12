@@ -1,9 +1,11 @@
+using System.Threading.Tasks;
+
 namespace DiscordBot
 {
     interface IEventBroker
     {
         void RegisterHandler(IEventHandler handler);
 
-        void FireEvent(IEvent firedEvent);
+        Task FireEvent(IEvent firedEvent);
     }
 }

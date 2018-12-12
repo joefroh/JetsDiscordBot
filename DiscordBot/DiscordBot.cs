@@ -18,15 +18,15 @@ namespace DiscordBot
         private ReactionHandler _reactionHandler;
         private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
-       
+
 
         public DiscordBot()
-        {            
+        {
             _commandHandler = new CommandHandler();
             _reactionHandler = new ReactionHandler();
 
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
-            
+
             if (!String.IsNullOrEmpty(token))
             {
                 Locator.Instance.Fetch<ILogger>().LogLine("Got token from config.");
@@ -62,11 +62,12 @@ namespace DiscordBot
             var message = arg as SocketUserMessage;
             if (message == null) return;
 
-            await _reactionHandler.HandleMessage(arg);
+            //await _reactionHandler.HandleMessage(arg);
 
             if (message.Author.IsBot != true)
             {
-                await _commandHandler.HandleCommand(arg);
+                //await _commandHandler.HandleCommand(arg);
+                await Locator.Instance.Fetch<IEventBroker>().FireEvent(new MessageReceivedEvent(message));
             }
         }
 

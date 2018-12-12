@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DiscordBot
 {
@@ -11,7 +12,7 @@ namespace DiscordBot
         {
             _handlerDict = new Dictionary<Type, List<IEventHandler>>();
         }
-        public void FireEvent(IEvent firedEvent)
+        public async Task FireEvent(IEvent firedEvent)
         {
             List<IEventHandler> handlerList;
 
@@ -20,7 +21,7 @@ namespace DiscordBot
             {
                 foreach (var handler in handlerList)
                 {
-                    handler.Fire(firedEvent); //TODO: Can probably async this
+                   await handler.Fire(firedEvent);
                 }
             }
         }

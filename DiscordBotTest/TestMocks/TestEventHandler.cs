@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using DiscordBot;
 
 namespace DiscordBotTest.TestMocks
@@ -9,9 +10,10 @@ namespace DiscordBotTest.TestMocks
 
         public Type Channel { get { return typeof(TestEvent); } }
 
-        public void Fire(IEvent firedEvent)
+        public Task Fire(IEvent firedEvent)
         {
             HasFired = true;
+            return null;
         }
     }
 }

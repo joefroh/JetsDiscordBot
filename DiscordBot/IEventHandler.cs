@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace DiscordBot
 {
@@ -6,6 +7,6 @@ namespace DiscordBot
     {
         Type Channel { get; }
 
-        void Fire(IEvent firedEvent);
+        Task Fire(IEvent firedEvent);
     }
 }
