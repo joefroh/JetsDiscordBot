@@ -12,7 +12,7 @@ namespace DiscordBot
             var logFileName = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.LogFile;
             if (logFileName == "")
             {
-                Console.WriteLine("No log file path found. All logs will be outputted to the log file.");
+                Console.WriteLine("No log file path found. All logs will be outputted to the Console.");
                 return;
             }
 

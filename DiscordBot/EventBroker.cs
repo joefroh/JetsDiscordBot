@@ -18,7 +18,9 @@ namespace DiscordBot
 
         private void RegisterEventHandlers()
         {
-            var handlers = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IEventHandler).IsAssignableFrom(p) && !p.IsInterface);
+            // Note if for some reason you want to load an assembly from a lib through reflection, this will not look there.
+            var handlers = System.Reflection.Assembly.GetEntryAssembly().GetTypes().Where(p => typeof(IEventHandler).IsAssignableFrom(p) && !p.IsInterface);
+
             foreach (var handler in handlers)
             {
                 var eventHandler = Activator.CreateInstance(handler) as IEventHandler;
