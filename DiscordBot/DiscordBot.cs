@@ -14,17 +14,11 @@ namespace DiscordBot
     public class DiscordBot
     {
         private DiscordSocketClient _client;
-        private CommandHandler _commandHandler;
-        private ReactionHandler _reactionHandler;
         private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
 
-
         public DiscordBot()
         {
-            _commandHandler = new CommandHandler();
-            _reactionHandler = new ReactionHandler();
-
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
 
             if (!String.IsNullOrEmpty(token))
@@ -39,7 +33,6 @@ namespace DiscordBot
             _client.MessageReceived += MessageReceived;
             _pollHandler = new PollHandler();
         }
-
 
         #region async tasks
         public async Task LoginAsync()
@@ -61,8 +54,6 @@ namespace DiscordBot
         {
             var message = arg as SocketUserMessage;
             if (message == null) return;
-
-            await _reactionHandler.HandleMessage(arg);
 
             if (message.Author.IsBot != true)
             {
