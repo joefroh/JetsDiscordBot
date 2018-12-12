@@ -1,6 +1,6 @@
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     public interface IPoller
     {

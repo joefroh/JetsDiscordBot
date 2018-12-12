@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 using NHLApi;
 using RestSharp;
 
-namespace discordBot
+namespace DiscordBot
 {
     class GoalHorn
     {

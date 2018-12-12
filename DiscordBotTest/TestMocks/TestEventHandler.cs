@@ -1,4 +1,4 @@
-using discordBot;
+using DiscordBot;
 
 namespace DiscordBotTest.TestMocks
 {

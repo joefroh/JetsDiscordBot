@@ -1,6 +1,6 @@
 using System;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class GameDetail
     {

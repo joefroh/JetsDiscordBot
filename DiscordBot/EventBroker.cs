@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class EventBroker : IEventBroker
     {

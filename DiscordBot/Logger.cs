@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using ClassLocator;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class Logger : ILogger
     {

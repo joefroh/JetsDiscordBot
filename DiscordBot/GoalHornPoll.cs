@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using ClassLocator;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     class GoalHornPoll : IPoller
     {

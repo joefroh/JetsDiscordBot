@@ -1,7 +1,7 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ConfigurationLoader : IConfigurationLoader
     {

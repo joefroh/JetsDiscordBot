@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ClassLocator;
 
-namespace discordBot
+namespace DiscordBot
 {
     class Program
     {

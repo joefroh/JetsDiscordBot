@@ -1,6 +1,6 @@
 using ClassLocator;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ClassRegistrar : IClassRegistrar
     {
@@ -8,6 +8,7 @@ namespace discordBot
         {
             locator.Register<IConfigurationLoader, ConfigurationLoader>();
             locator.Register<ILogger, Logger>();
+            locator.Register<IEventBroker, EventBroker>();
             locator.Register<TeamNameTranslator, TeamNameTranslator>();
         }
     }

@@ -1,5 +1,5 @@
 ﻿using System;
-using discordBot;
+using DiscordBot;
 using DiscordBotTest.TestMocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

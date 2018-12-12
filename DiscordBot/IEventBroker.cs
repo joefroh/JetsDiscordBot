@@ -1,4 +1,4 @@
-namespace discordBot
+namespace DiscordBot
 {
     interface IEventBroker
     {

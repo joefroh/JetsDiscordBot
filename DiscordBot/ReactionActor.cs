@@ -6,7 +6,7 @@ using Discord;
 using Discord.Rest;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ReactionActor
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using ClassLocator;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ReactionHandler
     {
