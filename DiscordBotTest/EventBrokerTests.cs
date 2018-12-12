@@ -45,7 +45,7 @@ namespace DiscordBotTest
             var broker = new EventBroker();
             var testHandler = new TestEventHandler();
             var testEvent = new TestEvent();
-            testEvent.Channel = "foo";
+            testEvent.Channel = typeof(string);
 
             broker.RegisterHandler(testHandler);
             broker.FireEvent(testEvent);

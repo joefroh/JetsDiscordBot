@@ -5,11 +5,11 @@ namespace DiscordBot
 {
     public class EventBroker : IEventBroker
     {
-        Dictionary<string, List<IEventHandler>> _handlerDict;
+        Dictionary<Type, List<IEventHandler>> _handlerDict;
 
         public EventBroker()
         {
-            _handlerDict = new Dictionary<string, List<IEventHandler>>();
+            _handlerDict = new Dictionary<Type, List<IEventHandler>>();
         }
         public void FireEvent(IEvent firedEvent)
         {
@@ -30,9 +30,9 @@ namespace DiscordBot
             List<IEventHandler> handlerlist;
 
             // Check if we already have a channel listed
-            if (_handlerDict.ContainsKey(handler.ChannelString))
+            if (_handlerDict.ContainsKey(handler.Channel))
             {
-                handlerlist = _handlerDict[handler.ChannelString];
+                handlerlist = _handlerDict[handler.Channel];
 
                 // check if we already have this handler registered
                 if (handlerlist.Contains(handler))
@@ -45,7 +45,7 @@ namespace DiscordBot
             {
                 // We don't yet have a handler list registered for that channel, make one.
                 handlerlist = new List<IEventHandler>();
-                _handlerDict.Add(handler.ChannelString, handlerlist);
+                _handlerDict.Add(handler.Channel, handlerlist);
             }
 
             handlerlist.Add(handler);

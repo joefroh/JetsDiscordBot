@@ -1,20 +1,16 @@
+using System;
 using DiscordBot;
 
-namespace DiscordBotTest.TestMocks
-{
-    public class TestEvent : IEvent
-    {
-        string channel = "test";
-        public TestEvent()
-        {
-
+namespace DiscordBotTest.TestMocks {
+    public class TestEvent : IEvent {
+        Type channel;
+        public TestEvent () {
+            channel = this.GetType ();
         }
 
-        public string Channel
-        {
+        public Type Channel {
             get { return channel; }
-            set
-            {
+            set {
                 channel = value;
             }
         }

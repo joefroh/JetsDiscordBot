@@ -1,5 +1,8 @@
-namespace DiscordBot {
-    public interface IEvent {
-        string Channel { get; }
+using System;
+namespace DiscordBot
+{
+    public interface IEvent
+    {
+        Type Channel { get; }
     }
 }

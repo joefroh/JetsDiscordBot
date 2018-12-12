@@ -1,7 +1,11 @@
-namespace DiscordBot {
-    public interface IEventHandler {
-        string ChannelString { get; }
+using System;
 
-        void Fire (IEvent firedEvent);
+namespace DiscordBot
+{
+    public interface IEventHandler
+    {
+        Type Channel { get; }
+
+        void Fire(IEvent firedEvent);
     }
 }
