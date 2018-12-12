@@ -7,9 +7,12 @@ using Discord.WebSocket;
 
 namespace DiscordBot
 {
-    public class ReactionHandler
+    public class ReactionHandler : IEventHandler
     {
         Dictionary<string, ReactionActor> _reactions;
+
+        public Type Channel { get { return typeof(MessageReceivedEvent); } }
+
         public ReactionHandler()
         {
             _reactions = new Dictionary<string, ReactionActor>();
@@ -41,6 +44,11 @@ namespace DiscordBot
                     await _reactions[key].React(msg);
                 }
             }
+        }
+
+        public async Task Fire(IEvent firedEvent)
+        {
+            await HandleMessage((firedEvent as MessageReceivedEvent).Message);
         }
     }
 }

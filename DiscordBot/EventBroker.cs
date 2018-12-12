@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using ClassLocator;
 
 namespace DiscordBot
 {
@@ -11,7 +13,21 @@ namespace DiscordBot
         public EventBroker()
         {
             _handlerDict = new Dictionary<Type, List<IEventHandler>>();
+            RegisterEventHandlers();
         }
+
+        private void RegisterEventHandlers()
+        {
+            var handlers = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => typeof(IEventHandler).IsAssignableFrom(p) && !p.IsInterface);
+            foreach (var handler in handlers)
+            {
+                var eventHandler = Activator.CreateInstance(handler) as IEventHandler;
+                this.RegisterHandler(eventHandler);
+
+                Locator.Instance.Fetch<ILogger>().LogLine("Registering Event Handler: " + eventHandler.GetType());
+            }
+        }
+
         public async Task FireEvent(IEvent firedEvent)
         {
             List<IEventHandler> handlerList;
@@ -21,7 +37,7 @@ namespace DiscordBot
             {
                 foreach (var handler in handlerList)
                 {
-                   await handler.Fire(firedEvent);
+                    await handler.Fire(firedEvent);
                 }
             }
         }

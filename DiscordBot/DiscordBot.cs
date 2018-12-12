@@ -62,11 +62,10 @@ namespace DiscordBot
             var message = arg as SocketUserMessage;
             if (message == null) return;
 
-            //await _reactionHandler.HandleMessage(arg);
+            await _reactionHandler.HandleMessage(arg);
 
             if (message.Author.IsBot != true)
             {
-                //await _commandHandler.HandleCommand(arg);
                 await Locator.Instance.Fetch<IEventBroker>().FireEvent(new MessageReceivedEvent(message));
             }
         }

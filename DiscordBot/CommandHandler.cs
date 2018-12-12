@@ -17,7 +17,6 @@ namespace DiscordBot
         public CommandHandler()
         {
             _commandExecutors = new Dictionary<string, ICommandExecutor>();
-            Locator.Instance.Fetch<IEventBroker>().RegisterHandler(this);
             RegisterCommands();
         }
 
