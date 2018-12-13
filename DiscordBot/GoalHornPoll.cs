@@ -16,9 +16,13 @@ namespace DiscordBot
 
         private void RegisterGoalHorns()
         {
+            Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Starting to register Goal Horns"));
             if (null == Locator.Instance.Fetch<IConfigurationLoader>().Configuration.GoalHornConfig)
+            {
+                Locator.Instance.Fetch<ILogger>().LogLine("WARNING: No Goal Horns found in config");
                 return;
-                
+            }
+
             foreach (var goalHornConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.GoalHornConfig)
             {
                 var guild = Locator.Instance.Fetch<IDiscordClient>().GetGuildAsync(goalHornConfig.ServerID).Result;
@@ -28,6 +32,7 @@ namespace DiscordBot
 
                     if (null != channel)
                     {
+                         Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Regisering Goal Horn for {0}", goalHornConfig.TeamFriendlyName));
                         _goalHorns.Add(new GoalHorn(channel as SocketTextChannel, goalHornConfig));
                     }
                 }

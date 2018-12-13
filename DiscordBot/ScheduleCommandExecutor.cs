@@ -142,6 +142,12 @@ namespace DiscordBot
 
             var timeToGame = nextGame.Dates.First().Games.First().GameDate - DateTime.UtcNow;
 
+            if (timeToGame.Ticks <= 0)
+            {
+                result.Add(string.Format("The {0} are currently playing!", teamData.Name));
+                return result;
+            }
+
             var formatString = (timeToGame.Days > 0 ? @"d\.h" : "") + @"h\:mm\:ss";
             result.Add(string.Format("The next {0} game is in {1}.", teamData.Name, timeToGame.Duration().ToString(formatString)));
             return result;
