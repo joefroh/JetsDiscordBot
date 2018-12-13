@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using ClassLocator;
+using Discord;
 using Discord.WebSocket;
 
 namespace DiscordBot
@@ -20,14 +21,14 @@ namespace DiscordBot
                 
             foreach (var goalHornConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.GoalHornConfig)
             {
-                var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(goalHornConfig.ServerID);
+                var guild = Locator.Instance.Fetch<IDiscordClient>().GetGuildAsync(goalHornConfig.ServerID).Result;
                 if (null != guild)
                 {
-                    var channel = guild.GetTextChannel(goalHornConfig.TargetChannelID);
+                    var channel = guild.GetTextChannelAsync(goalHornConfig.TargetChannelID).Result;
 
                     if (null != channel)
                     {
-                        _goalHorns.Add(new GoalHorn(channel, goalHornConfig));
+                        _goalHorns.Add(new GoalHorn(channel as SocketTextChannel, goalHornConfig));
                     }
                 }
             }

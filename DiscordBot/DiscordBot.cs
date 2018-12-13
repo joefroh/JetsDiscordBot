@@ -28,7 +28,7 @@ namespace DiscordBot
 
             Locator.Instance.Fetch<ILogger>().LogLine("Starting up client.");
             _client = new DiscordSocketClient();
-            Locator.Instance.RegisterInstance<DiscordSocketClient>(_client); //Make the client available downstream as a resource
+            Locator.Instance.RegisterInstance<IDiscordClient>(_client); //Make the client available downstream as a resource
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
             _pollHandler = new PollHandler();
