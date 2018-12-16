@@ -7,7 +7,16 @@ namespace DiscordBotTest.TestMocks
 {
     public class TestUserMessage : IUserMessage
     {
+        // Test Vars
         public string Message { get; set; }
+        public bool Deleted { get; set; }
+
+        public TestUserMessage()
+        {
+            Deleted = false;
+        }
+
+        // Interface Methods
         public IReadOnlyDictionary<IEmote, ReactionMetadata> Reactions => throw new NotImplementedException();
 
         public MessageType Type => throw new NotImplementedException();
@@ -51,7 +60,10 @@ namespace DiscordBotTest.TestMocks
 
         public Task DeleteAsync(RequestOptions options = null)
         {
-            throw new NotImplementedException();
+            TaskCompletionSource<bool> completionSource = new TaskCompletionSource<bool>();
+            Deleted = true;
+            completionSource.SetResult(true);
+            return completionSource.Task;
         }
 
         public Task<IReadOnlyCollection<IUser>> GetReactionUsersAsync(string emoji, int limit = 100, ulong? afterUserId = null, RequestOptions options = null)

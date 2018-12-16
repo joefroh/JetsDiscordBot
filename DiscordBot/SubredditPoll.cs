@@ -38,11 +38,18 @@ namespace DiscordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    var newSubmissions = subreddit.UpdateReddit();
-                    foreach (var sub in newSubmissions)
+                    var update = subreddit.UpdateReddit();
+
+                    foreach (var submission in update.NewSubmissions)
                     {
-                        var subEvent = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, sub);
+                        var subEvent = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, submission);
                         Locator.Instance.Fetch<IEventBroker>().FireEvent(subEvent);
+                    }
+
+                    foreach (var removal in update.RemovedSubmissions)
+                    {
+                        var subRemoval = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, removal, true);
+                        Locator.Instance.Fetch<IEventBroker>().FireEvent(subRemoval);
                     }
                 }
                 Thread.Sleep(pollRate * 60000/*minutes*/);

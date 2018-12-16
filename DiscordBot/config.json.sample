@@ -14,7 +14,7 @@
             "ServerFriendlyName": "a string for us humans to remember which server",
             "TargetChannelID": "channel id for where the reddit submissions go",
             "TargetSubreddit": "which subreddit you want to watch",
-            "NewSubmissionCacheSize": "an int for how many posts you cache to determine whats new (recommend 25 or greater)"
+            "NewSubmissionCacheSize": "an int for how many posts you cache to determine whats new (20 Max, 10-20 recommended)"
         }
     ],
     "GoalHornConfig":[
