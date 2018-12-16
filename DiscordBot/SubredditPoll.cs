@@ -38,16 +38,9 @@ namespace DiscordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    // var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(subreddit.TargetServer);
-                    // if (null == guild) continue;
-
-                    // var channel = guild.GetTextChannel(subreddit.TargetChannel);
-                    // if (null == channel) continue;
-
                     var newSubmissions = subreddit.UpdateReddit();
                     foreach (var sub in newSubmissions)
                     {
-                        //channel.SendMessageAsync(sub);
                         var subEvent = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, sub);
                         Locator.Instance.Fetch<IEventBroker>().FireEvent(subEvent);
                     }

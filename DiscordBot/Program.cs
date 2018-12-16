@@ -14,16 +14,28 @@ namespace DiscordBot
 
         // private members
         private DiscordBot _bot;
+        private PollHandler _pollHandler;
 
         // async main
         public async Task MainAsync()
+        {
+            await StartupDiscordBot();
+            Locator.Instance.Fetch<ILogger>().LogLine("Awaiting main thread.");
+            await Task.Delay(-1);
+        }
+
+        public async Task StartupDiscordBot()
         {
             Locator.Instance.Fetch<ILogger>().LogLine("Starting up the bot.");
             _bot = new DiscordBot();
             await _bot.LoginAsync();
             await _bot.StartAsync();
-            Locator.Instance.Fetch<ILogger>().LogLine("Awaiting main thread.");
-            await Task.Delay(-1);
+        }
+
+        public void StartupPollers()
+        {
+            _pollHandler = new PollHandler();
+            _pollHandler.StartPollers();
         }
     }
 }
