@@ -35,6 +35,9 @@ To build you can use VS Code or in a powershell prompt run:
 dotnet build
 ```
 
+(This project uses another project, namely https://github.com/joefroh/NHLApiDotNet. If you forked this project onto your github account and then cloned it to get it locally on your computer, you'll be missing this repo and the previous step won't work for you. Clone the repo I just linked and place it into the correct folder, then try building again)
+
+
 Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
 
 ## Discord Bot App Token 
