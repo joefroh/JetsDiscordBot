@@ -37,6 +37,10 @@ dotnet build
 
 Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
 
+## Discord Bot App Token 
+To get a token: 
+Go to: https://discordapp.com/developers/applications/ --> "Create a new application" --> "Bot" on the sidebar on the left --> "Add Bot" --> click "Reveal Token" to get/see your token. 
+
 ## Feature Requests
 
 * Team Stats Functions - In Progress
