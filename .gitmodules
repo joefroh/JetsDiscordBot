@@ -4,6 +4,3 @@
 [submodule "NHLApiDotNet"]
 	path = NHLApiDotNet
 	url = https://github.com/joefroh/NHLApiDotNet.git
-[submodule "TTEST"]
-	path = TTEST
-	url = https://github.com/MRbiomedical/TTEST.git
