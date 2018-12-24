@@ -50,7 +50,7 @@ You can find this information in more detail on the DiscordAPI and discord.net d
 
 1. To get a token: Go to https://discordapp.com/developers/applications/ --> "Create a new application" --> "Bot" on the sidebar on the left --> "Add Bot" --> click "Reveal Token" to get/see your token. 
 
-2. Take client ID of your bot (the process for getting this is similar to the token) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=<CLIENT ID>&scope=bot). 
+2. Take client ID of your bot (the process for getting this is similar to the token) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot). 
 
 ## Feature Requests
 
