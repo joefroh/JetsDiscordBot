@@ -32,7 +32,7 @@ dotnet restore
 To build you can use VS Code or in a powershell prompt run:
 
 ``` bash
-dotnet build
+dotnet build 
 ```
 
 Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
