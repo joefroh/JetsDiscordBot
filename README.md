@@ -20,7 +20,7 @@ To get started with this project, just fork or clone the repo, then open a power
 git submodule -q update --init --recursive
 ```
 
-That will properly initialize all the submodules (NHLApiDotNet and ClassLocator), before you build the project. You only need to run that once after cloning.
+That will properly initialize all the submodules (NHLApiDotNet and ClassLocator) before you build the project. You only need to run that once after cloning.
 
 Then restore all the dependencies:
 
@@ -37,14 +37,20 @@ dotnet build
 
 Once everything is building properly, in the DiscordBot folder, copy `config.json.sample` to `config.json` and fill in your bot token etc.
 
-After you've filled out the config.json, run `dotnet run` from the "DiscordBot" directory and the bot should come online (assuming you've completed the below steps). 
+After you've filled out the config.json, run 
+
+```bash 
+dotnet run`
+```
+
+from the "DiscordBot" directory and the bot should come online (assuming you've completed the below steps). 
 
 ## Discord Bot App Token and Server Integration
 To get a token: 
 
 Go to https://discordapp.com/developers/applications/ --> "Create a new application" --> "Bot" on the sidebar on the left --> "Add Bot" --> click "Reveal Token" to get/see your token. 
 
-You can find this information in more detail on the DiscordAPI and discord.net docs, but summary: you take client ID of your bot (the process for getting this is similar to the token) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=<CLIENT ID>&scope=bot). 
+You can find this information in more detail on the DiscordAPI and discord.net docs, but a summary: take client ID of your bot (the process for getting this is similar to the token) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=<CLIENT ID>&scope=bot). 
 
 ## Feature Requests
 
