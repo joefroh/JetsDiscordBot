@@ -40,7 +40,7 @@ Once everything is building properly, in the DiscordBot folder, copy `config.jso
 After you've filled out the config.json, run 
 
 ```bash 
-dotnet run`
+dotnet run
 ```
 
 from the "DiscordBot" directory and the bot should come online (assuming you've completed the below steps). 
