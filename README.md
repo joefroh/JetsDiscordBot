@@ -56,6 +56,7 @@ To get a token:
 This token should go into the corresponding field in config.json.
 
 To add your bot to a server: 
+
 Take the client ID of your bot (the process for getting this is similar to the above) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot). 
 
 ## Feature Requests
