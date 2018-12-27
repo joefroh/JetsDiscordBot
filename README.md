@@ -48,9 +48,15 @@ from the "DiscordBot" directory and the bot should come online (assuming you've 
 ## Discord Bot App Token and Server Integration
 You can find this information in more detail on the DiscordAPI and discord.net docs, but a summary: 
 
-1. To get a token: Go to https://discordapp.com/developers/applications/ --> "Create a new application" --> "Bot" on the sidebar on the left --> "Add Bot" --> click "Reveal Token" to get/see your token. This token should go into the corresponding field in config.json.
+To get a token: 
+1. Go to https://discordapp.com/developers/applications/ 
+2. "Create a new application"
+3. "Bot" on the sidebar on the left and click "Add Bot" 
+4. Click "Reveal Token" to get/see your token. 
+This token should go into the corresponding field in config.json.
 
-2. Take the client ID of your bot (the process for getting this is similar to the above) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot). 
+To add your bot to a server: 
+Take the client ID of your bot (the process for getting this is similar to the above) and add your bot to a server using that (put it in here: https://discordapp.com/oauth2/authorize?client_id=CLIENTIDHERE&scope=bot). 
 
 ## Feature Requests
 
