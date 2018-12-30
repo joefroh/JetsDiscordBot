@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
@@ -9,6 +10,23 @@ namespace DiscordBot
         public ConfigurationLoader()
         {
             LoadConfiguration();
+            ValidateConfiguration();
+        }
+
+        private void ValidateConfiguration()
+        {
+            foreach (var property in _config.GetType().GetProperties())
+            {
+                var attrs = property.GetCustomAttributes(typeof(ConfigurationRequired), false);
+                if (attrs.Length > 0)
+                {
+                    var value = property.GetMethod.Invoke(_config, new object[]{});
+                    if (value == null || value.ToString() == "0")
+                    {
+                        throw new MissingFieldException("Configuration file missing required member: " + property.Name);
+                    }
+                }
+            }
         }
 
         public Configuration Configuration
