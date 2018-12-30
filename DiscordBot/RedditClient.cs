@@ -100,7 +100,7 @@ namespace DiscordBot
                 var postInfo = jobj[0]["data"]["children"][0]["data"];
 
                 // check if it is marked as removed
-                if (postInfo["selftext"] != null && (postInfo["selftext"].ToString() == "[removed]"))
+                if (postInfo["selftext"] != null && (postInfo["selftext"].ToString() == "[removed]" || postInfo["selftext"].ToString() == "[deleted]"))
                 {
                     // if so, add its id to the list
                     removalList.Add(post);

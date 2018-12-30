@@ -19,6 +19,7 @@ namespace DiscordBot
         // async main
         public async Task MainAsync()
         {
+            StartupPollers();
             await StartupDiscordBot();
             Locator.Instance.Fetch<ILogger>().LogLine("Awaiting main thread.");
             await Task.Delay(-1);
@@ -34,6 +35,7 @@ namespace DiscordBot
 
         public void StartupPollers()
         {
+            Locator.Instance.Fetch<ILogger>().LogLine("Starting up pollers.");
             _pollHandler = new PollHandler();
             _pollHandler.StartPollers();
         }

@@ -14,7 +14,6 @@ namespace DiscordBot
     public class DiscordBot
     {
         private DiscordSocketClient _client;
-        private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
 
         public DiscordBot()
@@ -31,7 +30,6 @@ namespace DiscordBot
             Locator.Instance.RegisterInstance<IDiscordClient>(_client); //Make the client available downstream as a resource
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
-            _pollHandler = new PollHandler();
         }
 
         #region async tasks
@@ -80,8 +78,6 @@ namespace DiscordBot
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
             Locator.Instance.Fetch<ILogger>().LogLine("Bot is now ready to interact with users.");
-
-            _pollHandler.StartPollers();
         }
         #endregion
     }
