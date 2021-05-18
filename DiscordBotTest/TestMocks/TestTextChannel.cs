@@ -31,6 +31,10 @@ namespace DiscordBotTest.TestMocks
 
         public ulong Id => throw new NotImplementedException();
 
+        public int SlowModeInterval => throw new NotImplementedException();
+
+        public ulong? CategoryId => throw new NotImplementedException();
+
         public Task AddPermissionOverwriteAsync(IRole role, OverwritePermissions permissions, RequestOptions options = null)
         {
             throw new NotImplementedException();
@@ -46,7 +50,22 @@ namespace DiscordBotTest.TestMocks
             throw new NotImplementedException();
         }
 
+        public Task<IWebhook> CreateWebhookAsync(string name, Stream avatar = null, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task DeleteAsync(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteMessageAsync(ulong messageId, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteMessageAsync(IMessage message, RequestOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -62,6 +81,11 @@ namespace DiscordBotTest.TestMocks
         }
 
         public IDisposable EnterTypingState(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ICategoryChannel> GetCategoryAsync(CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -116,6 +140,16 @@ namespace DiscordBotTest.TestMocks
             throw new NotImplementedException();
         }
 
+        public Task<IWebhook> GetWebhookAsync(ulong id, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IReadOnlyCollection<IWebhook>> GetWebhooksAsync(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task ModifyAsync(Action<TextChannelProperties> func, RequestOptions options = null)
         {
             throw new NotImplementedException();
@@ -146,6 +180,16 @@ namespace DiscordBotTest.TestMocks
             throw new NotImplementedException();
         }
 
+        public Task<IUserMessage> SendFileAsync(string filePath, string text = null, bool isTTS = false, Embed embed = null, RequestOptions options = null, bool isSpoiler = false, AllowedMentions allowedMentions = null, MessageReference messageReference = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IUserMessage> SendFileAsync(Stream stream, string filename, string text = null, bool isTTS = false, Embed embed = null, RequestOptions options = null, bool isSpoiler = false, AllowedMentions allowedMentions = null, MessageReference messageReference = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IUserMessage> SendMessageAsync(string text, bool isTTS = false, Embed embed = null, RequestOptions options = null)
         {
             TaskCompletionSource<IUserMessage> taskCompleter = new TaskCompletionSource<IUserMessage>();
@@ -154,6 +198,16 @@ namespace DiscordBotTest.TestMocks
             taskCompleter.SetResult(message);
 
             return taskCompleter.Task;
+        }
+
+        public Task<IUserMessage> SendMessageAsync(string text = null, bool isTTS = false, Embed embed = null, RequestOptions options = null, AllowedMentions allowedMentions = null, MessageReference messageReference = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SyncPermissionsAsync(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
         }
 
         public Task TriggerTypingAsync(RequestOptions options = null)

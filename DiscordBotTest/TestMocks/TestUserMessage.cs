@@ -53,6 +53,20 @@ namespace DiscordBotTest.TestMocks
 
         public ulong Id => throw new NotImplementedException();
 
+        public IUserMessage ReferencedMessage => throw new NotImplementedException();
+
+        public bool IsSuppressed => throw new NotImplementedException();
+
+        public bool MentionedEveryone => throw new NotImplementedException();
+
+        public MessageActivity Activity => throw new NotImplementedException();
+
+        public MessageApplication Application => throw new NotImplementedException();
+
+        public MessageReference Reference => throw new NotImplementedException();
+
+        public MessageFlags? Flags => throw new NotImplementedException();
+
         public Task AddReactionAsync(IEmote emote, RequestOptions options = null)
         {
             throw new NotImplementedException();
@@ -97,6 +111,31 @@ namespace DiscordBotTest.TestMocks
         }
 
         public Task UnpinAsync(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task ModifySuppressionAsync(bool suppressEmbeds, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task CrosspostAsync(RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveReactionAsync(IEmote emote, ulong userId, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task RemoveAllReactionsForEmoteAsync(IEmote emote, RequestOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAsyncEnumerable<IReadOnlyCollection<IUser>> GetReactionUsersAsync(IEmote emoji, int limit, RequestOptions options = null)
         {
             throw new NotImplementedException();
         }
