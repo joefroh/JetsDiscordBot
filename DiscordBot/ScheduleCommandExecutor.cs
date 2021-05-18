@@ -7,7 +7,7 @@ using ClassLocator;
 using Discord.WebSocket;
 using NHLApi;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ScheduleCommandExecutor : ICommandExecutor
     {

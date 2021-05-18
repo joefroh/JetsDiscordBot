@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NHLApi;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class NHLInformationSummarizer
     {

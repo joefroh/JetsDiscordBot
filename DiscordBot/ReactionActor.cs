@@ -6,7 +6,7 @@ using Discord;
 using Discord.Rest;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class ReactionActor
     {
@@ -63,7 +63,11 @@ namespace discordBot
 
         private bool MessageFromBlackList(SocketMessage msg)
         {
-            return _config.ChannelBlackList.Contains(msg.Channel.Id.ToString());
+            if (null != _config.ChannelBlackList)
+            {
+                return _config.ChannelBlackList.Contains(msg.Channel.Id.ToString());
+            }
+            return false;
         }
 
         private bool MessageTriggerOnOnlyIgnoredWords(string message)

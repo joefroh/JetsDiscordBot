@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using ClassLocator;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     class SubredditPoll : IPoller
     {
@@ -38,16 +38,18 @@ namespace discordBot
             {
                 foreach (var subreddit in _subreddits)
                 {
-                    var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(subreddit.TargetServer);
-                    if (null == guild) continue;
+                    var update = subreddit.UpdateReddit();
 
-                    var channel = guild.GetTextChannel(subreddit.TargetChannel);
-                    if (null == channel) continue;
-
-                    var newSubmissions = subreddit.UpdateReddit();
-                    foreach (var sub in newSubmissions)
+                    foreach (var submission in update.NewSubmissions)
                     {
-                        channel.SendMessageAsync(sub);
+                        var subEvent = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, submission);
+                        Locator.Instance.Fetch<IEventBroker>().FireEvent(subEvent);
+                    }
+
+                    foreach (var removal in update.RemovedSubmissions)
+                    {
+                        var subRemoval = new SubredditEvent(subreddit.TargetServer, subreddit.TargetChannel, removal, true);
+                        Locator.Instance.Fetch<IEventBroker>().FireEvent(subRemoval);
                     }
                 }
                 Thread.Sleep(pollRate * 60000/*minutes*/);

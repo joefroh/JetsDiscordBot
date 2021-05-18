@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using ClassLocator;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
-    public class CommandHandler
+    public class CommandHandler : IEventHandler
     {
         private Dictionary<string, ICommandExecutor> _commandExecutors;
+
+        public Type Channel { get { return typeof(MessageReceivedEvent); } }
+
         public CommandHandler()
         {
             _commandExecutors = new Dictionary<string, ICommandExecutor>();
-
             RegisterCommands();
         }
 
@@ -88,6 +90,12 @@ namespace discordBot
 
                 await message.Channel.SendMessageAsync(executor.HelpText);
             }
+        }
+
+        public async Task Fire(IEvent firedEvent)
+        {
+            var payload = firedEvent as MessageReceivedEvent;
+            await this.HandleCommand(payload.Message);
         }
     }
 }

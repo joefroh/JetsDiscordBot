@@ -9,24 +9,17 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class DiscordBot
     {
         private DiscordSocketClient _client;
-        private CommandHandler _commandHandler;
-        private ReactionHandler _reactionHandler;
-        private PollHandler _pollHandler;
         private SocketTextChannel _adminChannel;
-       
 
         public DiscordBot()
-        {            
-            _commandHandler = new CommandHandler();
-            _reactionHandler = new ReactionHandler();
-
+        {
             var token = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.Token;
-            
+
             if (!String.IsNullOrEmpty(token))
             {
                 Locator.Instance.Fetch<ILogger>().LogLine("Got token from config.");
@@ -34,12 +27,10 @@ namespace discordBot
 
             Locator.Instance.Fetch<ILogger>().LogLine("Starting up client.");
             _client = new DiscordSocketClient();
-            Locator.Instance.RegisterInstance<DiscordSocketClient>(_client); //Make the client available downstream as a resource
+            Locator.Instance.RegisterInstance<IDiscordClient>(_client); //Make the client available downstream as a resource
             _client.Ready += GatewayHandshook;
             _client.MessageReceived += MessageReceived;
-            _pollHandler = new PollHandler();
         }
-
 
         #region async tasks
         public async Task LoginAsync()
@@ -62,11 +53,9 @@ namespace discordBot
             var message = arg as SocketUserMessage;
             if (message == null) return;
 
-            await _reactionHandler.HandleMessage(arg);
-
             if (message.Author.IsBot != true)
             {
-                await _commandHandler.HandleCommand(arg);
+                await Locator.Instance.Fetch<IEventBroker>().FireEvent(new MessageReceivedEvent(message));
             }
         }
 
@@ -89,8 +78,6 @@ namespace discordBot
 
             await _adminChannel.SendMessageAsync("Bot has connected.");
             Locator.Instance.Fetch<ILogger>().LogLine("Bot is now ready to interact with users.");
-
-            _pollHandler.StartPollers();
         }
         #endregion
     }

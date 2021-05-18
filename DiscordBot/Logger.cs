@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using ClassLocator;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class Logger : ILogger
     {
@@ -12,7 +12,7 @@ namespace discordBot
             var logFileName = Locator.Instance.Fetch<IConfigurationLoader>().Configuration.LogFile;
             if (logFileName == "")
             {
-                Console.WriteLine("No log file path found. All logs will be outputted to the log file.");
+                Console.WriteLine("No log file path found. All logs will be outputted to the Console.");
                 return;
             }
 

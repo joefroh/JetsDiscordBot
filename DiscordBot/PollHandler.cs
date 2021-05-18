@@ -4,7 +4,7 @@ using System.Linq;
 using ClassLocator;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     class PollHandler
     {

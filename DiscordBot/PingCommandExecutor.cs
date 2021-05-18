@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     public class PingCommandExececutor : ICommandExecutor
     {

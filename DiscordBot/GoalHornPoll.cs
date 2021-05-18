@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using ClassLocator;
+using Discord;
 using Discord.WebSocket;
 
-namespace discordBot
+namespace DiscordBot
 {
     class GoalHornPoll : IPoller
     {
@@ -24,15 +25,15 @@ namespace discordBot
 
             foreach (var goalHornConfig in Locator.Instance.Fetch<IConfigurationLoader>().Configuration.GoalHornConfig)
             {
-                var guild = Locator.Instance.Fetch<DiscordSocketClient>().GetGuild(goalHornConfig.ServerID);
+                var guild = Locator.Instance.Fetch<IDiscordClient>().GetGuildAsync(goalHornConfig.ServerID).Result;
                 if (null != guild)
                 {
-                    var channel = guild.GetTextChannel(goalHornConfig.TargetChannelID);
+                    var channel = guild.GetTextChannelAsync(goalHornConfig.TargetChannelID).Result;
 
                     if (null != channel)
                     {
-                        Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Regisering Goal Horn for {0}", goalHornConfig.TeamFriendlyName));
-                        _goalHorns.Add(new GoalHorn(channel, goalHornConfig));
+                         Locator.Instance.Fetch<ILogger>().LogLine(String.Format("Regisering Goal Horn for {0}", goalHornConfig.TeamFriendlyName));
+                        _goalHorns.Add(new GoalHorn(channel as SocketTextChannel, goalHornConfig));
                     }
                 }
             }

@@ -1,5 +1,5 @@
 {
-    "dotnet-test-explorer.testProjectPath": "./NHLApi/NHLApiTests/",
+    "dotnet-test-explorer.testProjectPath": "./DiscordBotTest/",
     "todo-tree.flat": true,
     "cSpell.words": [
         "information",
