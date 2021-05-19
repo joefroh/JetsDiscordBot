@@ -29,6 +29,11 @@ namespace DiscordBotTest.TestMocks
             throw new System.NotImplementedException();
         }
 
+        public Task<BotGateway> GetBotGatewayAsync(RequestOptions options = null)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<IChannel> GetChannelAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)
         {
             throw new System.NotImplementedException();
@@ -74,6 +79,11 @@ namespace DiscordBotTest.TestMocks
             throw new System.NotImplementedException();
         }
 
+        public Task<int> GetRecommendedShardCountAsync(RequestOptions options = null)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<IUser> GetUserAsync(ulong id, CacheMode mode = CacheMode.AllowDownload, RequestOptions options = null)
         {
             throw new System.NotImplementedException();
@@ -90,6 +100,11 @@ namespace DiscordBotTest.TestMocks
         }
 
         public Task<IReadOnlyCollection<IVoiceRegion>> GetVoiceRegionsAsync(RequestOptions options = null)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IWebhook> GetWebhookAsync(ulong id, RequestOptions options = null)
         {
             throw new System.NotImplementedException();
         }
