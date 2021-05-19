@@ -190,7 +190,7 @@ namespace DiscordBotTest.TestMocks
             throw new NotImplementedException();
         }
 
-        public Task<IUserMessage> SendMessageAsync(string text, bool isTTS = false, Embed embed = null, RequestOptions options = null)
+        public Task<IUserMessage> SendMessageAsync(string text = null, bool isTTS = false, Embed embed = null, RequestOptions options = null, AllowedMentions allowedMentions = null, MessageReference messageReference = null)
         {
             TaskCompletionSource<IUserMessage> taskCompleter = new TaskCompletionSource<IUserMessage>();
             var message = Locator.Instance.Fetch<IUserMessage>() as TestUserMessage;
@@ -198,11 +198,6 @@ namespace DiscordBotTest.TestMocks
             taskCompleter.SetResult(message);
 
             return taskCompleter.Task;
-        }
-
-        public Task<IUserMessage> SendMessageAsync(string text = null, bool isTTS = false, Embed embed = null, RequestOptions options = null, AllowedMentions allowedMentions = null, MessageReference messageReference = null)
-        {
-            throw new NotImplementedException();
         }
 
         public Task SyncPermissionsAsync(RequestOptions options = null)
